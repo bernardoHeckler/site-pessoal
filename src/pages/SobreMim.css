@@ -1,0 +1,222 @@
+main {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 81px;
+}
+
+section.SobreMim {
+  border: 1px solid #383838;
+  border-radius: 20px;
+  width: 358px;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(135deg, #1d1d1e 0%, #1e1e1f 100%);
+  box-shadow: 0px 0px 20px 0px rgb(0, 0, 0);
+  align-items: center;
+  flex-wrap: nowrap;
+  justify-content: center;
+  padding: 32px;
+  animation: fadeInSobre 0.5s ease-out;
+}
+
+.linha {
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 16px;
+  width: 100%;
+  padding-bottom: 16px;
+}
+
+.barra {
+  width: 40px;
+  height: 5px;
+  background-color: #ffc763;
+}
+
+.descricao {
+  color: #9f9f9f;
+  text-align: justify;
+  hyphens: auto;
+  word-spacing: -0.02em; 
+}
+
+.coluna {
+  display: flex;
+  gap: 32px;
+  flex-wrap: wrap;
+  width: 100%;
+  height: 100%;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: row;
+}
+
+section.informacao {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  min-width: 294px;
+  height: auto;
+  padding: 16px 8px;
+  border-radius: 20px;
+  background: radial-gradient(circle at center, #232324 0%, #202022 100%);
+  border: 1px solid #383838;
+  transition: all 0.3s ease;
+}
+
+section.informacao:hover {
+  transform: translateY(-3px);
+  background: radial-gradient(circle at 0% 100%, #383838, #202022);
+  border: 1px solid #fcce68;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.conteudo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  gap: 16px;
+  width: 100%;
+}
+
+.conteudo > img {
+  width: 40px;
+  transition: transform 0.3s ease;
+}
+
+section.informacao:hover .conteudo > img {
+  transform: scale(1.1);
+}
+
+.tecnologiasImg {
+  width: 80px;
+  transition: transform 0.3s ease;
+}
+
+.tecnologiasImg:hover {
+  transform: scale(1.1);
+}
+
+.text {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.conteudo > .text > .descricao {
+  padding: 0 16px;
+}
+
+.blocos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: auto;
+  gap: 20px;
+  padding-left: 8px;
+}
+
+.retangulos {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-items: start;
+  justify-content: space-evenly;
+  gap: 8px;
+}
+
+.blocoMaior {
+  padding: 16px;
+  border-radius: 10px;
+  background: radial-gradient(circle at center, #383838 0%, #121212 100%);
+  animation: animacaoConteudoSobre 0.5s ease-out;
+}
+
+.forma1 {
+  width: 30%;
+  height: 16px;
+  background: radial-gradient(circle at center, #383838 0%, #121212 100%);
+}
+
+.forma2 {
+  width: 90%;
+  height: 16px;
+  background: radial-gradient(circle at center, #383838 0%, #121212 100%);
+}
+
+h2 {
+  text-align: center;
+}
+
+.SobreMim > .linha > .caixa {
+  background: linear-gradient(135deg, #383838 0%, #121212 100%);
+  padding: 16px 22px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  border: 2px solid #383838;
+}
+.btn-baixar {
+  background-color: #ffc763;
+  width: 100%;
+  height: auto;
+  padding: 8px 16px;
+  border-radius: 20px;
+  box-shadow: 0px 0px 8px 0px #ffc763;
+  font-size: 24px;
+  font-weight: 600;
+  color: #1d1d1e;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  animation: animacaoConteudoContato 0.4s cubic-bezier(0.34, 1.56, 0.64, 1)
+    forwards;
+    transform: scale(1);
+}
+.btn-baixado {
+  background-color: #121212;
+  color: #ffc763;
+  box-shadow: 0px 0px 2px 0px #ffc763;
+  transition: all 0.3s ease;
+}
+
+@keyframes fadeInSobre {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes animacaoConteudoSobre {
+  from {
+    transform: scale(0.95);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}

@@ -1,0 +1,74 @@
+.navbar-container {
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1000;
+  width: auto;
+  animation: fadeInNav 0.5s ease-out forwards;
+  backdrop-filter: blur(10px);
+}
+
+.navbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #383838;
+  background-color: #38383835;
+  cursor: pointer;
+  border-radius: 20px;
+  margin: 0 0 16px 0;
+  height: 65px;
+  box-shadow: 0px 0px 20px 0px rgb(0, 0, 0);
+  gap: 16px;
+  width: 358px;
+  padding: 0 20px;
+  transition: all 0.3s ease;
+}
+
+.nav-link {
+  background-color: transparent;
+  color: #ffffffd7;
+  border: none;
+  transition: color 0.3s ease, transform 0.1s ease, box-shadow 0.2s ease;
+}
+
+.nav-link:hover {
+  color: #ffc763;
+  transform: translateY(-3px) scale(1.05);
+  animation: animacaoConteudoNav 0.4s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+}
+
+.nav-link:active {
+  color: #ffc763;
+  transform: scale(0.95);
+  opacity: 0.7;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+.textoNav {
+  font-size: 16px;
+  margin: 0;
+}
+
+@keyframes fadeInNav {
+  from {
+    opacity: 0;
+    transform: translateY(20px) translateX(-50%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) translateX(-50%);
+    backdrop-filter: blur(20px) !important;
+  }
+}
+
+@keyframes animacaoConteudoNav {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(0.95);
+    backdrop-filter: blur(20px) !important;
+  }
+}

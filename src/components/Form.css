@@ -1,0 +1,124 @@
+.container {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 16px;
+  gap: 16px;
+}
+
+.coluna {
+  display: flex;
+  gap: 32px;
+  flex-wrap: wrap;
+  width: 100%;
+  height: 100%;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  width: 100%;
+  height: auto;
+  transition: all 0.3s ease; /* Applying transition to the form */
+}
+
+input,
+textarea {
+  height: 55px;
+  padding: 16px;
+  border-radius: 10px;
+  background-color: #1e1e1f;
+  border: 1px solid #383838;
+  color: #9f9f9f;
+  transition: all 0.3s ease; /* Transition for inputs/textarea */
+}
+input:hover,
+textarea:hover{
+  transform: translateY(-3px); /* Button lifts slightly */
+}
+input:focus,
+textarea:focus {
+  border-color: #fcce68; /* Highlight border on focus */
+  outline: none; /* Remove default outline */
+  background-color: #28282a;
+  color: #ffffff;
+}
+
+textarea {
+  height: 122px;
+}
+
+.contato-section > .container > .linha {
+  align-items: center;
+}
+
+.btn-form {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+  height: 55px;
+  border-radius: 10px;
+  background: radial-gradient(circle at 0% 100%, #383838, #202022);
+  border: 1px solid #383838;
+  color: #fcce68;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease; /* Transition for the button */
+}
+
+.btn-form:hover {
+  background: radial-gradient(circle at 0% 100%, #383838, #202022);
+  border: 1px solid #fcce68;
+  transform: translateY(-3px); /* Button lifts slightly */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.btn-form img {
+  transition: transform 0.3s ease; /* Transition for the icon inside the button */
+}
+
+.btn-form:hover img {
+  transform: scale(1.1); /* Slightly scale the icon on hover */
+}
+
+.container > .linha > .coluna > .coluna > .btn-form {
+  animation: fadeInForm 0.5s ease-out forwards; /* Fade-in for the heading */
+}
+
+@keyframes fadeInForm {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Optional:  Animate the entire form on load */
+.container {
+  animation: animacaoConteudoForm 0.4s cubic-bezier(0.34, 1.56, 0.64, 1)
+    forwards;
+}
+
+@keyframes animacaoConteudoForm {
+  from {
+    transform: scale(0.95);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}

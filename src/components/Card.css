@@ -1,0 +1,233 @@
+.container {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 16px;
+  gap: 16px;
+}
+aside {
+  border: 1px solid #383838;
+  border-radius: 20px;
+  width: 358px;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(135deg, #1d1d1e 0%, #1e1e1f 100%);
+  box-shadow: 0px 0px 20px 0px rgb(0, 0, 0);
+  align-items: flex-end;
+}
+.canto {
+  display: flex;
+  justify-content: end;
+}
+.btn-canto {
+  display: flex;
+  width: 32px;
+  height: 24px;
+  justify-content: center;
+  align-items: center;
+  background: radial-gradient(circle at 5% 57%, #3a3020, #121212);
+  border-radius: 0 20px 0 12px;
+  cursor: pointer;
+}
+.btn-canto > img {
+  width: 12px;
+  transition: transform 0.3s ease;
+}
+
+.content-abaixo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: auto;
+  gap: 32px;
+  padding: 16px 0;
+}
+.caixaPerfil {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #3c3c3d;
+  width: 80px;
+  height: 78px;
+  border-radius: 20px;
+}
+.tamanhoFoto {
+  width: 100%;
+}
+.caixaPerfil.expandido {
+  width: 150px;
+  height: 148px;
+}
+.tamanhoFoto.expandido {
+  width: 100%;
+}
+
+.texto {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.textoLinks {
+  text-align: start;
+}
+
+.subText {
+  color: #9f9f9f;
+  text-transform: uppercase;
+  font-size: 12px;
+}
+
+.informacoes {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  justify-content: start;
+  align-items: center;
+}
+
+.caixaImg {
+  background: radial-gradient(circle at 0% 100%, #383838, #202022);
+  border: 1px solid #383838;
+  border-radius: 10px;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.caixaDev {
+  background-color: #3c3c3d;
+  border-radius: 8px;
+  width: 60%;
+  padding: 8px;
+}
+
+.links {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 0 20px;
+}
+
+.barraLinha {
+  width: 70%;
+  height: 1px;
+  background-color: #9f9f9f;
+}
+
+.iconesSociais {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 8px;
+  align-items: center;
+}
+
+.canto-baixo {
+  display: flex;
+  justify-content: end;
+}
+.btn-canto-invertido {
+  display: flex;
+  width: 32px;
+  height: 24px;
+  justify-content: center;
+  align-items: center;
+  background: radial-gradient(circle at 5% 57%, #3a3020, #121212);
+  border-radius: 0 20px 0 12px;
+  border-radius: 12px 0 20px 0;
+  cursor: pointer;
+}
+.btn-canto-invertido > img {
+  width: 12px;
+  transition: transform 0.3s ease;
+  transform: rotate(180deg);
+}
+
+.content-acima {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-top: 32px;
+  width: 100%;
+  gap: 16px;
+}
+
+
+.content-acima.compacto {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  margin: 0 auto;
+  max-width: 100%;
+  flex-wrap: nowrap;
+  padding-top: 0;
+  padding-bottom: 16px;
+}
+
+.content-acima.compacto .texto {
+  align-items: flex-start;
+  text-align: left;
+  gap: 8px;
+}
+
+.content-acima.compacto .caixaDev {
+  width: auto;
+}
+.caixaImg {
+  transition: all 0.3s ease;
+}
+
+.caixaImg:hover {
+  transform: translateY(-3px);
+}
+
+.iconesSociais a img {
+  transition: all 0.3s ease;
+  filter: grayscale(30%);
+}
+
+.iconesSociais a img:hover {
+  transform: translateY(-3px);
+  filter: grayscale(0%);
+}
+
+.content-abaixo {
+  /* Mantenha as propriedades existentes e adicione: */
+  animation: fadeIn 0.5s ease-out forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.content-acima.compacto {
+  animation: animacaoConteudo 0.4s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+}
+
+@keyframes animacaoConteudo {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(0.9);
+  }
+}

@@ -1,35 +1,48 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+// App.jsx
+import React, { useState, useEffect } from "react";
+import "./App.css";
 
-function App() {
-  const [count, setCount] = useState(0)
+import Card from "./components/Card";
+import NavBar from "./components/NavBar";
+
+import SobreMim from "./pages/SobreMim";
+import Carreira from "./pages/Carreira";
+import Portfolio from "./pages/Portfolio";
+import Blog from "./pages/Blog";
+import Contato from "./pages/Contato";
+
+export default function App() {
+  const [sessaoAtiva, setSessaoAtiva] = useState(() => {
+    const sessaoSalvada = localStorage.getItem("sessaoDoSiteAtiva");
+    return sessaoSalvada ? sessaoSalvada : "card";
+  });
+
+  useEffect(() => {
+    localStorage.setItem("sessaoDoSiteAtiva", sessaoAtiva);
+  }, [sessaoAtiva]);
+
+  const sessaoRenderizada = () => {
+    switch (sessaoAtiva) {
+      case "sobreMim":
+        return <SobreMim />;
+      case "carreira":
+        return <Carreira />;
+      case "portfolio":
+        return <Portfolio />;
+      case "blog":
+        return <Blog />;
+      case "contato":
+        return <Contato />;
+      case "card":
+      default:
+        return <Card />;
+    }
+  };
 
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+    <div className="app">
+      {sessaoRenderizada()}
+      <NavBar setSessaoAtiva={setSessaoAtiva} />
+    </div>
+  );
 }
-
-export default App
