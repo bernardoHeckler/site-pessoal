@@ -5,14 +5,14 @@ import Card from "../components/Card";
 import iconeBaixar from "../iconeBaixar.svg";
 import iconeOk from "../iconeOK.svg";
 import { useState } from "react";
+import curriculoPDF from "../bernardoHecklerCV2025.pdf";
 
 const SobreMim = () => {
   const [baixarCurriculo, setBaixarCurriculo] = useState(false);
 
   const handleBaixarCurriculo = () => {
-    const curriculo = "../bernardoHecklerCV2025.pdf";
     const link = document.createElement("a");
-    link.href = curriculo;
+    link.href = curriculoPDF;
     link.download = "bHeckler_CV_2025.pdf";
 
     document.body.appendChild(link);
