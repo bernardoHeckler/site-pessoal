@@ -17,9 +17,9 @@ const PortfolioData = {
     },
     {
       id: 2,
-      url: "#",
-      target: "_parent",
-      titulo: "IMC com REACT",
+      url: "https://bernardoheckler.github.io/calculadora_de_IMC/",
+      target: "_blank",
+      titulo: "Calculadora de IMC",
       imagem: projetoImcCalcImg,
       categoria: "aplicacao",
     },
