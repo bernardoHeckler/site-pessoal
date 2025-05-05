@@ -64,7 +64,7 @@ const CardData = {
       id: 3,
       nome: "GitHub",
       icone: iconeGitHub,
-      link: "https://github.com/bernardoHeckler/testes",
+      link: "https://github.com/bernardoHeckler/site-pessoal.git",
     },
     {
       id: 4,
