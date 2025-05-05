@@ -40,17 +40,19 @@ const Portfolio = () => {
           <div className="lista-projetos">
             {projetosFiltrados.map((projeto) => (
               <figure key={projeto.id} className="card-projeto">
-                <img src={projeto.imagem} alt={projeto.titulo} />
-                <div className="text">
-                  <h3 className="nome-projeto">{projeto.titulo}</h3>
-                  <p className="tipo-projeto">
-                    {projeto.categoria === "aplicacao"
-                      ? "Aplicação"
-                      : projeto.categoria === "Design Web"
-                      ? "Design Web"
-                      : "Desenvolvimento Web"}
-                  </p>
-                </div>
+                <a href={projeto.url} target={projeto.target} rel="noopener noreferrer" className="link-projeto">
+                  <img src={projeto.imagem} alt={projeto.titulo} />
+                  <div className="text">
+                    <h3 className="nome-projeto">{projeto.titulo}</h3>
+                    <p className="tipo-projeto">
+                      {projeto.categoria === "aplicacao"
+                        ? "Aplicação"
+                        : projeto.categoria === "Design Web"
+                        ? "Design Web"
+                        : "Desenvolvimento Web"}
+                    </p>
+                  </div>
+                </a>
               </figure>
             ))}
           </div>
