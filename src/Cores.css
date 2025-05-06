@@ -1,0 +1,33 @@
+:root {
+  --bcsite: #111;
+  --highlight: #fcce68;
+  --highlightopacity: #fccd6833;
+  --borders: #383838;
+  --bordersopacity: #38383835;
+  --white: #fff;
+  --black: rgb(0, 0, 0);
+  --black12: #121212;
+  --black1d: #1d1d1e;
+  --gray1e: #1e1e1f;
+  --gray3c: #3c3c3d;
+  --textfade: #9f9f9f;
+  --blackopacity: rgba(0, 0, 0, 0.1);
+  --focus: #28282a;
+
+  --section: linear-gradient(135deg, var(--black1d) 0%, var(--gray1e) 100%);
+  --bcplusradial: linear-gradient(
+    135deg,
+    var(--borders) 0%,
+    var(--black12) 100%
+  );
+
+  --bcradial: radial-gradient(circle at center, #232324 0%, #202022 100%);
+  --bcradialhover: radial-gradient(circle at 0% 100%, var(--borders), #202022);
+  --bcblackradial: radial-gradient(
+    circle at center,
+    var(--borders) 0%,
+    var(--black12) 100%
+  );
+  --bcicon: radial-gradient(circle at 0% 100%, var(--borders), #202022);
+  --bcbtn: radial-gradient(circle at 5% 57%, #3a3020, #121212);
+}

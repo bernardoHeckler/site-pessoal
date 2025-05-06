@@ -1,6 +1,7 @@
+@import "./Cores.css";
 body {
-  background-color: #111;
-  color: #fff;
+  background-color: var(--bcsite);
+  color: var(--white);
   padding: 46px 16px 16px 16px;
   transition: 0.3s;
   display: flex;
@@ -10,5 +11,5 @@ body {
 }
 
 a {
-  color: #fff;
+  color: var(--white);
 }

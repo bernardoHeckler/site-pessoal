@@ -13,13 +13,13 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 1px solid #383838;
-  background-color: #38383835;
+  border: 1px solid var(--borders);
+  background-color: var(--bordersopacity);
   cursor: pointer;
   border-radius: 20px;
   margin: 0 0 16px 0;
   height: 65px;
-  box-shadow: 0px 0px 20px 0px rgb(0, 0, 0);
+  box-shadow: 0px 0px 20px 0px var(--black);
   gap: 16px;
   width: 358px;
   padding: 0 20px;
@@ -28,22 +28,22 @@
 
 .nav-link {
   background-color: transparent;
-  color: #ffffffd7;
+  color: var(--white);
   border: none;
   transition: color 0.3s ease, transform 0.1s ease, box-shadow 0.2s ease;
 }
 
 .nav-link:hover {
-  color: #ffc763;
+  color: var(--highlight);
   transform: translateY(-3px) scale(1.05);
   animation: animacaoConteudoNav 0.4s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
 }
 
 .nav-link:active {
-  color: #ffc763;
+  color: var(--highlight);
   transform: scale(0.95);
   opacity: 0.7;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 5px var(--blackopacity);
 }
 
 .textoNav {

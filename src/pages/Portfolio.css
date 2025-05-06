@@ -1,3 +1,4 @@
+@import "../Cores.css";
 .portfolio-container {
   width: 100%;
   height: auto;
@@ -7,14 +8,14 @@
 }
 
 .portfolio-section {
-  border: 1px solid #383838;
+  border: 1px solid var(--borders);
   border-radius: 20px;
   width: 358px;
   height: auto;
   display: flex;
   flex-direction: column;
-  background: linear-gradient(135deg, #1d1d1e 0%, #1e1e1f 100%);
-  box-shadow: 0px 0px 20px 0px rgb(0, 0, 0);
+  background: var(--section);
+  box-shadow: 0px 0px 20px 0px var(--black);
   align-items: flex-start;
   flex-wrap: nowrap;
   justify-content: center;
@@ -37,13 +38,13 @@
 
 .portfolio-nav > button {
   background-color: transparent;
-  color: #fff;
+  color: var(--white);
   font-size: 16px;
   transition: all 0.3s ease;
 }
 
 .portfolio-nav > button:hover {
-  color: #fcce68;
+  color: var(--highlight);
 }
 
 .card-projeto {
@@ -60,7 +61,7 @@
   min-width: 100%;
   height: 187px;
   border-radius: 24px;
-  border: 4px solid #3c3c3d;
+  border: 4px solid var(--borders);
   transition: all 0.3s ease;
 }
 
@@ -93,7 +94,7 @@
 }
 
 .portfolio-nav > button.ativo {
-  color: #fcce68;
+  color: var(--highlight);
   position: relative;
 }
 
@@ -104,7 +105,7 @@
   left: 0;
   width: 100%;
   height: 2px;
-  background-color: #fcce68;
+  background-color: var(--highlight);
 }
 
 

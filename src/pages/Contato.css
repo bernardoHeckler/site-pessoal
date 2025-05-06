@@ -1,3 +1,4 @@
+@import "../Cores.css";
 .contato-container {
   width: 100%;
   height: auto;
@@ -7,14 +8,14 @@
 }
 
 .contato-section {
-  border: 1px solid #383838;
+  border: 1px solid var(--borders);
   border-radius: 20px;
   width: 358px;
   height: auto;
   display: flex;
   flex-direction: column;
-  background: linear-gradient(135deg, #1d1d1e 0%, #1e1e1f 100%);
-  box-shadow: 0px 0px 20px 0px rgb(0, 0, 0);
+  background: var(--section);
+  box-shadow: 0px 0px 20px 0px var(--black);
   align-items: flex-start;
   flex-wrap: nowrap;
   justify-content: center;
@@ -25,7 +26,7 @@
 }
 
 .contato-section > .linha > .caixa {
-  background: linear-gradient(135deg, #383838 0%, #121212 100%);
+  background: var(--bcblackradial);
   padding: 16px 22px;
   width: 100%;
   display: flex;
@@ -34,18 +35,18 @@
   justify-content: center;
   align-items: center;
   border-radius: 10px;
-  border: 2px solid #383838;
+  border: 2px solid var(--borders);
 }
 .btn-copiar {
-  background-color: #ffc763;
+  background-color: var(--highlight);
   width: 100%;
   height: auto;
   padding: 8px 16px;
   border-radius: 20px;
-  box-shadow: 0px 0px 8px 0px #ffc763;
+  box-shadow: 0px 0px 8px 0px var(--highlight);
   font-size: 24px;
   font-weight: 600;
-  color: #1d1d1e;
+  color: var(--black1d);
   display: flex;
   justify-content: space-between;
   flex-direction: row;
@@ -56,9 +57,9 @@
     transform: scale(1);
 }
 .btn-copiado {
-  background-color: #121212;
-  color: #ffc763;
-  box-shadow: 0px 0px 2px 0px #ffc763;
+  background-color: var(--black12);
+  color: var(--highlight);
+  box-shadow: 0px 0px 2px 0px var(--highlight);
   transition: all 0.3s ease;
 }
 
