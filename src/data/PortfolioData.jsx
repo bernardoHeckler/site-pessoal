@@ -1,9 +1,9 @@
-import projetoPortfolioImg from "../imgportfolio.svg";
-import projetoImcCalcImg from "../imgimccalc.svg";
-import projetoChatBotImg from "../imgchatbot.svg";
-import projetoProfileImg from "../imgprofile.svg";
-import projetoCatalogoFilmesImg from "../imgcatalogofilmes.svg";
-import projetosDeTelaImg from "../imgprojetosdetela.svg";
+import projetoPortfolioImg from "../svg/imgportfolio.svg";
+import projetoImcCalcImg from "../svg/imgimccalc.svg";
+import projetoChatBotImg from "../svg/imgchatbot.svg";
+import projetoProfileImg from "../svg/imgprofile.svg";
+import projetoCatalogoFilmesImg from "../svg/imgcatalogofilmes.svg";
+import projetosDeTelaImg from "../svg/imgprojetosdetela.svg";
 
 const PortfolioData = {
   projetos: [

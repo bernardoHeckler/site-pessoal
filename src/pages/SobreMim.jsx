@@ -1,9 +1,8 @@
-import React from "react";
 import "./SobreMim.css";
 import SobreMimData from "../data/SobreMimData";
 import Card from "../components/Card";
-import iconeBaixar from "../iconeBaixar.svg";
-import iconeOk from "../iconeOK.svg";
+import iconeBaixar from "../svg/iconeBaixar.svg";
+import iconeOk from "../svg/iconeOK.svg";
 import { useState } from "react";
 import curriculoPDF from "../bernardoHecklerCV2025.pdf";
 

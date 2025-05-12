@@ -1,4 +1,3 @@
-import React from "react";
 import Card from "../components/Card";
 import BlogData from "../data/BlogData";
 import "./Blog.css";

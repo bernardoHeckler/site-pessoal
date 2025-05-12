@@ -1,6 +1,6 @@
-import blogSiteImg from "../imgsitenovo.svg";
-import blogReactImg from "../imgblogreactpost.svg";
-import blogDesign from "../imgDesign.svg";
+import blogSiteImg from "../svg/imgsitenovo.svg";
+import blogReactImg from "../svg/imgblogreactpost.svg";
+import blogDesign from "../svg/imgDesign.svg";
 
 const BlogData = {
     titulo: "Blog",

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import "./Card.css";
 import CardData from "../data/CardData";
 

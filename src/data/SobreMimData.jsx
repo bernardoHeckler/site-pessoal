@@ -1,15 +1,15 @@
-import IconeDesign from "../iconeDev.svg";
-import IconeFormacao from "../iconeFormacao.svg";
-import IconeTrabalho from "../iconeTrabalho.svg";
-import IconeMais from "../iconeMais.svg";
-import IconeHtml from "../iconeHtml.svg";
-import IconeCss from "../iconeCss.svg";
-import IconeJs from "../iconeJavaScript.svg";
-import IconeReact from "../iconeReact.svg";
-import IconeFigmaMaior from "../iconeFigmaMaior.svg";
-import IconeJava from "../iconeJava.svg";
-import IconePython from "../iconePython.svg";
-import IconeGit from "../iconeGit.svg";
+import IconeDesign from "../svg/iconeDev.svg";
+import IconeFormacao from "../svg/iconeFormacao.svg";
+import IconeTrabalho from "../svg/iconeTrabalho.svg";
+import IconeMais from "../svg/iconeMais.svg";
+import IconeHtml from "../svg/iconeHtml.svg";
+import IconeCss from "../svg/iconeCss.svg";
+import IconeJs from "../svg/iconeJavaScript.svg";
+import IconeReact from "../svg/iconeReact.svg";
+import IconeFigmaMaior from "../svg/iconeFigmaMaior.svg";
+import IconeJava from "../svg/iconeJava.svg";
+import IconePython from "../svg/iconePython.svg";
+import IconeGit from "../svg/iconeGit.svg";
 
 const SobreMimData = {
   titulo: "Sobre Mim",

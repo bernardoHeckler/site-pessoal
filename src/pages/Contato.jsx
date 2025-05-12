@@ -1,9 +1,9 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import Card from "../components/Card";
 import "./Contato.css";
 import Form from "../components/Form";
-import iconeCopiar from "../iconeCopiar.svg";
-import iconeCopiado from "../iconeOK.svg";
+import iconeCopiar from "../svg/iconeCopiar.svg";
+import iconeCopiado from "../svg/iconeOK.svg";
 
 const Contato = () => {
   const [copiarEmail, setCopiarEmail] = useState(false);

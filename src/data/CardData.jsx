@@ -1,13 +1,13 @@
-import setinha from "../setinha.svg";
-import logo from "../fotoperfil.svg";
-import iconeEmail from "../iconeEmail.svg";
-import iconeTelefone from "../iconeTelefone.svg";
-import iconeAgenda from "../iconeAgenda.svg";
-import iconeLocal from "../iconeLocal.svg";
-import iconeX from "../iconeTwitter.svg";
-import iconeFigma from "../iconeFigma.svg";
-import iconeGitHub from "../iconeGitHub.svg";
-import iconeLinkedIn from "../iconeLinkedin.svg";
+import setinha from "../svg/setinha.svg";
+import logo from "../svg/fotoperfil.svg";
+import iconeEmail from "../svg/iconeEmail.svg";
+import iconeTelefone from "../svg/iconeTelefone.svg";
+import iconeAgenda from "../svg/iconeAgenda.svg";
+import iconeLocal from "../svg/iconeLocal.svg";
+import iconeX from "../svg/iconeTwitter.svg";
+import iconeFigma from "../svg/iconeFigma.svg";
+import iconeGitHub from "../svg/iconeGitHub.svg";
+import iconeLinkedIn from "../svg/iconeLinkedin.svg";
 
 const CardData = {
   perfil: {

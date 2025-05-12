@@ -1,8 +1,7 @@
-import React from "react";
 import Card from "../components/Card";
 import CarreiraData from "../data/CarreiraData";
 import "./Carreira.css";
-import IconeImg from "../iconeImg.svg";
+import IconeImg from "../svg/iconeImg.svg";
 
 const Carreira = () => {
   return (

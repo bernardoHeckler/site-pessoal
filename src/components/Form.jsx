@@ -1,6 +1,5 @@
-import React from "react";
 import "./Form.css";
-import IconeEnviar from "../iconeEnviar.svg";
+import IconeEnviar from "../svg/iconeEnviar.svg";
 
 const Form = () => {
   return (
