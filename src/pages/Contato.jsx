@@ -18,7 +18,7 @@ const Contato = () => {
   };
 
   return (
-    <div>
+    <>
       <Card />
       <main className="contato-container">
         <section className="contato-section">
@@ -39,7 +39,7 @@ const Contato = () => {
           <Form />
         </section>
       </main>
-    </div>
+    </>
   );
 };
 export default Contato;

@@ -3,7 +3,7 @@ import IconeEnviar from "../svg/iconeEnviar.svg";
 
 const Form = () => {
   return (
-    <div className="container">
+    <div className="form-container">
       <div className="linha">
         <h2>Ou me envie uma mensagem por aqui!</h2>
       </div>

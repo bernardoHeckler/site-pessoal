@@ -4,7 +4,7 @@ import "./Blog.css";
 
 const Blog = () => {
   return (
-    <div>
+    <>
       <Card />
       <main className="blog-container">
         <section className="blog-section">
@@ -31,7 +31,7 @@ const Blog = () => {
           </div>
         </section>
       </main>
-    </div>
+    </>
   );
 };
 

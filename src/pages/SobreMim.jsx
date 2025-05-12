@@ -26,16 +26,16 @@ const SobreMim = () => {
   };
 
   return (
-    <div>
+    <>
       <Card />
-      <main>
-        <section className="SobreMim">
+      <main className="sobreMim-container">
+        <section className="sobreMim-section">
           <div className="linha">
             <h1>{SobreMimData.titulo}</h1>
             <div className="barra"></div>
             <p className="descricao">{SobreMimData.descricao}</p>
           </div>
-          <div className="linha">
+          <div className="linha" id="linha-caixa">
             <div className="caixa">
               <h3>Baixar meu Currículo</h3>
               <button
@@ -52,7 +52,7 @@ const SobreMim = () => {
           </div>
           <div className="linha">
             <h2>O Que Estou Fazendo</h2>
-            <div className="coluna">
+            <div id="coluna-atividades">
               {SobreMimData.atividades.map((atividade) => (
                 <section key={atividade.id} className="informacao">
                   <div className="conteudo">
@@ -69,7 +69,7 @@ const SobreMim = () => {
 
           <div className="linha">
             <h2>Futuras Ideias</h2>
-            <div className="coluna">
+            <div className="coluna-ideias">
               {SobreMimData.futurasIdeias.map((ideia) => (
                 <section key={ideia.id} className="informacao">
                   <div className="blocos">
@@ -102,7 +102,7 @@ const SobreMim = () => {
           </div>
         </section>
       </main>
-    </div>
+    </>
   );
 };
 

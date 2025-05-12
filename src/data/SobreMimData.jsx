@@ -28,7 +28,7 @@ const SobreMimData = {
       titulo: "Ciências da Computação",
       icone: IconeFormacao,
       descricao:
-        "Atualmente cursando Faculdade de Ciências da Computação na Atitus Educação.",
+        "Atualmente cursando Faculdade de Ciências da Computação na Atitus Educação. Já no terceiro semestre, estou aprofundando meus conhecimentos em programação e desenvolvimento de software.",
     },
     {
       id: 3,

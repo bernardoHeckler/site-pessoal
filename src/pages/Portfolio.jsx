@@ -14,7 +14,7 @@ const Portfolio = () => {
         );
 
   return (
-    <div className="portfolio-page">
+    <>
       <Card />
       <main className="portfolio-container">
         <section className="portfolio-section">
@@ -40,7 +40,12 @@ const Portfolio = () => {
           <div className="lista-projetos">
             {projetosFiltrados.map((projeto) => (
               <figure key={projeto.id} className="card-projeto">
-                <a href={projeto.url} target={projeto.target} rel="noopener noreferrer" className="link-projeto">
+                <a
+                  href={projeto.url}
+                  target={projeto.target}
+                  rel="noopener noreferrer"
+                  className="link-projeto"
+                >
                   <img src={projeto.imagem} alt={projeto.titulo} />
                   <div className="text">
                     <h3 className="nome-projeto">{projeto.titulo}</h3>
@@ -58,7 +63,7 @@ const Portfolio = () => {
           </div>
         </section>
       </main>
-    </div>
+    </>
   );
 };
 

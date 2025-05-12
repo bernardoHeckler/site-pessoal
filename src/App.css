@@ -13,3 +13,35 @@ body {
 a {
   color: var(--white);
 }
+.app {
+  width: auto;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+}
+
+@media (min-width: 768px) {
+  .app {
+    max-width: 1000px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: stretch;
+    gap: 16px;
+    flex-wrap: nowrap;
+  }
+}
+@media (min-width: 1024px) {
+  .app {
+    max-width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: stretch;
+    gap: 16px;
+    flex-wrap: nowrap;
+  }
+}

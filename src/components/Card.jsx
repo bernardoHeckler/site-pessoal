@@ -1,25 +1,43 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import "./Card.css";
 import CardData from "../data/CardData";
 
 const Card = () => {
-  const [mostrar, setMostrar] = useState(false);
+  const [mostrar, setMostrar] = useState(window.innerWidth > 768);
   const alterar = () => setMostrar(!mostrar);
 
+  const verificarLargura = () => {
+    setMostrar(window.innerWidth > 768);
+  };
+
+  useEffect(() => {
+    const handleResize = () => {
+      verificarLargura();
+    };
+
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
   return (
-    <div className="container">
+    <div className="card-container">
       <aside>
-        {/* Botão superior */}
-        {!mostrar && (
+        {window.innerWidth <= 768 && !mostrar && (
           <div className="canto">
             <button className="btn-canto" onClick={alterar}>
               <img src={CardData.icones.seta} alt="Mostrar conteúdo" />
             </button>
           </div>
         )}
-        
-        {/* Conteúdo superior */}
-        <div className={`content-acima ${!mostrar ? "compacto" : ""}`}>
+
+        <div
+          className={`content-acima ${
+            window.innerWidth <= 768 && !mostrar ? "compacto" : ""
+          }`}
+        >
           <div className={`caixaPerfil ${mostrar ? "expandido" : ""}`}>
             <img
               className={`tamanhoFoto ${mostrar ? "expandido" : ""}`}
@@ -32,9 +50,8 @@ const Card = () => {
             <p className="caixaDev">{CardData.perfil.profissao}</p>
           </div>
         </div>
-        
-        {/* Conteúdo inferior (mostrar quando expandido) */}
-        {mostrar && (
+
+        {mostrar || window.innerWidth > 768 ? (
           <>
             <div className="content-abaixo">
               <div className="barraLinha"></div>
@@ -69,13 +86,15 @@ const Card = () => {
                 ))}
               </div>
             </div>
-            <div className="canto-baixo">
-              <button className="btn-canto-invertido" onClick={alterar}>
-                <img src={CardData.icones.seta} alt="Botão Alterar" />
-              </button>
-            </div>
+            {window.innerWidth <= 768 && (
+              <div className="canto-baixo">
+                <button className="btn-canto-invertido" onClick={alterar}>
+                  <img src={CardData.icones.seta} alt="Botão Alterar" />
+                </button>
+              </div>
+            )}
           </>
-        )}
+        ) : null}
       </aside>
     </div>
   );
