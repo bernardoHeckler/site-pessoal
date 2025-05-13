@@ -50,9 +50,9 @@ const Carreira = () => {
           </ol>
 
           {/* Seção Habilidades */}
-          <div className="linha">
+          <div className="linha-skills">
             <h2>{CarreiraData.habilidades.titulo}</h2>
-            <section className="informacao">
+            <section className="informacao-skills">
               {CarreiraData.habilidades.itens.map((habilidade) => (
                 <div key={habilidade.id} className="skill">
                   <h3>

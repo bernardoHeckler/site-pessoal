@@ -120,14 +120,17 @@
   font-size: 0.95rem;
   line-height: 1.5;
 }
-.linha-carreira {
+.career-container > .linha-carreira {
   display: flex;
   flex-wrap: nowrap;
   flex-direction: column;
   align-items: stretch;
   gap: 16px;
 }
-.linha {
+.linha-skills {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
   align-items: flex-start;
 }
 .skill {
@@ -154,7 +157,17 @@
 .icon-wrapper:hover img {
   transform: scale(1.1);
 }
-
+.informacao-skills {
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  padding: 16px 8px;
+  border-radius: 20px;
+  background: var(--bcradial);
+  border: 1px solid var(--borders);
+  transition: all 0.3s ease;
+  width: 100%;
+}
 @keyframes fadeInCarreira {
   from {
     opacity: 0;
@@ -178,10 +191,10 @@
 }
 
 @media (min-width: 768px) {
-  .career-section{
+  .career-section {
     width: 100%;
   }
-  .career-section > .linha > .informacao{
+  .career-section > .linha-skills > .informacao-skills {
     width: 100%;
   }
 }
