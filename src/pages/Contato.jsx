@@ -24,7 +24,7 @@ const Contato = () => {
         <section className="contato-section">
           <h1>Entre em Contato</h1>
           <div className="barra"></div>
-          <div className="linha">
+          <div className="linha-caixa">
             <div className="caixa">
               <h3>bernaheckler1@gmail.com</h3>
               <button
