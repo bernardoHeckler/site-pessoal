@@ -24,7 +24,7 @@ section.sobreMim-section {
   animation: fadeInSobre 0.5s ease-out;
 }
 
-.linha {
+.sobreMim-section > .linha {
   display: flex;
   flex-wrap: nowrap;
   flex-direction: column;
