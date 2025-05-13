@@ -9,7 +9,7 @@ const Carreira = () => {
       <Card />
       <main className="career-container">
         <section className="career-section">
-          <div className="linha-carreira">
+          <div className="linha">
             <h1>{CarreiraData.titulo}</h1>
             <div className="barra"></div>
           </div>
