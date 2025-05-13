@@ -4,7 +4,7 @@ import Card from "../components/Card";
 import iconeBaixar from "../svg/iconeBaixar.svg";
 import iconeOk from "../svg/iconeOK.svg";
 import { useState } from "react";
-import curriculoPDF from "../bernardoHecklerCV2025.pdf";
+import curriculoPDF from "../curriculo2025.pdf";
 
 const SobreMim = () => {
   const [baixarCurriculo, setBaixarCurriculo] = useState(false);
