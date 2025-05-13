@@ -137,10 +137,9 @@
   width: 100%;
   padding: 0 16px;
 }
-.barra-interativa{
+.barra-interativa {
   background-color: var(--highlightopacity);
   border-radius: 5px;
-
 }
 .barra-interativa div {
   height: 10px;
@@ -175,5 +174,14 @@
   to {
     transform: scale(1);
     opacity: 1;
+  }
+}
+
+@media (min-width: 768px) {
+  .career-section{
+    width: 100%;
+  }
+  .career-section > .linha > .informacao{
+    width: 100%;
   }
 }
