@@ -12,7 +12,7 @@ const Blog = () => {
             <h2>{BlogData.titulo}</h2>
             <div className="barra"></div>
           </div>
-          <div className="linha">
+          <div className="linha-posts">
             {BlogData.posts.map((post) => (
               <section key={post.id} className="blog-informacao">
                 <img
