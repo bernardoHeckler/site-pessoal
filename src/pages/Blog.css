@@ -136,6 +136,12 @@ section.blog-informacao:hover img {
     justify-content: flex-start;
     align-items: center;
   }
+  .blog-section > .linha {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    width: 100%;
+  }
   .linha-posts {
     display: flex;
     flex-direction: row;
