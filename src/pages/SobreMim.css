@@ -280,7 +280,11 @@ h2 {
     width: 420px;
     height: auto;
   }
-  .coluna{
-    gap: none;
+  .sobreMim-section > .linha > .coluna{
+    gap: 12px;
+  }
+  .sobreMim-section > .linha > h2{
+    width: 100%;
+    text-align: left;
   }
 }
