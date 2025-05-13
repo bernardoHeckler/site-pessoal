@@ -108,7 +108,6 @@
   background-color: var(--highlight);
 }
 
-
 @keyframes fadeInPortfolio {
   from {
     opacity: 0;
@@ -126,4 +125,37 @@
 
 .card-projeto:hover img {
   transform: scale(1.01);
+}
+@media (min-width: 768px) {
+  .portfolio-container {
+    min-height: 674px;
+    height: auto;
+  }
+  .portfolio-section {
+    display: flex;
+    width: 100%;
+    justify-content: flex-start;
+  }
+  .lista-projetos {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: auto;
+    align-items: center;
+    align-content: center;
+  }
+  .card-projeto {
+    width: auto;
+    margin-bottom: 15px;
+  }
+  .card-projeto > .link-projeto > img {
+    width: 100%;
+    height: 160px;
+  }
+}
+@media (min-width: 1006px) {
+  .portfolio-container{
+    width: 100%;
+  }
 }
