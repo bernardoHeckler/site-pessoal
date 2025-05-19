@@ -4,8 +4,10 @@ import Card from "../components/Card";
 import PortfolioData from "../data/PortfolioData";
 
 const Portfolio = () => {
+  // 1. Controlar o filtro atual com useState
   const [filtroAtual, setFiltroAtual] = useState("todos");
 
+  // 2. Lógica de filtro
   const projetosFiltrados =
     filtroAtual === "todos"
       ? PortfolioData.projetos
@@ -14,6 +16,7 @@ const Portfolio = () => {
         );
 
   return (
+    // 3. layout visual
     <>
       <Card />
       <main className="portfolio-container">
@@ -24,6 +27,7 @@ const Portfolio = () => {
           </div>
 
           <div className="linha">
+            {/* 4. Botões de filtro */}
             <nav className="portfolio-nav">
               {PortfolioData.categorias.map((categoria) => (
                 <button
@@ -38,6 +42,7 @@ const Portfolio = () => {
           </div>
 
           <div className="lista-projetos">
+            {/* 5. Renderizar os projetos filtrados */}
             {projetosFiltrados.map((projeto) => (
               <figure key={projeto.id} className="card-projeto">
                 <a
@@ -50,10 +55,13 @@ const Portfolio = () => {
                   <div className="text">
                     <h3 className="nome-projeto">{projeto.titulo}</h3>
                     <p className="tipo-projeto">
+                      {/* 6. Renderizar o tipo de projeto */}
                       {projeto.categoria === "aplicacao"
                         ? "Aplicação"
-                        : projeto.categoria === "Design Web"
+                        : projeto.categoria === "design"
                         ? "Design Web"
+                        : projeto.categoria === "java"
+                        ? "Desenvolvimento Java"
                         : "Desenvolvimento Web"}
                     </p>
                   </div>

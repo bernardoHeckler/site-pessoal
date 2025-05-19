@@ -4,6 +4,8 @@ import projetoChatBotImg from "../svg/imgchatbot.svg";
 import projetoProfileImg from "../svg/imgprofile.svg";
 import projetoCatalogoFilmesImg from "../svg/imgcatalogofilmes.svg";
 import projetosDeTelaImg from "../svg/imgprojetosdetela.svg";
+import projetoDeGestao from "../svg/imgprojetosGestaoPoo.svg";
+import projetoDeBiblioteca from "../svg/imgprojetosBiblioteca.svg";
 
 const PortfolioData = {
   projetos: [
@@ -13,7 +15,7 @@ const PortfolioData = {
       target: "_blank",
       titulo: "Portfólio Pessoal 2024",
       imagem: projetoPortfolioImg,
-      categoria: "Design Web",
+      categoria: "design",
     },
     {
       id: 2,
@@ -37,7 +39,7 @@ const PortfolioData = {
       target: "_blank",
       titulo: "Cartão de Visitas",
       imagem: projetoProfileImg,
-      categoria: "Desenvolvimento Web",
+      categoria: "web",
     },
     {
       id: 5,
@@ -45,7 +47,7 @@ const PortfolioData = {
       target: "_blank",
       titulo: "Catálogo de Filmes",
       imagem: projetoCatalogoFilmesImg,
-      categoria: "Desenvolvimento Web",
+      categoria: "web",
     },
     {
       id: 6,
@@ -53,15 +55,32 @@ const PortfolioData = {
       target: "_blank",
       titulo: "Projetos de Tela",
       imagem: projetosDeTelaImg,
-      categoria: "Design Web",
+      categoria: "design",
     },
+    {
+      id: 7,
+      url: "https://github.com/bernardoHeckler/gerenciamento-de-custos-com-combustivel.git",
+      target: "_blank",
+      titulo: "Gestão de Custo - POO",
+      imagem: projetoDeGestao,
+      categoria: "java",
+    },
+    {
+      id: 8,
+      url: "https://github.com/bernardoHeckler/gestao-de-biblioteca.git",
+      target: "_blank",
+      titulo: "Gestão de Biblioteca - POO",
+      imagem: projetoDeBiblioteca,
+      categoria: "java",
+    }
   ],
 
   categorias: [
     { id: "todos", nome: "Todos" },
-    { id: "Design Web", nome: "Design Web" },
+    { id: "design", nome: "Design Web" },
     { id: "aplicacao", nome: "Aplicações" },
-    { id: "Desenvolvimento Web", nome: "Desenvolvimento Web" },
+    { id: "web", nome: "Desenvolvimento Web" },
+    { id: "java", nome: "Desenvolvimento Java" },
   ],
 };
 
