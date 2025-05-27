@@ -6,6 +6,12 @@ import projetoCatalogoFilmesImg from "../svg/imgcatalogofilmes.svg";
 import projetosDeTelaImg from "../svg/imgprojetosdetela.svg";
 import projetoDeGestao from "../svg/imgprojetosGestaoPoo.svg";
 import projetoDeBiblioteca from "../svg/imgprojetosBiblioteca.svg";
+import projetoListaDeTarefas from "../svg/imgprojetosListadeTarefas.svg";
+import projetoZoologico from "../svg/imgprojetosZoologico.svg";
+import projetoAcademico from "../svg/imgprojetosTelasACM.svg";
+import projetoEbooks from "../svg/imgprojetosEbooks.svg";
+
+
 
 const PortfolioData = {
   projetos: [
@@ -72,6 +78,38 @@ const PortfolioData = {
       titulo: "Gestão de Biblioteca - POO",
       imagem: projetoDeBiblioteca,
       categoria: "java",
+    },
+    {
+      id: 9,
+      url: "https://bernardoheckler.github.io/basics-js.github.io/Projeto%232_ListaDeTarefas/",
+      target: "_blank",
+      titulo: "Lista de Tarefas",
+      imagem: projetoListaDeTarefas,
+      categoria: "web",
+    },
+    {
+      id: 10,
+      url: "https://github.com/bernardoHeckler/aulas-java.git",
+      target: "_blank",
+      titulo: "Zoologico - POO",
+      imagem: projetoZoologico,
+      categoria: "java",
+    },
+    {
+      id: 11,
+      url: "https://www.figma.com/design/pRv0DpZDE7SPC8VMAG7RPf/PROT%C3%93TIPOS-AQUI...?node-id=0-1&t=OYB5kFzEuatR9srs-1",
+      target: "_blank",
+      titulo: "Projeto de Telas",
+      imagem: projetoAcademico,
+      categoria: "design",
+    },
+    {
+      id: 12,
+      url: "https://github.com/bernardoHeckler/e-books-programacao.git",
+      target: "_blank",
+      titulo: "e-Books PDF",
+      imagem: projetoEbooks,
+      categoria: "aplicacao",
     }
   ],
 
