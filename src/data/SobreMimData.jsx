@@ -1,6 +1,6 @@
 import IconeDesign from "../svg/iconeDev.svg";
 import IconeFormacao from "../svg/iconeFormacao.svg";
-import IconeTrabalho from "../svg/iconeTrabalho.svg";
+import IconeTempo from "../svg/IconeTempo.svg";
 import IconeMais from "../svg/iconeMais.svg";
 import IconeHtml from "../svg/iconeHtml.svg";
 import IconeCss from "../svg/iconeCss.svg";
@@ -32,10 +32,10 @@ const SobreMimData = {
     },
     {
       id: 3,
-      titulo: "Estagiário de TI",
-      icone: IconeTrabalho,
+      titulo: "Cursos Onlines",
+      icone: IconeTempo,
       descricao:
-        "Estagiando na empresa de tecnologia, onde estou contribuindo para o desenvolvimento de soluções inovadoras e aprimorando minhas habilidades técnicas.",
+        "Fora do âmbito profissional, dedico tempo a cursos online que alimentam minha curiosidade e contribuem para o meu desenvolvimento como indivíduo.",
     },
   ],
 
