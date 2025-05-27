@@ -41,7 +41,7 @@ const CarreiraData = {
       {
         id: 2,
         posicao: "Estágio de TI",
-        periodo: "08/2024 — 08/2025",
+        periodo: "08/2024 — 05/2025",
         descricao:
           "Manutenção de computadores, configuração de redes, suporte técnico, instalação de softwares e hardware.",
       },
