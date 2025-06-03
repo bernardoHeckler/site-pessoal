@@ -10,8 +10,7 @@ import projetoListaDeTarefas from "../svg/imgprojetosListadeTarefas.svg";
 import projetoZoologico from "../svg/imgprojetosZoologico.svg";
 import projetoAcademico from "../svg/imgprojetosTelasACM.svg";
 import projetoEbooks from "../svg/imgprojetosEbooks.svg";
-
-
+import projetoPedagio from "../svg/imgprojetosPedagio.svg";
 
 const PortfolioData = {
   projetos: [
@@ -110,7 +109,15 @@ const PortfolioData = {
       titulo: "e-Books PDF",
       imagem: projetoEbooks,
       categoria: "aplicacao",
-    }
+    },
+    {
+      id: 13,
+      url: "https://github.com/bernardoHeckler/pedagio-java.git",
+      target: "_blank",
+      titulo: "Pagamento de Pedágios",
+      imagem: projetoPedagio,
+      categoria: "java",
+    },
   ],
 
   categorias: [
