@@ -12,7 +12,7 @@ import iconeLinkedIn from "../svg/iconeLinkedin.svg";
 const CardData = {
   perfil: {
     nome: "Bernardo Heckler",
-    profissao: "FrontEnd Junior",
+    profissao: "Engenheiro de Dados",
     foto: logo,
     desde: "1/11/2022",
     localizacao: "Brazil, Rio Grande do Sul",

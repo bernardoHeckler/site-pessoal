@@ -33,8 +33,15 @@ const CarreiraData = {
     itens: [
       {
         id: 1,
+        posicao: "Engenheiro de Dados - Compass UOL",
+        periodo: "08/2025 — Atualmente",
+        descricao:
+          "Atuando na Compass UOL, onde estou aprendendo e aplicando práticas de ETL, modelagem de dados e otimização de pipelines. Minha experiência inclui o uso de Python e SQL para transformar dados brutos em insights valiosos.",
+      },
+      {
+        id: 1,
         posicao: "Freelancer",
-        periodo: "03/2022 — Atualmente",
+        periodo: "03/2022 — 05/2025",
         descricao:
           "Desenvolvimento de sites, aplicações e landing pages, utilizando HTML, CSS, JavaScript, React, Figma e GitHub.",
       },
@@ -59,19 +66,19 @@ const CarreiraData = {
     itens: [
       {
         id: 1,
-        nome: "Figma",
-        porcentagem: 100,
+        nome: "Python",
+        porcentagem: 50,
         idBarra: "barra1-porcento",
       },
       {
         id: 2,
         nome: "GitHub",
-        porcentagem: 70,
+        porcentagem: 100,
       },
       {
         id: 3,
         nome: "React",
-        porcentagem: 90,
+        porcentagem: 70,
       },
       {
         id: 4,
@@ -80,8 +87,8 @@ const CarreiraData = {
       },
       {
         id: 5,
-        nome: "LeetCode",
-        porcentagem: 10,
+        nome: "SQL",
+        porcentagem: 100,
       },
       {
         id: 5,
@@ -91,7 +98,47 @@ const CarreiraData = {
       {
         id: 6,
         nome: "Java",
-        porcentagem: 45,
+        porcentagem: 60,
+      },
+      {
+        id: 7,
+        nome: "Figma",
+        porcentagem: 99,
+      },
+      {
+        id: 8,
+        nome: "AWS",
+        porcentagem: 30,
+      },
+      {
+        id: 9,
+        nome: "Pandas",
+        porcentagem: 80,
+      },
+      {
+        id: 10,
+        nome: "Numpy",
+        porcentagem: 80,
+      },
+      {
+        id: 11,
+        nome: "Postman",
+        porcentagem: 75,
+      },
+      {
+        id: 12,
+        nome: "Kali Linux",
+        porcentagem: 85,
+      },
+      {
+        id: 13,
+        nome: "HTML",
+        porcentagem: 100,
+      },
+      {
+        id: 14,
+        nome: "CSS",
+        porcentagem: 100,
       },
     ],
   },

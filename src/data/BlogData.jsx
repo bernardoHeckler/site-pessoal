@@ -1,17 +1,16 @@
 import blogSiteImg from "../svg/imgsitenovo.svg";
 import blogReactImg from "../svg/imgblogreactpost.svg";
-import blogDesign from "../svg/imgDesign.svg";
-
+import blogNoticia from "../svg/imgblognoticia.svg";
 const BlogData = {
     titulo: "Blog",
     posts: [
       {
         id: 1,
-        imagem: blogDesign,
-        categoria: "Criando Interfaces",
-        data: "05/05/2025",
-        titulo: "Telas de Baixa Fidelidade",
-        descricao: "Estou criando alguns designs de baixa fidelidade para projetos acadêmicos.",
+        imagem: blogNoticia,
+        categoria: "Minha nova Jornada",
+        data: "04/08/2025",
+        titulo: "Estágio - Compass UOL",
+        descricao: "Estou iniciando uma nova jornada na Compass UOL como Engenheiro de Dados. Estou animado para aprender e crescer nesta nova posição.",
       },
       {
         id: 2,

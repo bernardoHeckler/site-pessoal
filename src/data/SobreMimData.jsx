@@ -1,6 +1,6 @@
 import IconeDesign from "../svg/iconeDev.svg";
 import IconeFormacao from "../svg/iconeFormacao.svg";
-import IconeTempo from "../svg/IconeTempo.svg";
+import IconeTrabalho from "../svg/IconeTrabalho.svg";
 import IconeMais from "../svg/iconeMais.svg";
 import IconeHtml from "../svg/iconeHtml.svg";
 import IconeCss from "../svg/iconeCss.svg";
@@ -10,10 +10,16 @@ import IconeFigmaMaior from "../svg/iconeFigmaMaior.svg";
 import IconeJava from "../svg/iconeJava.svg";
 import IconePython from "../svg/iconePython.svg";
 import IconeGit from "../svg/iconeGit.svg";
+import IconeAWS from "../svg/IconeAWS.svg";
+import IconePandas from "../svg/IconePandas.svg";
+import IconeNumpy from "../svg/IconeNumpy.svg";
+import IconePostman from "../svg/IconePostman.svg";
+import IconeMySQL from "../svg/IconeMySql.svg";
+
 
 const SobreMimData = {
   titulo: "Sobre Mim",
-  descricao: "Sou Bernardo Heckler, acadêmico de Ciências da Computação e Autodidata. Minhas habilidades técnicas abrangem HTML, CSS, JavaScript, TypeScript e React, além de conhecimentos em Node.js, bancos de dados e princípios de UX/UI, utilizando ferramentas como Figma para desenvolvimento de interfaces centradas no usuário. Com inglês em nível B1, busco aprimorar constantemente minhas competências para atuar de forma colaborativa e eficiente em ambientes de tecnologia ágil. Comprometido com a construção de soluções inovadoras que unem tecnologia, usabilidade e impacto real.",
+  descricao: "Sou Bernardo Heckler, um Engenheiro de Dados em construção e um verdadeiro arquiteto do mundo digital. Na Compass UOL, atuo na linha de frente, onde os dados ganham vida. É como se eu fosse um maestro regendo uma orquestra de informações, transformando bytes brutos em notas musicais claras e estratégicas para o negócio. Minha rotina é movida pelo desafio de construir e otimizar pipelines de dados, garantindo que cada informação chegue ao seu destino com perfeição. Utilizo o poder do Python e SQL para moldar, organizar e purificar esses dados, e aprendo diariamente as melhores práticas de ETL e engenharia de dados. No dia a dia, colaboro ativamente em Sprints, acompanhando o fluxo no Kanban e garantindo que cada entrega seja uma vitória meu desenvolvimento profissional e pessoal. Para mim, os dados são a matéria-prima do futuro, e meu objetivo é continuar transformando-os em insights valiosos e soluções que realmente fazem a diferença.",
 
   atividades: [
     {
@@ -32,38 +38,38 @@ const SobreMimData = {
     },
     {
       id: 3,
-      titulo: "Cursos Onlines",
-      icone: IconeTempo,
+      titulo: "Engenharia de Dados",
+      icone: IconeTrabalho,
       descricao:
-        "Fora do âmbito profissional, dedico tempo a cursos online que alimentam minha curiosidade e contribuem para o meu desenvolvimento como indivíduo.",
+        "Estou atuando na Compass UOL, onde estou aprendendo e aplicando práticas de ETL, modelagem de dados e otimização de pipelines. Minha experiência inclui o uso de Python e SQL para transformar dados brutos em insights valiosos.",
     },
   ],
 
   tecnologias: [
     {
       id: 1,
-      nome: "HTML",
-      icone: IconeHtml,
+      nome: "Python",
+      icone: IconePython,
     },
     {
       id: 2,
-      nome: "CSS",
-      icone: IconeCss,
+      nome: "MySQL",
+      icone: IconeMySQL,
     },
     {
       id: 3,
-      nome: "JavaScript",
-      icone: IconeJs,
-    },
-    {
-      id: 4,
       nome: "React",
       icone: IconeReact,
     },
     {
-      id: 5,
+      id: 4,
       nome: "Figma",
       icone: IconeFigmaMaior,
+    },
+    {
+      id: 5,
+      nome: "JavaScript",
+      icone: IconeJs,
     },
     {
       id: 6,
@@ -72,13 +78,38 @@ const SobreMimData = {
     },
     {
       id: 7,
-      nome: "Python",
-      icone: IconePython,
+      nome: "HTML",
+      icone: IconeHtml,
     },
     {
       id: 8,
+      nome: "CSS",
+      icone: IconeCss,
+    },
+    {
+      id: 9,
+      nome: "AWS",
+      icone: IconeAWS,
+    },
+    {
+      id: 10,
       nome: "Git",
       icone: IconeGit,
+    },
+    {
+      id: 11,
+      nome: "Pandas",
+      icone: IconePandas,
+    },
+    {
+      id: 12,
+      nome: "Numpy",
+      icone: IconeNumpy,
+    },
+    {
+      id: 13,
+      nome: "Postman",
+      icone: IconePostman,
     },
   ],
 
