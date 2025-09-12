@@ -1,22 +1,10 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import "./Card.css";
 import CardData from "../data/CardData";
 
 const Card = () => {
   const [mostrar, setMostrar] = useState(window.innerWidth > 768);
   const alterar = () => setMostrar(!mostrar);
-
-  useEffect(() => {
-    const verificarLargura = () => {
-      setMostrar(window.innerWidth > 768);
-    };
-
-    window.addEventListener("resize", verificarLargura);
-
-    return () => {
-      window.removeEventListener("resize", verificarLargura);
-    };
-  }, []);
 
   return (
     <div className="card-container">
