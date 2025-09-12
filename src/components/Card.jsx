@@ -6,26 +6,22 @@ const Card = () => {
   const [mostrar, setMostrar] = useState(window.innerWidth > 768);
   const alterar = () => setMostrar(!mostrar);
 
-  const verificarLargura = () => {
-    setMostrar(window.innerWidth > 768);
-  };
-
   useEffect(() => {
-    const handleResize = () => {
-      verificarLargura();
+    const verificarLargura = () => {
+      setMostrar(window.innerWidth > 768);
     };
 
-    window.addEventListener("resize", handleResize);
+    window.addEventListener("resize", verificarLargura);
 
     return () => {
-      window.removeEventListener("resize", handleResize);
+      window.removeEventListener("resize", verificarLargura);
     };
   }, []);
 
   return (
     <div className="card-container">
       <aside>
-        {!mostrar && (
+        {window.innerWidth <= 768 && !mostrar && (
           <div className="canto">
             <button className="btn-canto" onClick={alterar}>
               <img src={CardData.icones.seta} alt="Mostrar conteúdo" />
@@ -86,7 +82,7 @@ const Card = () => {
                 ))}
               </div>
             </div>
-            {!mostrar && (
+            {window.innerWidth <= 768 && (
               <div className="canto-baixo">
                 <button className="btn-canto-invertido" onClick={alterar}>
                   <img src={CardData.icones.seta} alt="Botão Alterar" />
