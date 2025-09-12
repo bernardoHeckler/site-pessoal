@@ -86,7 +86,7 @@ const Card = () => {
                 ))}
               </div>
             </div>
-            {window.innerWidth <= 768 && (
+            {!mostrar && (
               <div className="canto-baixo">
                 <button className="btn-canto-invertido" onClick={alterar}>
                   <img src={CardData.icones.seta} alt="Botão Alterar" />
