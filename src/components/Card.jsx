@@ -25,7 +25,7 @@ const Card = () => {
   return (
     <div className="card-container">
       <aside>
-        {window.innerWidth <= 768 && !mostrar && (
+        {!mostrar && (
           <div className="canto">
             <button className="btn-canto" onClick={alterar}>
               <img src={CardData.icones.seta} alt="Mostrar conteúdo" />
@@ -51,7 +51,7 @@ const Card = () => {
           </div>
         </div>
 
-        {mostrar || window.innerWidth > 768 ? (
+        {mostrar ? (
           <>
             <div className="content-abaixo">
               <div className="barraLinha"></div>

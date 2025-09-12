@@ -1,4 +1,4 @@
-import IconeDesign from "../svg/iconeDev.svg";
+// import IconeDesign from "../svg/iconeDev.svg";
 import IconeFormacao from "../svg/iconeFormacao.svg";
 import IconeTrabalho from "../svg/IconeTrabalho.svg";
 import IconeMais from "../svg/iconeMais.svg";
@@ -15,6 +15,10 @@ import IconePandas from "../svg/IconePandas.svg";
 import IconeNumpy from "../svg/IconeNumpy.svg";
 import IconePostman from "../svg/IconePostman.svg";
 import IconeMySQL from "../svg/IconeMySql.svg";
+import IconeDocker from "../svg/iconeDocker.svg";
+import IconeAnalise from "../svg/iconeAnalise.svg";
+import IconeJupyter from "../svg/iconeJupyter.svg";
+import IconeAnaconda from "../svg/iconeAnaconda.svg";
 
 
 const SobreMimData = {
@@ -24,10 +28,10 @@ const SobreMimData = {
   atividades: [
     {
       id: 1,
-      titulo: "Design Web",
-      icone: IconeDesign,
+      titulo: "Análise de Dados",
+      icone: IconeAnalise,
       descricao:
-        "Aprimorando minhas habilidades em design, buscando criar interfaces intuitivas e atraentes que proporcionem uma experiência de usuário excepcional.",
+        "Aprimorando minhas habilidades em análise de dados para extrair insights valiosos e apoiar a tomada de decisões informadas. Utilizo Python, e suas Bibliotecas, também Docker para criar ambientes eficientes de análise.",
     },
     {
       id: 2,
@@ -41,7 +45,7 @@ const SobreMimData = {
       titulo: "Engenharia de Dados",
       icone: IconeTrabalho,
       descricao:
-        "Estou atuando na Compass UOL, onde estou aprendendo e aplicando práticas de ETL, modelagem de dados e otimização de pipelines. Minha experiência inclui o uso de Python e SQL para transformar dados brutos em insights valiosos.",
+        "Estou atuando na Compass UOL, onde estou aprendendo e aplicando práticas de ETL, modelagem de dados e otimização de pipelines. Experiência com Python, Jupyter Notebooks e ambientes de nuvem.",
     },
   ],
 
@@ -52,6 +56,11 @@ const SobreMimData = {
       icone: IconePython,
     },
     {
+      id: 14,
+      nome: "Docker",
+      icone: IconeDocker,
+    },
+    {
       id: 2,
       nome: "MySQL",
       icone: IconeMySQL,
@@ -60,6 +69,16 @@ const SobreMimData = {
       id: 3,
       nome: "React",
       icone: IconeReact,
+    },
+    {
+      id: 15,
+      nome: "Jupyter",
+      icone: IconeJupyter,
+    },
+    {
+      id: 16,
+      nome: "Anaconda",
+      icone: IconeAnaconda,
     },
     {
       id: 4,

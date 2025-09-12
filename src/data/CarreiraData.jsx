@@ -36,7 +36,7 @@ const CarreiraData = {
         posicao: "Engenheiro de Dados - Compass UOL",
         periodo: "08/2025 — Atualmente",
         descricao:
-          "Atuando na Compass UOL, onde estou aprendendo e aplicando práticas de ETL, modelagem de dados e otimização de pipelines. Minha experiência inclui o uso de Python e SQL para transformar dados brutos em insights valiosos.",
+          "Atuando na Compass UOL, onde estou aprendendo e aplicando práticas de ETL, modelagem de dados e otimização de pipelines. Experiência com Python, Jupyter Notebooks e Ambientes de nuvem da AWS, também com Docker para criar ambientes eficientes de análise. E SQL para transformar dados brutos em insights valiosos. Busco transformar dados em decisões estratégicas, e fazer a organização e Documentação de processos do projeto.",
       },
       {
         id: 1,
@@ -67,7 +67,7 @@ const CarreiraData = {
       {
         id: 1,
         nome: "Python",
-        porcentagem: 50,
+        porcentagem: 70,
         idBarra: "barra1-porcento",
       },
       {
@@ -78,7 +78,12 @@ const CarreiraData = {
       {
         id: 3,
         nome: "React",
-        porcentagem: 70,
+        porcentagem: 80,
+      },
+      {
+        id: 15,
+        nome: "React-Native",
+        porcentagem: 40,
       },
       {
         id: 4,
@@ -103,17 +108,17 @@ const CarreiraData = {
       {
         id: 7,
         nome: "Figma",
-        porcentagem: 99,
+        porcentagem: 100,
       },
       {
         id: 8,
         nome: "AWS",
-        porcentagem: 30,
+        porcentagem: 35,
       },
       {
         id: 9,
         nome: "Pandas",
-        porcentagem: 80,
+        porcentagem: 90,
       },
       {
         id: 10,
@@ -128,7 +133,7 @@ const CarreiraData = {
       {
         id: 12,
         nome: "Kali Linux",
-        porcentagem: 85,
+        porcentagem: 90,
       },
       {
         id: 13,
@@ -139,6 +144,16 @@ const CarreiraData = {
         id: 14,
         nome: "CSS",
         porcentagem: 100,
+      },
+      {
+        id: 16,
+        nome: "Docker",
+        porcentagem: 50,
+      },
+      {
+        id: 17,
+        nome: "Jupyter",
+        porcentagem: 80,
       },
     ],
   },
