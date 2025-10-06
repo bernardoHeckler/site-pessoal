@@ -18,6 +18,7 @@ const Portfolio = () => {
   return (
     // 3. layout visual
     <>
+      <div id="animated-background"></div>
       <Card />
       <main className="portfolio-container">
         <section className="portfolio-section">

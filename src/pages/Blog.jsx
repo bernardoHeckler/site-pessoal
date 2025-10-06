@@ -5,6 +5,7 @@ import "./Blog.css";
 const Blog = () => {
   return (
     <>
+      <div id="animated-background"></div>
       <Card />
       <main className="blog-container">
         <section className="blog-section">
@@ -15,16 +16,13 @@ const Blog = () => {
           <div className="linha-posts">
             {BlogData.posts.map((post) => (
               <section key={post.id} className="blog-informacao">
-                <img
-                  src={post.imagem}
-                  alt={`Imagem do post: ${post.titulo}`}
-                />
+                <img src={post.imagem} alt={`Imagem do post: ${post.titulo}`} />
                 <div className="text">
-                  <p className="infoData">{post.categoria} - {post.data}</p>
-                  <h4 className="tituloData">{post.titulo}</h4>
-                  <p className="descricao">
-                    {post.descricao}
+                  <p className="infoData">
+                    {post.categoria} - {post.data}
                   </p>
+                  <h4 className="tituloData">{post.titulo}</h4>
+                  <p className="descricao">{post.descricao}</p>
                 </div>
               </section>
             ))}

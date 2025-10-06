@@ -27,6 +27,7 @@ const SobreMim = () => {
 
   return (
     <>
+      <div id="animated-background"></div>
       <Card />
       <main className="sobreMim-container">
         <section className="sobreMim-section">

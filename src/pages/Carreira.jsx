@@ -6,6 +6,7 @@ import IconeImg from "../svg/iconeImg.svg";
 const Carreira = () => {
   return (
     <>
+      <div id="animated-background"></div>
       <Card />
       <main className="career-container">
         <section className="career-section">

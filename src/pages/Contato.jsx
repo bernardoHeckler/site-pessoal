@@ -19,6 +19,7 @@ const Contato = () => {
 
   return (
     <>
+      <div id="animated-background"></div>
       <Card />
       <main className="contato-container">
         <section className="contato-section">
