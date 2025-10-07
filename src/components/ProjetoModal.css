@@ -1,0 +1,246 @@
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  backdrop-filter: blur(2px);
+  height: 100%;
+  z-index: 1000;
+  padding: 60px;
+}
+.modal-content {
+  background: var(--section);
+  border: 1px solid var(--borders);
+  border-radius: 20px;
+  width: 90%;
+  max-width: 500px;
+  margin: auto;
+  position: relative;
+  animation: slideUp 0.3s ease-out;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(3px); /* Mantendo este do seu código anterior */
+  overflow-y: auto;
+  max-height: 76vh; /* Limita a altura máxima para ativar a rolagem */
+}
+.modal-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  border-bottom: 1px solid var(--borders);
+}
+
+.modal-header img {
+  object-fit: cover;
+  border-radius: 12px;
+  border: 2px solid var(--borders);
+}
+
+.modal-header img:hover {
+  transform: scale(1.02);
+}
+
+.modal-header h2 {
+  font-size: 28px;
+  color: var(--white);
+  margin: 16px 0;
+}
+
+.modal-body {
+  padding: 24px;
+  height: auto;
+}
+
+.projeto-descricao {
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--white);
+  margin-bottom: 24px;
+}
+
+.projeto-tecnologias {
+  margin: 24px 0;
+}
+
+.projeto-tecnologias h3 {
+  color: var(--highlight);
+  font-size: 20px;
+  margin-bottom: 16px;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.tag {
+  background: var(--borders);
+  color: var(--white);
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 14px;
+  transition: all 0.3s ease;
+}
+
+.tag:hover {
+  background: var(--highlight);
+  transform: translateY(-2px);
+}
+
+.projeto-links {
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  gap: 32px;
+  margin-top: 32px;
+  justify-content: center; /* Centraliza os botões */
+}
+
+.btn-link {
+  background: var(--highlight);
+  color: var(--black1d);
+  padding: 16px;
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: 0px 0px 8px 0px var(--highlight);
+  text-decoration: none;
+  text-align: center;
+  transition: all 0.3s ease;
+  font-weight: 600;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  letter-spacing: 0.5px;
+  border: 2px solid transparent;
+}
+
+.btn-link:hover {
+  transform: translateY(-2px);
+  border: 2px solid var(--white);
+}
+
+.modal-close {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  background: var(--borders);
+  border: none;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  color: var(--white);
+  font-size: 20px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-close:hover {
+  background: var(--highlight);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .modal-content {
+    width: 95%; /* Aumenta um pouco para telas menores */
+    margin: 0;
+    min-width: 250px;
+  }
+
+  .modal-header img {
+    height: auto;
+    max-height: 200px;
+  }
+
+  .modal-body {
+    padding: 16px;
+  }
+
+  .btn-link {
+    width: 100%;
+    min-width: unset;
+  }
+
+  .projeto-links {
+    flex-direction: column;
+    gap: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .modal-content {
+    width: 100%;
+    min-width: 200px;
+    margin: 0;
+    border-radius: 12px;
+    max-height: 85vh; /* Limita a altura máxima para evitar overflow */
+  }
+
+  .modal-header h2 {
+    font-size: 24px;
+  }
+
+  .modal-overlay {
+    padding: 8px;
+  }
+  .modal-close {
+    position: fixed;
+    top: 14px;
+    right: 14px;
+  }
+}
+
+/* Para telas muito grandes */
+@media (min-width: 1200px) {
+  .modal-content {
+    min-width: 400px;
+    height: auto;
+  }
+}
+
+/* Define a largura da barra de rolagem */
+.modal-content::-webkit-scrollbar {
+  width: 6px;
+}
+
+/* Define a cor de fundo da pista/trilha da barra de rolagem */
+.modal-content::-webkit-scrollbar-track {
+  background-color: var(--borders); /* Cor de fundo da trilha */
+  border-radius: 6px;
+  border: 2px solid var(--section);
+}
+
+/* Define o estilo e a cor do "polegar" (a parte que você move) */
+.modal-content::-webkit-scrollbar-thumb {
+  background-color: var(--textfade); /* Cor mais neutra para o polegar */
+  border-radius: 6px; /* Bordas arredondadas */
+}
+
+/* Efeito ao passar o mouse sobre o "polegar" */
+.modal-content::-webkit-scrollbar-thumb:hover {
+  background-color: var(--d1d1d1); /* Cor ao passar o mouse */
+}

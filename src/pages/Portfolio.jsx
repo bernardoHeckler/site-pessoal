@@ -1,22 +1,34 @@
 import { useState } from "react";
 import "./Portfolio.css";
 import Card from "../components/Card";
+import ProjetoCard from "../components/ProjetoCard";
 import PortfolioData from "../data/PortfolioData";
+// 1. Importe o componente ProjetoModal
+import ProjetoModal from "../components/ProjetoModal"; 
 
 const Portfolio = () => {
-  // 1. Controlar o filtro atual com useState
   const [filtroAtual, setFiltroAtual] = useState("todos");
+  // 2. Novo estado para controlar o projeto selecionado (abre/fecha o modal)
+  const [projetoSelecionado, setProjetoSelecionado] = useState(null); 
 
-  // 2. Lógica de filtro
   const projetosFiltrados =
     filtroAtual === "todos"
       ? PortfolioData.projetos
       : PortfolioData.projetos.filter(
           (projeto) => projeto.categoria === filtroAtual
         );
+        
+  // 3. Função para abrir o modal (recebe o objeto projeto)
+  const handleOpenModal = (projeto) => {
+    setProjetoSelecionado(projeto);
+  };
+  
+  // 4. Função para fechar o modal
+  const handleCloseModal = () => {
+    setProjetoSelecionado(null);
+  };
 
   return (
-    // 3. layout visual
     <>
       <div id="animated-background"></div>
       <Card />
@@ -28,7 +40,6 @@ const Portfolio = () => {
           </div>
 
           <div className="linha">
-            {/* 4. Botões de filtro */}
             <nav className="portfolio-nav">
               {PortfolioData.categorias.map((categoria) => (
                 <button
@@ -43,35 +54,25 @@ const Portfolio = () => {
           </div>
 
           <div className="lista-projetos">
-            {/* 5. Renderizar os projetos filtrados */}
             {projetosFiltrados.map((projeto) => (
-              <figure key={projeto.id} className="card-projeto">
-                <a
-                  href={projeto.url}
-                  target={projeto.target}
-                  rel="noopener noreferrer"
-                  className="link-projeto"
-                >
-                  <img src={projeto.imagem} alt={projeto.titulo} />
-                  <div className="text">
-                    <h3 className="nome-projeto">{projeto.titulo}</h3>
-                    <p className="tipo-projeto">
-                      {/* 6. Renderizar o tipo de projeto */}
-                      {projeto.categoria === "aplicacao"
-                        ? "Aplicação"
-                        : projeto.categoria === "design"
-                        ? "Design Web"
-                        : projeto.categoria === "java"
-                        ? "Desenvolvimento Java"
-                        : "Desenvolvimento Web"}
-                    </p>
-                  </div>
-                </a>
-              </figure>
+              // 5. Passa a nova função de abertura (handleOpenModal) para o ProjetoCard
+              <ProjetoCard 
+                key={projeto.id} 
+                projeto={projeto} 
+                onCardClick={handleOpenModal} // <--- Nova prop de clique
+              />
             ))}
           </div>
         </section>
       </main>
+      
+      {/* 6. Renderização Condicional do Modal na raiz do componente */}
+      {projetoSelecionado && (
+        <ProjetoModal 
+          projeto={projetoSelecionado} 
+          onClose={handleCloseModal} 
+        />
+      )}
     </>
   );
 };
