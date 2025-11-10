@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build && cp sitemap.xml dist/ && cp robots.txt dist/",
+    "build": "vite build && copy sitemap.xml dist\\ && copy robots.txt dist\\",
     "preview": "vite preview",
     "deploy": "npm run build && gh-pages -d dist",
     "analyze": "npx vite-bundle-analyzer"
