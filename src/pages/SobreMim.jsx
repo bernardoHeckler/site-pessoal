@@ -90,7 +90,7 @@ const SobreMim = () => {
 
           <div className="linha">
             <h2>Tecnologias</h2>
-            <div className="coluna">
+            <div className="coluna-sobremim-tecnologias">
               {SobreMimData.tecnologias.map((tech) => (
                 <img
                   key={tech.id}

@@ -75,6 +75,11 @@ aside {
   justify-content: center;
   text-align: center;
 }
+.texto > h1{
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--white);
+}
 
 .textoLinks {
   text-align: start;

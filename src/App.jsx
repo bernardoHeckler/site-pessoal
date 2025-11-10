@@ -1,21 +1,58 @@
 // App.jsx
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, Suspense } from "react";
 import "./App.css";
 
 import Card from "./components/Card";
 import NavBar from "./components/NavBar";
+import useMetaTags from "./hooks/useMetaTags";
 
-import SobreMim from "./pages/SobreMim";
-import Carreira from "./pages/Carreira";
-import Portfolio from "./pages/Portfolio";
-import Blog from "./pages/Blog";
-import Contato from "./pages/Contato";
+// Code splitting com React.lazy
+const SobreMim = React.lazy(() => import("./pages/SobreMim"));
+const Carreira = React.lazy(() => import("./pages/Carreira"));
+const Portfolio = React.lazy(() => import("./pages/Portfolio"));
+const Blog = React.lazy(() => import("./pages/Blog"));
+const Contato = React.lazy(() => import("./pages/Contato"));
+
+const LoadingSpinner = () => (
+  <div className="loading-container">
+    <div className="loading-spinner"></div>
+  </div>
+);
 
 export default function App() {
   const [sessaoAtiva, setSessaoAtiva] = useState(() => {
     const sessaoSalvada = localStorage.getItem("sessaoDoSiteAtiva");
     return sessaoSalvada ? sessaoSalvada : "card";
   });
+
+  // Meta tags dinâmicas baseadas na seção ativa
+  const getMetaData = () => {
+    const metaMap = {
+      sobreMim: {
+        title: 'Sobre Mim - Bernardo Heckler',
+        description: 'Conheça Bernardo Heckler, Engenheiro de Dados especializado em Python, AWS e análise de dados. Atualmente na Compass UOL.'
+      },
+      carreira: {
+        title: 'Carreira - Bernardo Heckler',
+        description: 'Experiência profissional e formação acadêmica de Bernardo Heckler. Engenheiro de Dados com expertise em Python, React e AWS.'
+      },
+      portfolio: {
+        title: 'Portfólio - Bernardo Heckler',
+        description: 'Projetos e trabalhos desenvolvidos por Bernardo Heckler. APIs, aplicações web, mobile e designs em Figma.'
+      },
+      blog: {
+        title: 'Blog - Bernardo Heckler',
+        description: 'Artigos e posts sobre desenvolvimento, engenharia de dados e tecnologia por Bernardo Heckler.'
+      },
+      contato: {
+        title: 'Contato - Bernardo Heckler',
+        description: 'Entre em contato com Bernardo Heckler. Engenheiro de Dados disponível para oportunidades e projetos.'
+      }
+    };
+    return metaMap[sessaoAtiva] || {};
+  };
+
+  useMetaTags(getMetaData());
 
   useEffect(() => {
     localStorage.setItem("sessaoDoSiteAtiva", sessaoAtiva);
@@ -24,15 +61,35 @@ export default function App() {
   const sessaoRenderizada = () => {
     switch (sessaoAtiva) {
       case "sobreMim":
-        return <SobreMim />;
+        return (
+          <Suspense fallback={<LoadingSpinner />}>
+            <SobreMim />
+          </Suspense>
+        );
       case "carreira":
-        return <Carreira />;
+        return (
+          <Suspense fallback={<LoadingSpinner />}>
+            <Carreira />
+          </Suspense>
+        );
       case "portfolio":
-        return <Portfolio />;
+        return (
+          <Suspense fallback={<LoadingSpinner />}>
+            <Portfolio />
+          </Suspense>
+        );
       case "blog":
-        return <Blog />;
+        return (
+          <Suspense fallback={<LoadingSpinner />}>
+            <Blog />
+          </Suspense>
+        );
       case "contato":
-        return <Contato />;
+        return (
+          <Suspense fallback={<LoadingSpinner />}>
+            <Contato />
+          </Suspense>
+        );
       case "card":
       default:
         return <Card />;

@@ -1,6 +1,7 @@
 import { useState } from "react";
 import "./Card.css";
 import CardData from "../data/CardData";
+import LazyImage from "./LazyImage";
 
 const Card = () => {
   const [mostrar, setMostrar] = useState(window.innerWidth > 768);
@@ -23,7 +24,7 @@ const Card = () => {
           }`}
         >
           <div className={`caixaPerfil ${mostrar ? "expandido" : ""}`}>
-            <img
+            <LazyImage
               className={`tamanhoFoto ${mostrar ? "expandido" : ""}`}
               src={CardData.perfil.foto}
               alt="Foto perfil"
@@ -43,7 +44,7 @@ const Card = () => {
                 {CardData.contatos.map((contato) => (
                   <div key={contato.id} className="informacoes">
                     <div className="caixaImg">
-                      <img src={contato.icone} alt={`Ícone ${contato.tipo}`} />
+                      <LazyImage src={contato.icone} alt={`Ícone ${contato.tipo}`} />
                     </div>
                     <div className="textoLinks">
                       <p className="subText">{contato.tipo}</p>
@@ -65,7 +66,7 @@ const Card = () => {
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    <img src={rede.icone} alt={`Meu ${rede.nome}`} />
+                    <LazyImage src={rede.icone} alt={`Meu ${rede.nome}`} />
                   </a>
                 ))}
               </div>

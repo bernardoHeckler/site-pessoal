@@ -1,5 +1,6 @@
 import ProjetoModal from "./ProjetoModal";
 import { useRef } from "react";
+import LazyImage from "./LazyImage";
 
 const ProjetoCard = ({ projeto, onCardClick }) => {
   const getTipoProjeto = (categoria) => {
@@ -37,7 +38,7 @@ const ProjetoCard = ({ projeto, onCardClick }) => {
     <>
       <figure className="card-projeto" onClick={handleClick} ref={cardRef}>
         <div className="link-projeto">
-          <img src={projeto.imagem} alt={projeto.titulo} />
+          <LazyImage src={projeto.imagem} alt={projeto.titulo} />
           <div className="text">
             <h3 className="nome-projeto">{projeto.titulo}</h3>
             <p className="tipo-projeto">{getTipoProjeto(projeto.categoria)}</p>
