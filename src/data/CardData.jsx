@@ -1,5 +1,5 @@
 import setinha from "../svg/setinha.svg";
-import logo from "../svg/fotoperfil.svg";
+import { getSeasonalProfile } from "../utils/seasonalProfile";
 import iconeEmail from "../svg/iconeEmail.svg";
 import iconeTelefone from "../svg/iconeTelefone.svg";
 import iconeAgenda from "../svg/iconeAgenda.svg";
@@ -13,7 +13,7 @@ const CardData = {
   perfil: {
     nome: "Bernardo Heckler",
     profissao: "Engenheiro de Dados",
-    foto: logo,
+    foto: getSeasonalProfile(),
     desde: "1/11/2022",
     localizacao: "Brazil, Rio Grande do Sul",
   },
