@@ -18,7 +18,7 @@ const useMetaTags = ({
     updateMetaProperty('og:image', image);
     updateMetaProperty('og:url', url);
     updateMetaProperty('og:type', 'website');
-    updateMetaProperty('og:site_name', 'Bernardo Heckler Portfolio');
+    updateMetaProperty('og:site_name', 'Bernardo Heckler Projetos');
     
     updateMetaName('twitter:card', 'summary_large_image');
     updateMetaName('twitter:title', title);

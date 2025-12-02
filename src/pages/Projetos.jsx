@@ -1,20 +1,20 @@
 import { useState } from "react";
-import "./Portfolio.css";
+import "./Projetos.css";
 import Card from "../components/Card";
 import ProjetoCard from "../components/ProjetoCard";
-import PortfolioData from "../data/PortfolioData";
+import ProjetosData from "../data/ProjetosData";
 // 1. Importe o componente ProjetoModal
 import ProjetoModal from "../components/ProjetoModal"; 
 
-const Portfolio = () => {
+const Projetos = () => {
   const [filtroAtual, setFiltroAtual] = useState("todos");
   // 2. Novo estado para controlar o projeto selecionado (abre/fecha o modal)
   const [projetoSelecionado, setProjetoSelecionado] = useState(null); 
 
   const projetosFiltrados =
     filtroAtual === "todos"
-      ? PortfolioData.projetos
-      : PortfolioData.projetos.filter(
+      ? ProjetosData.projetos
+      : ProjetosData.projetos.filter(
           (projeto) => projeto.categoria === filtroAtual
         );
         
@@ -32,16 +32,16 @@ const Portfolio = () => {
     <>
       <div id="animated-background"></div>
       <Card />
-      <main className="portfolio-container">
-        <section className="portfolio-section">
+      <main className="projetos-container">
+        <section className="projetos-section">
           <div className="linha">
-            <h2>Portfólio</h2>
+            <h2>Projetos</h2>
             <div className="barra"></div>
           </div>
 
           <div className="linha">
-            <nav className="portfolio-nav">
-              {PortfolioData.categorias.map((categoria) => (
+            <nav className="projetos-nav">
+              {ProjetosData.categorias.map((categoria) => (
                 <button
                   key={categoria.id}
                   onClick={() => setFiltroAtual(categoria.id)}
@@ -77,4 +77,4 @@ const Portfolio = () => {
   );
 };
 
-export default Portfolio;
+export default Projetos;

@@ -14,7 +14,7 @@ const NavBar = ({ setSessaoAtiva }) => {
           onClick={() => setSessaoAtiva("portfolio")}
           className="nav-link"
         >
-          <p className="textoNav">Portfólio</p>
+          <p className="textoNav">Projetos</p>
         </button>
         <button onClick={() => setSessaoAtiva("blog")} className="nav-link">
           <p className="textoNav">Blog</p>

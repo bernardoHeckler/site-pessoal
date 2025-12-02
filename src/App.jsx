@@ -9,7 +9,7 @@ import useMetaTags from "./hooks/useMetaTags";
 // Code splitting com React.lazy
 const SobreMim = React.lazy(() => import("./pages/SobreMim"));
 const Carreira = React.lazy(() => import("./pages/Carreira"));
-const Portfolio = React.lazy(() => import("./pages/Portfolio"));
+const Projetos = React.lazy(() => import("./pages/Projetos"));
 const Blog = React.lazy(() => import("./pages/Blog"));
 const Contato = React.lazy(() => import("./pages/Contato"));
 
@@ -37,7 +37,7 @@ export default function App() {
         description: 'Experiência profissional e formação acadêmica de Bernardo Heckler. Engenheiro de Dados com expertise em Python, React e AWS.'
       },
       portfolio: {
-        title: 'Portfólio - Bernardo Heckler',
+        title: 'Projetos - Bernardo Heckler',
         description: 'Projetos e trabalhos desenvolvidos por Bernardo Heckler. APIs, aplicações web, mobile e designs em Figma.'
       },
       blog: {
@@ -75,7 +75,7 @@ export default function App() {
       case "portfolio":
         return (
           <Suspense fallback={<LoadingSpinner />}>
-            <Portfolio />
+            <Projetos />
           </Suspense>
         );
       case "blog":

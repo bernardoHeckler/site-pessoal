@@ -24,8 +24,8 @@ export default defineConfig({
         ]
       },
       manifest: {
-        name: 'Bernardo Heckler - Portfolio',
-        short_name: 'BH Portfolio',
+        name: 'Bernardo Heckler - Projetos',
+        short_name: 'BH Projetos',
         description: 'Portfólio de Bernardo Heckler, Engenheiro de Dados',
         theme_color: '#fcce68',
         background_color: '#111',

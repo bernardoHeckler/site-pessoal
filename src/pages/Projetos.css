@@ -1,5 +1,5 @@
 @import "../Cores.css";
-.portfolio-container {
+.projetos-container {
   width: 100%;
   max-width: 848px;
   height: auto;
@@ -8,7 +8,7 @@
   margin-bottom: 81px;
 }
 
-.portfolio-section {
+.projetos-section {
   border: 1px solid var(--borders);
   border-radius: 20px;
   width: 358px;
@@ -22,10 +22,10 @@
   justify-content: center;
   padding: 32px;
   gap: 16px;
-  animation: fadeInPortfolio 0.5s ease-out forwards;
+  animation: fadeInProjetos 0.5s ease-out forwards;
 }
 
-.portfolio-nav {
+.projetos-nav {
   width: 100%;
   height: auto;
   display: flex;
@@ -37,14 +37,14 @@
   align-items: center;
 }
 
-.portfolio-nav > button {
+.projetos-nav > button {
   background-color: transparent;
   color: var(--white);
   font-size: 16px;
   transition: all 0.3s ease;
 }
 
-.portfolio-nav > button:hover {
+.projetos-nav > button:hover {
   color: var(--highlight);
 }
 
@@ -94,12 +94,12 @@
   font-weight: 100;
 }
 
-.portfolio-nav > button.ativo {
+.projetos-nav > button.ativo {
   color: var(--highlight);
   position: relative;
 }
 
-.portfolio-nav > button.ativo::after {
+.projetos-nav > button.ativo::after {
   content: "";
   position: absolute;
   bottom: -5px;
@@ -109,7 +109,7 @@
   background-color: var(--highlight);
 }
 
-@keyframes fadeInPortfolio {
+@keyframes fadeInProjetos {
   from {
     opacity: 0;
     transform: translateY(20px);
@@ -128,11 +128,11 @@
   transform: scale(1.01);
 }
 @media (min-width: 768px) {
-  .portfolio-container {
+  .projetos-container {
     min-height: 674px;
     height: auto;
   }
-  .portfolio-section {
+  .projetos-section {
     display: flex;
     width: 100%;
     justify-content: flex-start;
@@ -156,7 +156,7 @@
   }
 }
 @media (min-width: 1006px) {
-  .portfolio-container{
+  .projetos-container{
     width: 100%;
   }
 }

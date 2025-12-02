@@ -14,7 +14,7 @@ import apitrabalho from "../svg/apitrabalho.svg";
 import apimicroservices from "../svg/apimicroservice.svg";
 import briqueshop from "../svg/briqueshop.svg";
 
-const PortfolioData = {
+const ProjetosData = {
   projetos: [
     {
       id: 1,
@@ -55,11 +55,11 @@ const PortfolioData = {
     {
       id: 15,
       target: "_blank",
-      titulo: "Portfólio Pessoal 2024",
+      titulo: "Projetos Pessoal 2024",
       imagem: projetoPortfolioImg,
       categoria: "design",
       descricao:
-        "Design completo do meu portfólio pessoal, desenvolvido com Figma utilizando conceitos modernos de UI/UX.",
+        "Design completo dos meus projetos pessoais, desenvolvido com Figma utilizando conceitos modernos de UI/UX.",
       tecnologias: ["Figma", "UI/UX Design", "Prototipagem"],
       repositorio: null,
       demo: "https://www.figma.com/design/koC9cc5OO6by74aIBBJJzv/meu-portf%C3%B3lio-e-telas-din%C3%A2micas?node-id=0-1&t=xZ7DlWkNGYFROLOW-1",
@@ -211,4 +211,4 @@ const PortfolioData = {
   ],
 };
 
-export default PortfolioData;
+export default ProjetosData;
