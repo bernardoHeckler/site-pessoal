@@ -1,0 +1,14 @@
+.footer {
+  text-align: center;
+  padding: 1rem;
+  width: 100%;
+  z-index: 10;
+  position: relative;
+}
+
+.footer p {
+  margin: 0;
+  font-size: 0.875rem;
+  color: var(--cor-texto-secundario, #666);
+  opacity: 0.8;
+}

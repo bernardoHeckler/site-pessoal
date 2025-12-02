@@ -1,6 +1,7 @@
 import Card from "../components/Card";
 import BlogData from "../data/BlogData";
 import "./Blog.css";
+import Footer from "../components/Footer";
 
 const Blog = () => {
   return (
@@ -27,6 +28,7 @@ const Blog = () => {
               </section>
             ))}
           </div>
+          <Footer />
         </section>
       </main>
     </>

@@ -4,6 +4,7 @@ import "./App.css";
 
 import Card from "./components/Card";
 import NavBar from "./components/NavBar";
+import Footer from "./components/Footer";
 import useMetaTags from "./hooks/useMetaTags";
 
 // Code splitting com React.lazy
@@ -101,5 +102,6 @@ export default function App() {
       {sessaoRenderizada()}
       <NavBar setSessaoAtiva={setSessaoAtiva} />
     </div>
+    
   );
 }

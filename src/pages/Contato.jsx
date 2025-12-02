@@ -4,6 +4,7 @@ import "./Contato.css";
 import Form from "../components/Form";
 import iconeCopiar from "../svg/iconeCopiar.svg";
 import iconeCopiado from "../svg/iconeOK.svg";
+import Footer from "../components/Footer";
 
 const Contato = () => {
   const [copiarEmail, setCopiarEmail] = useState(false);
@@ -38,6 +39,7 @@ const Contato = () => {
             </div>
           </div>
           <Form />
+          <Footer />
         </section>
       </main>
     </>

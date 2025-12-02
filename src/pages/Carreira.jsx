@@ -2,6 +2,7 @@ import Card from "../components/Card";
 import CarreiraData from "../data/CarreiraData";
 import "./Carreira.css";
 import IconeImg from "../svg/iconeImg.svg";
+import Footer from "../components/Footer";
 
 const Carreira = () => {
   return (
@@ -69,6 +70,7 @@ const Carreira = () => {
               ))}
             </section>
           </div>
+          <Footer />
         </section>
       </main>
     </>

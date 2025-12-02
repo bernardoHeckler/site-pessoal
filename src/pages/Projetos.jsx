@@ -4,7 +4,8 @@ import Card from "../components/Card";
 import ProjetoCard from "../components/ProjetoCard";
 import ProjetosData from "../data/ProjetosData";
 // 1. Importe o componente ProjetoModal
-import ProjetoModal from "../components/ProjetoModal"; 
+import ProjetoModal from "../components/ProjetoModal";
+import Footer from "../components/Footer";
 
 const Projetos = () => {
   const [filtroAtual, setFiltroAtual] = useState("todos");
@@ -63,6 +64,7 @@ const Projetos = () => {
               />
             ))}
           </div>
+          <Footer />
         </section>
       </main>
       

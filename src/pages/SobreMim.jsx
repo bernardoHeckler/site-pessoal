@@ -5,6 +5,7 @@ import iconeBaixar from "../svg/iconeBaixar.svg";
 import iconeOk from "../svg/iconeOK.svg";
 import { useState } from "react";
 import curriculoPDF from "../curriculo2025.pdf";
+import Footer from "../components/Footer";
 
 const SobreMim = () => {
   const [baixarCurriculo, setBaixarCurriculo] = useState(false);
@@ -101,6 +102,7 @@ const SobreMim = () => {
               ))}
             </div>
           </div>
+          <Footer />
         </section>
       </main>
     </>
