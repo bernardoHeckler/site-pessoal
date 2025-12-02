@@ -111,7 +111,8 @@ aside {
 }
 
 .caixaDev {
-  background-color: #3c3c3d;
+  background-color: #00b33c;
+  /* background-color: #3c3c3d; */
   border-radius: 8px;
   padding: 8px;
 
@@ -131,8 +132,8 @@ aside {
   background: linear-gradient(
     -60deg,
     transparent,
-    rgba(210, 197, 197, 0),
-    rgba(255, 255, 255, 0.268),
+    rgba(229, 0, 0, 0),
+    rgba(255, 255, 255, 0.581),
     rgba(255, 255, 255, 0),
     transparent
   );
