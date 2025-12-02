@@ -25,7 +25,7 @@ body {
   z-index: -1;
 
   background-color: var(--bcsite);
-  background-image: url("png/blueprint-pattern.jpeg");
+  background-image: url("png/blueprint-pattern.png");
   background-repeat: repeat-x;
   background-size: auto 100%;
 

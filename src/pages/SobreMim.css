@@ -36,7 +36,7 @@ section.sobreMim-section {
 }
 
 .barra {
-  width: 40px;
+  width: 55px;
   height: 5px;
   background-color: var(--highlight);
 }
@@ -99,17 +99,29 @@ section.informacao:hover {
   transition: transform 0.3s ease;
 }
 
+.conteudo > svg {
+  color: var(--icon-primary);
+  transition: all 0.3s ease;
+}
+
 section.informacao:hover .conteudo > img {
   transform: scale(1.1);
 }
 
+section.informacao:hover .conteudo > svg {
+  transform: scale(1.1);
+  color: var(--icon-hover);
+}
+
 .tecnologiasImg {
   width: 80px;
-  transition: transform 0.3s ease;
+  color: var(--icon-primary);
+  transition: all 0.3s ease;
 }
 
 .tecnologiasImg:hover {
   transform: scale(1.1);
+  color: var(--icon-hover);
 }
 
 .text {
@@ -150,20 +162,27 @@ section.informacao:hover .conteudo > img {
 .blocoMaior {
   padding: 16px;
   border-radius: 10px;
-  background: var(--bcblackradial);
+  background: var(--color-white);
   animation: animacaoConteudoSobre 0.5s ease-out;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.blocoMaior svg {
+  color: var(--color-highlight);
 }
 
 .forma1 {
   width: 30%;
   height: 16px;
-  background: var(--bcblackradial);
+  background: var(--color-highlight);
 }
 
 .forma2 {
   width: 90%;
   height: 16px;
-  background: var(--bcblackradial);
+  background: var(--color-gray-lighter);
 }
 
 h2 {
@@ -201,11 +220,20 @@ h2 {
     forwards;
   transform: scale(1);
 }
+
+.btn-baixar svg {
+  color: var(--black1d);
+  transition: all 0.3s ease;
+}
 .btn-baixado {
   background-color: var(--black12);
   color: var(--highlight);
   box-shadow: 0px 0px 2px 0px var(--highlight);
   transition: all 0.3s ease;
+}
+
+.btn-baixado svg {
+  color: var(--icon-active);
 }
 .coluna-sobremim-tecnologias{
   display: flex;

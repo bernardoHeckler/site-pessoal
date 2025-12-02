@@ -2,8 +2,7 @@ import { useState } from "react";
 import Card from "../components/Card";
 import "./Contato.css";
 import Form from "../components/Form";
-import iconeCopiar from "../svg/iconeCopiar.svg";
-import iconeCopiado from "../svg/iconeOK.svg";
+import { MdContentCopy, MdCheckCircle } from "react-icons/md";
 import Footer from "../components/Footer";
 
 const Contato = () => {
@@ -34,7 +33,7 @@ const Contato = () => {
                 className={`btn-copiar ${copiarEmail ? "btn-copiado" : ""}`}
               >
                 {copiarEmail ? "Email Copiado" : "Copiar Email"}
-                <img src={copiarEmail ? iconeCopiado : iconeCopiar} alt="Copiar" />
+                {copiarEmail ? <MdCheckCircle size={24} /> : <MdContentCopy size={24} />}
               </button>
             </div>
           </div>

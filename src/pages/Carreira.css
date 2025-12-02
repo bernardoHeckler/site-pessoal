@@ -41,6 +41,7 @@
   width: 48px;
   height: 48px;
   display: flex;
+  padding: 8px;
   align-items: center;
   justify-content: center;
   background: var(--bcicon);
@@ -52,6 +53,11 @@
 .icon-wrapper > img {
   width: 24px;
   height: 24px;
+  transition: transform 0.3s ease;
+}
+
+.icon-wrapper > svg {
+  color: var(--icon-primary);
   transition: transform 0.3s ease;
 }
 
@@ -157,6 +163,11 @@
 
 .icon-wrapper:hover img {
   transform: scale(1.1);
+}
+
+.icon-wrapper:hover svg {
+  transform: scale(1.1);
+  color: var(--icon-hover);
 }
 .informacao-skills {
   display: flex;

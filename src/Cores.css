@@ -1,34 +1,70 @@
 :root {
-  --bcsite: #111;
-  --highlight: #fcce68;
-  --highlightopacity: #fccd6833;
-  --borders: #383838;
-  --bordersopacity: #38383835;
-  --white: #fff;
-  --black: rgb(0, 0, 0);
-  --black12: #121212;
-  --black1d: #1d1d1e;
-  --gray1e: #1e1e1f;
-  --gray3c: #3c3c3d;
-  --textfade: #9f9f9f;
-  --d1d1d1: #d1d1d1;
-  --blackopacity: rgba(0, 0, 0, 0.1);
-  --focus: #28282a;
-
-  --section: linear-gradient(135deg, var(--black1d) 0%, var(--gray1e) 100%);
-  --bcplusradial: linear-gradient(
-    135deg,
-    var(--borders) 0%,
-    var(--black12) 100%
-  );
-
-  --bcradial: radial-gradient(circle at center, #232324 0%, #202022 100%);
-  --bcradialhover: radial-gradient(circle at 0% 100%, var(--borders), #202022);
-  --bcblackradial: radial-gradient(
-    circle at center,
-    var(--borders) 0%,
-    var(--black12) 100%
-  );
-  --bcicon: radial-gradient(circle at 0% 100%, var(--borders), #202022);
-  --bcbtn: radial-gradient(circle at 5% 57%, #3a3020, #121212);
+  /* ===== CORES BASE ===== */
+  --color-white: #ffffff;
+  --color-black: #000000;
+  --color-highlight: #1599E4;
+  --color-accent: #1599E4;
+  
+  /* ===== TONS DE CINZA/AZUL ===== */
+  --color-bg-site: #313131;
+  --color-bg-dark: #2a2a2a;
+  --color-bg-darker: #313131;
+  --color-bg-section: #122e3f;
+  --color-gray-medium: #666666;
+  --color-gray-light: #999999;
+  --color-gray-lighter: #cccccc;
+  --color-focus: #1a3a4f;
+  
+  /* ===== BORDAS ===== */
+  --color-border: #444444;
+  --color-border-light: #44444433;
+  
+  /* ===== OPACIDADES ===== */
+  --color-highlight-opacity: #1599E433;
+  --color-black-opacity: rgba(0, 0, 0, 0.1);
+  
+  /* ===== GRADIENTES DE FUNDO ===== */
+  --bg-section: linear-gradient(135deg, #313131 0%, #122e3f 100%);
+  --bg-card: linear-gradient(135deg, #313131 0%, #122e3f 100%);
+  --bg-radial: radial-gradient(circle at center, #313131 0%, #122e3f 100%);
+  --bg-radial-hover: radial-gradient(circle at 0% 100%, #1599E4, #122e3f);
+  --bg-radial-dark: radial-gradient(circle at center, #313131 0%, #122e3f 100%);
+  --bg-icon: radial-gradient(circle at 0% 100%, #1599E4, #122e3f);
+  --bg-button: radial-gradient(circle at 5% 57%, #1599E4, #122e3f);
+  
+  /* ===== CORES DE ÍCONES ===== */
+  --icon-primary: var(--color-white);
+  --icon-secondary: var(--color-gray-light);
+  --icon-hover: var(--color-highlight);
+  --icon-active: var(--color-highlight);
+  
+  /* ===== CORES DE TEXTO ===== */
+  --text-primary: #ffffff;
+  --text-secondary: #cccccc;
+  --text-tertiary: #999999;
+  --text-highlight: var(--color-highlight);
+  
+  /* ===== ALIASES (COMPATIBILIDADE) ===== */
+  --white: var(--color-white);
+  --black: var(--color-black);
+  --highlight: var(--color-highlight);
+  --bcsite: var(--color-bg-site);
+  --black12: var(--color-bg-dark);
+  --black1d: var(--color-bg-darker);
+  --gray1e: var(--color-bg-section);
+  --gray3c: var(--color-gray-medium);
+  --textfade: var(--text-tertiary);
+  --d1d1d1: var(--color-gray-lighter);
+  --focus: var(--color-focus);
+  --borders: var(--color-border);
+  --bordersopacity: var(--color-border-light);
+  --highlightopacity: var(--color-highlight-opacity);
+  --blackopacity: var(--color-black-opacity);
+  --section: var(--bg-section);
+  --bcplusradial: var(--bg-card);
+  --bcradial: var(--bg-radial);
+  --bcradialhover: var(--bg-radial-hover);
+  --bcblackradial: var(--bg-radial-dark);
+  --bcicon: var(--bg-icon);
+  --bcbtn: var(--bg-button);
 }

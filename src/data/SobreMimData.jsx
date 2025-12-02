@@ -1,25 +1,7 @@
-// import IconeDesign from "../svg/iconeDev.svg";
-import IconeFormacao from "../svg/iconeFormacao.svg";
-import IconeTrabalho from "../svg/IconeTrabalho.svg";
-import IconeMais from "../svg/iconeMais.svg";
-import IconeHtml from "../svg/iconeHtml.svg";
-import IconeCss from "../svg/iconeCss.svg";
-import IconeJs from "../svg/iconeJavaScript.svg";
-import IconeReact from "../svg/iconeReact.svg";
-import IconeFigmaMaior from "../svg/iconeFigmaMaior.svg";
-import IconeJava from "../svg/iconeJava.svg";
-import IconePython from "../svg/iconePython.svg";
-import IconeGit from "../svg/iconeGit.svg";
-import IconeAWS from "../svg/IconeAWS.svg";
-import IconePandas from "../svg/IconePandas.svg";
-import IconeNumpy from "../svg/IconeNumpy.svg";
-import IconePostman from "../svg/IconePostman.svg";
-import IconeMySQL from "../svg/IconeMySql.svg";
-import IconeDocker from "../svg/iconeDocker.svg";
-import IconeAnalise from "../svg/iconeAnalise.svg";
-import IconeJupyter from "../svg/iconeJupyter.svg";
-import IconeAnaconda from "../svg/iconeAnaconda.svg";
-
+import { MdSchool, MdWork, MdAdd } from "react-icons/md";
+import { SiPython, SiMysql, SiReact, SiFigma, SiJavascript, SiHtml5, SiCss3, SiGit, SiPostman, SiDocker, SiJupyter, SiAnaconda, SiPandas, SiNumpy } from "react-icons/si";
+import { IoAnalytics } from "react-icons/io5";
+import { FaAws, FaJava } from "react-icons/fa";
 
 const SobreMimData = {
   titulo: "Sobre Mim",
@@ -29,21 +11,21 @@ const SobreMimData = {
     {
       id: 1,
       titulo: "Análise de Dados",
-      icone: IconeAnalise,
+      icone: IoAnalytics,
       descricao:
         "Aprimorando minhas habilidades em análise de dados para extrair insights valiosos e apoiar a tomada de decisões informadas. Utilizo Python, e suas Bibliotecas, também Docker para criar ambientes eficientes de análise.",
     },
     {
       id: 2,
       titulo: "Ciências da Computação",
-      icone: IconeFormacao,
+      icone: MdSchool,
       descricao:
         "Atualmente cursando Faculdade de Ciências da Computação na Atitus Educação. Já no terceiro semestre, estou aprofundando meus conhecimentos em programação e desenvolvimento de software.",
     },
     {
       id: 3,
       titulo: "Engenharia de Dados",
-      icone: IconeTrabalho,
+      icone: MdWork,
       descricao:
         "Estou atuando na Compass UOL, onde estou aprendendo e aplicando práticas de ETL, modelagem de dados e otimização de pipelines. Experiência com Python, Jupyter Notebooks e ambientes de nuvem.",
     },
@@ -53,93 +35,93 @@ const SobreMimData = {
     {
       id: 1,
       nome: "Python",
-      icone: IconePython,
+      icone: SiPython,
     },
     {
       id: 14,
       nome: "Docker",
-      icone: IconeDocker,
+      icone: SiDocker,
     },
     {
       id: 2,
       nome: "MySQL",
-      icone: IconeMySQL,
+      icone: SiMysql,
     },
     {
       id: 3,
       nome: "React",
-      icone: IconeReact,
+      icone: SiReact,
     },
     {
       id: 15,
       nome: "Jupyter",
-      icone: IconeJupyter,
+      icone: SiJupyter,
     },
     {
       id: 16,
       nome: "Anaconda",
-      icone: IconeAnaconda,
+      icone: SiAnaconda,
     },
     {
       id: 4,
       nome: "Figma",
-      icone: IconeFigmaMaior,
+      icone: SiFigma,
     },
     {
       id: 5,
       nome: "JavaScript",
-      icone: IconeJs,
+      icone: SiJavascript,
     },
     {
       id: 6,
       nome: "Java",
-      icone: IconeJava,
+      icone: FaJava,
     },
     {
       id: 7,
       nome: "HTML",
-      icone: IconeHtml,
+      icone: SiHtml5,
     },
     {
       id: 8,
       nome: "CSS",
-      icone: IconeCss,
+      icone: SiCss3,
     },
     {
       id: 9,
       nome: "AWS",
-      icone: IconeAWS,
+      icone: FaAws,
     },
     {
       id: 10,
       nome: "Git",
-      icone: IconeGit,
+      icone: SiGit,
     },
     {
       id: 11,
       nome: "Pandas",
-      icone: IconePandas,
+      icone: SiPandas,
     },
     {
       id: 12,
       nome: "Numpy",
-      icone: IconeNumpy,
+      icone: SiNumpy,
     },
     {
       id: 13,
       nome: "Postman",
-      icone: IconePostman,
+      icone: SiPostman,
     },
   ],
 
   futurasIdeias: [
     {
       id: 1,
-      icone: IconeMais,
+      icone: MdAdd,
     },
     {
       id: 2,
-      icone: IconeMais,
+      icone: MdAdd,
     },
   ],
 };

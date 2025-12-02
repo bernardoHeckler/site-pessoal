@@ -9,6 +9,6 @@
 .footer p {
   margin: 0;
   font-size: 0.875rem;
-  color: var(--cor-texto-secundario, #666);
+  color: var(--text-secondary);
   opacity: 0.8;
 }

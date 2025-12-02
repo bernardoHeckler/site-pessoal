@@ -13,7 +13,7 @@ const Card = () => {
         {window.innerWidth <= 768 && !mostrar && (
           <div className="canto">
             <button className="btn-canto" onClick={alterar}>
-              <img src={CardData.icones.seta} alt="Mostrar conteúdo" />
+              <CardData.icones.seta size={12} />
             </button>
           </div>
         )}
@@ -44,7 +44,7 @@ const Card = () => {
                 {CardData.contatos.map((contato) => (
                   <div key={contato.id} className="informacoes">
                     <div className="caixaImg">
-                      <LazyImage src={contato.icone} alt={`Ícone ${contato.tipo}`} />
+                      <contato.icone size={24} />
                     </div>
                     <div className="textoLinks">
                       <p className="subText">{contato.tipo}</p>
@@ -66,7 +66,7 @@ const Card = () => {
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    <LazyImage src={rede.icone} alt={`Meu ${rede.nome}`} />
+                    <rede.icone size={24} />
                   </a>
                 ))}
               </div>
@@ -74,7 +74,7 @@ const Card = () => {
             {window.innerWidth <= 768 && (
               <div className="canto-baixo">
                 <button className="btn-canto-invertido" onClick={alterar}>
-                  <img src={CardData.icones.seta} alt="Botão Alterar" />
+                  <CardData.icones.seta size={12} style={{ transform: 'rotate(180deg)' }} />
                 </button>
               </div>
             )}

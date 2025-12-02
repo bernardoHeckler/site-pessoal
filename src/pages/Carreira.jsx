@@ -1,7 +1,6 @@
 import Card from "../components/Card";
 import CarreiraData from "../data/CarreiraData";
 import "./Carreira.css";
-import IconeImg from "../svg/iconeImg.svg";
 import Footer from "../components/Footer";
 
 const Carreira = () => {
@@ -19,7 +18,7 @@ const Carreira = () => {
           {/* Seção Educação */}
           <div className="section-header">
             <div className="icon-wrapper">
-              <img src={IconeImg} alt="icone" className="section-icon" />
+              <CarreiraData.educacao.icone size={20} className="section-icon" />
             </div>
             <h3 className="section-title">{CarreiraData.educacao.titulo}</h3>
           </div>
@@ -36,7 +35,7 @@ const Carreira = () => {
           {/* Seção Experiência */}
           <div className="section-header">
             <div className="icon-wrapper">
-              <img src={IconeImg} alt="icone" className="section-icon" />
+              <CarreiraData.experiencia.icone size={20} className="section-icon" />
             </div>
             <h3 className="section-title">{CarreiraData.experiencia.titulo}</h3>
           </div>

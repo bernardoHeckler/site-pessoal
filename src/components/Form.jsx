@@ -1,5 +1,5 @@
 import "./Form.css";
-import IconeEnviar from "../svg/iconeEnviar.svg";
+import { IoSend } from "react-icons/io5";
 
 const Form = () => {
   return (
@@ -17,7 +17,7 @@ const Form = () => {
           <input type="email" name="email" placeholder="E-mail" required />
           <textarea name="message" placeholder="Mensagem" required></textarea>
           <button className="btn-form" type="submit">
-          <img src={IconeEnviar} alt="Enviar" />
+          <IoSend size={20} />
           Enviar Mensagem</button>
         </form>
       </div>

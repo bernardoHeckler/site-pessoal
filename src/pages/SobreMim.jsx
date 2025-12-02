@@ -1,8 +1,7 @@
 import "./SobreMim.css";
 import SobreMimData from "../data/SobreMimData";
 import Card from "../components/Card";
-import iconeBaixar from "../svg/iconeBaixar.svg";
-import iconeOk from "../svg/iconeOK.svg";
+import { MdDownload, MdCheckCircle } from "react-icons/md";
 import { useState } from "react";
 import curriculoPDF from "../curriculo2025.pdf";
 import Footer from "../components/Footer";
@@ -45,61 +44,66 @@ const SobreMim = () => {
                 onClick={handleBaixarCurriculo}
               >
                 {baixarCurriculo ? "CV Baixado" : "Clique aqui"}
-                <img
-                  src={baixarCurriculo ? iconeOk : iconeBaixar}
-                  alt="baixar"
-                />
+                {baixarCurriculo ? <MdCheckCircle size={24} /> : <MdDownload size={24} />}
               </button>
             </div>
           </div>
           <div className="linha">
             <h2>O Que Estou Fazendo</h2>
             <div id="coluna-atividades">
-              {SobreMimData.atividades.map((atividade) => (
-                <section key={atividade.id} className="informacao">
-                  <div className="conteudo">
-                    <img src={atividade.icone} alt="icone" />
-                    <div className="text">
-                      <h3>{atividade.titulo}</h3>
-                      <p className="descricao">{atividade.descricao}</p>
+              {SobreMimData.atividades.map((atividade) => {
+                const IconeAtividade = atividade.icone;
+                return (
+                  <section key={atividade.id} className="informacao">
+                    <div className="conteudo">
+                      <IconeAtividade size={32} />
+                      <div className="text">
+                        <h3>{atividade.titulo}</h3>
+                        <p className="descricao">{atividade.descricao}</p>
+                      </div>
                     </div>
-                  </div>
-                </section>
-              ))}
+                  </section>
+                );
+              })}
             </div>
           </div>
 
           <div className="linha">
             <h2>Futuras Ideias</h2>
             <div className="coluna-ideias">
-              {SobreMimData.futurasIdeias.map((ideia) => (
-                <section key={ideia.id} className="informacao">
-                  <div className="blocos">
-                    <div className="blocoMaior">
-                      <img src={ideia.icone} alt="Ideia futura" />
+              {SobreMimData.futurasIdeias.map((ideia) => {
+                const IconeIdeia = ideia.icone;
+                return (
+                  <section key={ideia.id} className="informacao">
+                    <div className="blocos">
+                      <div className="blocoMaior">
+                        <IconeIdeia size={48} />
+                      </div>
+                      <div className="retangulos">
+                        <div className="forma1"></div>
+                        <div className="forma2"></div>
+                        <div className="forma2"></div>
+                      </div>
                     </div>
-                    <div className="retangulos">
-                      <div className="forma1"></div>
-                      <div className="forma2"></div>
-                      <div className="forma2"></div>
-                    </div>
-                  </div>
-                </section>
-              ))}
+                  </section>
+                );
+              })}
             </div>
           </div>
 
           <div className="linha">
             <h2>Tecnologias</h2>
             <div className="coluna-sobremim-tecnologias">
-              {SobreMimData.tecnologias.map((tech) => (
-                <img
-                  key={tech.id}
-                  className="tecnologiasImg"
-                  src={tech.icone}
-                  alt={tech.nome}
-                />
-              ))}
+              {SobreMimData.tecnologias.map((tech) => {
+                const IconeTech = tech.icone;
+                return (
+                  <IconeTech
+                    key={tech.id}
+                    className="tecnologiasImg"
+                    size={48}
+                  />
+                );
+              })}
             </div>
           </div>
           <Footer />

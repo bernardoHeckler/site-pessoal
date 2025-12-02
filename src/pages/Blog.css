@@ -47,7 +47,7 @@ section.blog-informacao {
   padding: 0;
   border-radius: 20px;
   background: var(--bcradial);
-  border: 1px solid var(--borders);
+  border: 1px solid var(--color-highlight);
   gap: 16px;
   transition: all 0.3s ease;
 }

@@ -32,9 +32,9 @@ aside {
   border-radius: 0 20px 0 12px;
   cursor: pointer;
 }
-.btn-canto > img {
-  width: 12px;
+.btn-canto > svg {
   transition: transform 0.3s ease;
+  color: var(--icon-primary);
 }
 
 .content-abaixo {
@@ -105,7 +105,7 @@ aside {
 }
 
 .caixaImg {
-  background: var(--bcradial);
+  background: var(--bcicon);
   border: 1px solid var(--borders);
   border-radius: 10px;
   width: 48px;
@@ -113,6 +113,10 @@ aside {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.caixaImg svg {
+  color: var(--icon-primary);
 }
 
 .caixaDev {
@@ -191,10 +195,9 @@ aside {
   border-radius: 12px 0 20px 0;
   cursor: pointer;
 }
-.btn-canto-invertido > img {
-  width: 12px;
+.btn-canto-invertido > svg {
   transition: transform 0.3s ease;
-  transform: rotate(180deg);
+  color: var(--icon-primary);
 }
 
 .content-acima {
@@ -236,14 +239,14 @@ aside {
   transform: translateY(-3px);
 }
 
-.iconesSociais a img {
+.iconesSociais a svg {
   transition: all 0.3s ease;
-  filter: grayscale(30%);
+  color: var(--bcicon);
 }
 
-.iconesSociais a img:hover {
+.iconesSociais a svg:hover {
   transform: translateY(-3px);
-  filter: grayscale(0%);
+  color: var(--icon-hover);
 }
 
 .content-abaixo {

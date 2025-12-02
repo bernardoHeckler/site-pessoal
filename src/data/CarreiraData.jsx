@@ -1,8 +1,10 @@
+import { MdSchool, MdWork } from "react-icons/md";
+
 const CarreiraData = {
   titulo: "Carreira",
   educacao: {
     titulo: "Educação",
-    icone: "../iconeImg.svg",
+    icone: MdSchool,
     itens: [
       {
         id: 1,
@@ -29,7 +31,7 @@ const CarreiraData = {
   },
   experiencia: {
     titulo: "Experiência",
-    icone: "../iconeImg.svg",
+    icone: MdWork,
     itens: [
       {
         id: 1,
