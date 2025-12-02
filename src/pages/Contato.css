@@ -1,6 +1,6 @@
 @import "../Cores.css";
 .contato-container {
-  width: 100%;
+  width: auto !important;
   max-width: 848px !important;
   height: auto;
   display: flex;
@@ -12,8 +12,7 @@
 .contato-section {
   border: 1px solid var(--borders);
   border-radius: 20px;
-  /* width: 100%; */
-  /* max-width: 848px; */
+  width: 358px;
   height: auto;
   display: flex;
   flex-direction: column;
@@ -112,7 +111,6 @@
   }
   
   .contato-section {
-    width: 100%;
-    max-width: 848px;
+    width: 848px;
   }
 }
