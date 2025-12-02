@@ -1,6 +1,7 @@
 @import "../Cores.css";
 .career-container {
   width: 100%;
+  max-width: 848px;
   height: auto;
   display: flex;
   flex-direction: row;

@@ -1,16 +1,19 @@
 @import "../Cores.css";
 .contato-container {
   width: 100%;
+  max-width: 848px !important;
   height: auto;
   display: flex;
   flex-direction: row;
   margin-bottom: 81px;
+  flex-shrink: 0;
 }
 
 .contato-section {
   border: 1px solid var(--borders);
   border-radius: 20px;
-  min-width: 358px;
+  /* width: 100%; */
+  /* max-width: 848px; */
   height: auto;
   display: flex;
   flex-direction: column;
@@ -21,6 +24,7 @@
   justify-content: center;
   padding: 32px;
   gap: 16px;
+  box-sizing: border-box;
 
   animation: fadeInContato 0.5s ease-out forwards;
 }
@@ -38,7 +42,7 @@
 }
 .btn-copiar {
   background-color: var(--highlight);
-  width: 100%;
+  /* width: 100%; */
   height: auto;
   padding: 8px 16px;
   border-radius: 20px;
@@ -101,10 +105,14 @@
     transform: translateY(0);
   }
 }
-@media (width: 768px) {
+@media (min-width: 768px) {
+  .contato-container {
+    max-width: 848px !important;
+    margin: 0;
+  }
+  
   .contato-section {
-    display: flex;
-    justify-content: flex-start;
-    align-items: stretch;
+    width: 100%;
+    max-width: 848px;
   }
 }

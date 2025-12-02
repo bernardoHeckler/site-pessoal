@@ -12,6 +12,7 @@ section.sobreMim-section {
   border: 1px solid var(--borders);
   border-radius: 20px;
   width: 358px;
+  max-width: 848px;
   height: auto;
   display: flex;
   flex-direction: column;
