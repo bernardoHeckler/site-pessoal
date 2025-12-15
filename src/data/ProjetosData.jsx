@@ -13,9 +13,22 @@ import projetoPedagio from "../svg/imgprojetosPedagio.svg";
 import apitrabalho from "../svg/apitrabalho.svg";
 import apimicroservices from "../svg/apimicroservice.svg";
 import briqueshop from "../svg/briqueshop.svg";
+import TreEBook from "../svg/TreE-Book.svg";
 
 const ProjetosData = {
   projetos: [
+    {
+      id: 99,
+      target: "_blank",
+      titulo: "TreE-Book",
+      imagem: TreEBook,
+      categoria: "app mobile",
+      descricao:
+        "TreE-Book é um aplicativo mobile desenvolvido em React Native com Expo (JavaScript) que consome dados de uma API em Java, responsável por todo o modelo de negócio da aplicação. Trata-se de uma plataforma completa de e-commerce especializada em livros digitais, construída com arquitetura de microserviços. O projeto foi desenvolvido em equipe, utilizando a metodologia ágil SCRUM, e tem caráter de trabalho acadêmico, com foco em boas práticas de desenvolvimento, organização e escalabilidade.",
+      tecnologias: ["React Native", "Java", "Spring Boot", "PostgreSQL", "APIs", "Documentação"],
+      repositorio: "https://github.com/orgs/aula-projeto-4o-semestre/repositories",
+      demo: "https://www.figma.com/design/UNNm2LZawDmRxDy8XKBDmr/WireFrames-do-TreE-book?m=auto&t=d4Pz3IKKdlaNgei0-1",
+    },
     {
       id: 1,
       target: "_blank",
