@@ -3,8 +3,8 @@ import "./Projetos.css";
 import Card from "../components/Card";
 import ProjetoCard from "../components/ProjetoCard";
 import ProjetosData from "../data/ProjetosData";
-// 1. Importe o componente ProjetoModal
 import ProjetoModal from "../components/ProjetoModal";
+import ProjetosNav from "../components/ProjetosNav";
 import Footer from "../components/Footer";
 
 const Projetos = () => {
@@ -40,27 +40,20 @@ const Projetos = () => {
             <div className="barra"></div>
           </div>
 
-          <div className="linha">
-            <nav className="projetos-nav">
-              {ProjetosData.categorias.map((categoria) => (
-                <button
-                  key={categoria.id}
-                  onClick={() => setFiltroAtual(categoria.id)}
-                  className={filtroAtual === categoria.id ? "ativo" : ""}
-                >
-                  {categoria.nome}
-                </button>
-              ))}
-            </nav>
+          <div className="carrosel">
+            <ProjetosNav 
+              categorias={ProjetosData.categorias}
+              filtroAtual={filtroAtual}
+              onFiltroChange={setFiltroAtual}
+            />
           </div>
 
           <div className="lista-projetos">
             {projetosFiltrados.map((projeto) => (
-              // 5. Passa a nova função de abertura (handleOpenModal) para o ProjetoCard
               <ProjetoCard 
                 key={projeto.id} 
                 projeto={projeto} 
-                onCardClick={handleOpenModal} // <--- Nova prop de clique
+                onCardClick={handleOpenModal}
               />
             ))}
           </div>
@@ -68,7 +61,6 @@ const Projetos = () => {
         </section>
       </main>
       
-      {/* 6. Renderização Condicional do Modal na raiz do componente */}
       {projetoSelecionado && (
         <ProjetoModal 
           projeto={projetoSelecionado} 

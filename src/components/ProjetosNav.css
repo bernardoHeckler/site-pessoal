@@ -1,0 +1,32 @@
+@import "../Cores.css";
+
+.projetos-nav {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  gap: 6px;
+  padding-bottom: 8px;
+}
+
+.projetos-nav > button {
+  background: var(--borders);
+  color: var(--white);
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 14px;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.projetos-nav > button:hover {
+  background: var(--highlight);
+  transform: translateY(-2px);
+}
+
+.projetos-nav > button.ativo {
+  background: var(--highlight);
+  color: var(--white);
+}
