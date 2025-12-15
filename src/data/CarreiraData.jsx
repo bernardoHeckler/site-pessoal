@@ -13,15 +13,22 @@ const CarreiraData = {
         descricao:
           "Python, Git/GitHub, LinkedIn, Google Colab, Canva, Cyber Security, Curso AWS, Cisco Packet Tracer, Kali Linux, Ethical Hacking, Inteligência Emocional, Liderança, Trabalho em Equipe, Banco de Dados, Full-Stack e JAVA.",
       },
-      {
+       {
         id: 2,
+        instituicao: "Udemy",
+        periodo: "08/2025 — 12/2025",
+        descricao:
+          "Cursos de especialização em Data Engineering, Python Avançado, AWS para Data Engineers e Docker.",
+      },
+      {
+        id: 3,
         instituicao: "Senac RS",
         periodo: "11/2022 — 03/2023",
         descricao:
           "Tecnologias: JavaScript, HTML, CSS, JAVA, MySQL (Banco de dados)",
       },
       {
-        id: 3,
+        id: 4,
         instituicao: "Rockfeller Center",
         periodo: "03/2019 — 05/2022",
         descricao:
