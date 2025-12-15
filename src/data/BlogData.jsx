@@ -16,18 +16,18 @@ const BlogData = {
         id: 2,
         imagem: blogSiteImg,
         categoria: "Boas Vindas!",
-        data: "02/05/2025",
-        titulo: "Site novo Inaugurado",
-        descricao: "Fiz este site com muito cuidado e carinho. Foi um projeto que me fez aprender muito e me ajudou a me desenvolver como profissional.",
+        data: "15/12/2025",
+        titulo: "Site Com Novo Design e Novos Conteúdos",
+        descricao: "Meu site pessoal passou por uma reformulação completa, com um novo design moderno e conteúdos atualizados para refletir minhas últimas conquistas e projetos. Explore as novas seções e fique por dentro das minhas novidades!",
       },
       {
         id: 3,
         imagem: blogReactImg,
         categoria: "Curtindo aprender",
         data: "01/03/2025",
-        titulo: "Como foi utilizar o React",
-        descricao: "Foi algo que só agregou a criar personalidade e criatividade. Foi algo que me fez aprender muito e me ajudou a me desenvolver como profissional.",
-      },
+        titulo: "Como foi utilizar o React Native",
+        descricao: "Estou expandindo meus conhecimentos em **projetos Web e Mobile**, explorando a criação, personalização e aplicação da minha criatividade no desenvolvimento de novos projetos. Essa experiência tem sido fundamental para meu aprendizado contínuo e para o meu desenvolvimento profissional."
+      }
     ]
   };
   
