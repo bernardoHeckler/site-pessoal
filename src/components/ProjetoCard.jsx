@@ -17,6 +17,8 @@ const ProjetoCard = ({ projeto, onCardClick }) => {
         return "APIs";
       case "app mobile":
         return "App Mobile";
+      case "dados":
+        return "Dados";
       default:
         return "Outro";
     }
@@ -28,7 +30,7 @@ const ProjetoCard = ({ projeto, onCardClick }) => {
     if (cardRef.current) {
       cardRef.current.scrollIntoView({
         behavior: "smooth",
-        block: "center", 
+        block: "center",
       });
     }
     onCardClick(projeto);

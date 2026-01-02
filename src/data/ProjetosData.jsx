@@ -23,7 +23,7 @@ const ProjetosData = {
       target: "_blank",
       titulo: "Scholarship Compass UOL",
       imagem: compassUOL,
-      categoria: "Dados",
+      categoria: "dados",
       descricao:
         "Este Repositório conta toda a minha trajetória e conquistas que tive durante o Estágio na Compass UOL. Ele reflete minha evolução técnica em Engenharia de Dados, ferramentas AWS e a maturidade adquirida em projetos reais. Convido você, a explorar a documentação e os marcos dessa jornada!",
       tecnologias: ["Jupyter Notebook", "Python", "AWS", "SQL"],
@@ -234,6 +234,7 @@ const ProjetosData = {
     { id: "java", nome: "Desenvolvimento Java" },
     { id: "app mobile", nome: "App Mobile" },
     { id: "api", nome: "APIs" },
+    { id: "dados", nome: "Dados" },
   ],
 };
 
