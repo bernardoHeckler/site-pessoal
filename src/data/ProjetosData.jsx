@@ -13,10 +13,23 @@ import projetoPedagio from "../svg/imgprojetosPedagio.svg";
 import apitrabalho from "../svg/apitrabalho.svg";
 import apimicroservices from "../svg/apimicroservice.svg";
 import briqueshop from "../svg/briqueshop.svg";
+import compassUOL from "../svg/compass uol.svg";
 import TreEBook from "../svg/TreE-Book.svg";
 
 const ProjetosData = {
   projetos: [
+    {
+      id: 98,
+      target: "_blank",
+      titulo: "Scholarship Compass UOL",
+      imagem: compassUOL,
+      categoria: "Dados",
+      descricao:
+        "Este Repositório conta toda a minha trajetória e conquistas que tive durante o Estágio na Compass UOL. Ele reflete minha evolução técnica em Engenharia de Dados, ferramentas AWS e a maturidade adquirida em projetos reais. Convido você, a explorar a documentação e os marcos dessa jornada!",
+      tecnologias: ["Jupyter Notebook", "Python", "AWS", "SQL"],
+      repositorio: "https://github.com/bernardoHeckler/scholarship-compass.git",
+      demo: "https://github.com/bernardoHeckler/scholarship-compass/blob/main/README.md",
+    },
     {
       id: 99,
       target: "_blank",
