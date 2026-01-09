@@ -50,11 +50,10 @@ section.sobreMim-section {
 .descricao:hover {
   color: var(--color-white);
 }
-/* Estilos específicos para a descrição longa (melhor leitura) */
 .descricao-longa {
   margin-top: 12px;
   width: 100%;
-  max-width: 72ch; /* comprimento de linha ideal para leitura */
+  max-width: 72ch;
   margin-left: auto;
   margin-right: auto;
   transition: max-height 0.35s cubic-bezier(.2,.9,.2,1), opacity 0.35s ease, padding 0.25s ease;
@@ -230,53 +229,6 @@ section.informacao:hover .conteudo > svg {
 h2 {
   text-align: center;
 }
-
-.sobreMim-section > .linha > .caixa {
-  background: var(--bcplusradial);
-  padding: 16px 22px;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-  justify-content: center;
-  align-items: center;
-  border-radius: 10px;
-  border: 2px solid var(--borders);
-}
-.btn-baixar {
-  background-color: var(--highlight);
-  width: 100%;
-  height: auto;
-  padding: 8px 16px;
-  border-radius: 20px;
-  box-shadow: 0px 0px 8px 0px var(--highlight);
-  font-size: 24px;
-  font-weight: 600;
-  color: var(--black1d);
-  display: flex;
-  justify-content: space-between;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  align-items: center;
-  animation: animacaoConteudoContato 0.4s cubic-bezier(0.34, 1.56, 0.64, 1)
-    forwards;
-  transform: scale(1);
-}
-
-.btn-baixar svg {
-  color: var(--black1d);
-  transition: all 0.3s ease;
-}
-.btn-baixado {
-  background-color: var(--black12);
-  color: var(--highlight);
-  box-shadow: 0px 0px 2px 0px var(--highlight);
-  transition: all 0.3s ease;
-}
-
-.btn-baixado svg {
-  color: var(--icon-active);
-}
 .coluna-sobremim-tecnologias{
   display: flex;
   flex-direction: row;
@@ -312,18 +264,11 @@ h2 {
   .sobreMim-section {
     width: 100% !important;
   }
-  .sobreMim-section > #linha-caixa {
-    justify-content: center;
-    align-items: center;
-  }
   .coluna{
     gap: 16px;
   }
 }
 @media (min-width: 1024px) {
-  .sobreMim-section > #linha-caixa > .caixa {
-    width: 40% !important;
-  }
   #coluna-atividades {
     display: flex !important;
     width: 100% !important;
@@ -365,5 +310,22 @@ h2 {
   .sobreMim-section > .linha > h2{
     width: 100%;
     text-align: left;
+  }
+}
+
+
+.titulo-topo{
+  display: flex;
+  width: 100%;
+  height: auto;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+/* Responsivo: empilha em telas pequenas */
+@media (max-width: 767px) {
+  .titulo-topo{
+    flex-direction: column;
+    align-items: flex-start;
   }
 }

@@ -18,21 +18,21 @@ const SobreMimData = {
       titulo: "Análise de Dados",
       icone: IoAnalytics,
       descricao:
-        "Aprimorando minhas habilidades em análise de dados para extrair insights valiosos e apoiar a tomada de decisões informadas. Utilizo Python, e suas Bibliotecas, também Docker para criar ambientes eficientes de análise.",
+        "No meu último desafio, construí todo o ecossistema de dados — AWS Lambda e S3 até QuickSight. Minha visão de analista serve para garantir que o dashboard final seja impecável, mas meu interesse real está em como os dados chegam lá.",
     },
     {
       id: 2,
       titulo: "Ciências da Computação",
       icone: MdSchool,
       descricao:
-        "Atualmente cursando Faculdade de Ciências da Computação na Atitus Educação. Já no terceiro semestre, estou aprofundando meus conhecimentos em programação e desenvolvimento de software.",
+        "Sigo no 5º Semestre na Atitus Educação. Tenho mergulhado em Cloud Computing, Hacking Ético, Desenvolvimento de Software, Base Teórica, e a complexidade do hardware no dia a dia.",
     },
     {
       id: 3,
       titulo: "Engenharia de Dados",
       icone: MdWork,
       descricao:
-        "Estou atuando na Compass UOL, onde estou aprendendo e aplicando práticas de ETL, modelagem de dados e otimização de pipelines. Experiência com Python, Jupyter Notebooks e ambientes de nuvem.",
+        "Em busca de novos desafios como Júnior ou Estagiário Avançado. Domino o ciclo de ETL, modelagem e otimização de pipelines com Python, Docker e AWS.",
     },
   ],
 

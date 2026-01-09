@@ -1,30 +1,12 @@
 import "./SobreMim.css";
 import SobreMimData from "../data/SobreMimData";
 import Card from "../components/Card";
-import { MdDownload, MdCheckCircle } from "react-icons/md";
 import { useState } from "react";
-import curriculoPDF from "../curriculo2025.pdf";
 import Footer from "../components/Footer";
+import CaixaDownloadCV from "../components/CaixaDownloadCV";
 
 const SobreMim = () => {
-  const [baixarCurriculo, setBaixarCurriculo] = useState(false);
   const [mostrarCompleto, setMostrarCompleto] = useState(false);
-
-  const handleBaixarCurriculo = () => {
-    const link = document.createElement("a");
-    link.href = curriculoPDF;
-    link.download = "bHeckler_CV_2025.pdf";
-
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
-
-    setBaixarCurriculo(true);
-
-    setTimeout(() => {
-      setBaixarCurriculo(false);
-    }, 3000);
-  };
 
   return (
     <>
@@ -32,15 +14,20 @@ const SobreMim = () => {
       <Card />
       <main className="sobreMim-container">
         <section className="sobreMim-section">
-          <div className="linha">
-            <h1>{SobreMimData.titulo}</h1>
+            <div className="linha">
+            <div className="titulo-topo">
+              <h1>{SobreMimData.titulo}</h1>
+              <CaixaDownloadCV/>
+            </div>
             <div className="barra"></div>
             <div className="descricao">
               <p>{SobreMimData.descricao}</p>
               {SobreMimData.descricaoLonga && (
                 <>
                   <div
-                    className={`descricao-longa ${mostrarCompleto ? "open" : ""}`}
+                    className={`descricao-longa ${
+                      mostrarCompleto ? "open" : ""
+                    }`}
                     aria-expanded={mostrarCompleto}
                   >
                     {mostrarCompleto
@@ -59,20 +46,8 @@ const SobreMim = () => {
               )}
             </div>
           </div>
-          <div className="linha" id="linha-caixa">
-            <div className="caixa">
-              <h3>Baixar meu Currículo</h3>
-              <button
-                className={`btn-baixar ${baixarCurriculo ? "btn-baixado" : ""}`}
-                onClick={handleBaixarCurriculo}
-              >
-                {baixarCurriculo ? "CV Baixado" : "Clique aqui"}
-                {baixarCurriculo ? <MdCheckCircle size={24} /> : <MdDownload size={24} />}
-              </button>
-            </div>
-          </div>
           <div className="linha">
-            <h2>O Que Estou Fazendo</h2>
+            <h2>O Que Estou Fazendo?</h2>
             <div id="coluna-atividades">
               {SobreMimData.atividades.map((atividade) => {
                 const IconeAtividade = atividade.icone;
@@ -90,7 +65,22 @@ const SobreMim = () => {
               })}
             </div>
           </div>
-
+          {/* <div className="linha" id="linha-caixa">
+            <div className="caixa">
+              <h3>Baixar meu Currículo</h3>
+              <button
+                className={`btn-baixar ${baixarCurriculo ? "btn-baixado" : ""}`}
+                onClick={handleBaixarCurriculo}
+              >
+                {baixarCurriculo ? "CV Baixado" : "Clique aqui"}
+                {baixarCurriculo ? (
+                  <MdCheckCircle size={24} />
+                ) : (
+                  <MdDownload size={24} />
+                )}
+              </button>
+            </div>
+          </div> */}
           <div className="linha">
             <h2>Futuras Ideias</h2>
             <div className="coluna-ideias">
