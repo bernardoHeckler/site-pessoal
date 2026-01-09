@@ -16,27 +16,27 @@ const CardData = {
   contatos: [
     {
       id: 1,
-      tipo: "EMAIL",
+      tipo: "Email",
       valor: "bernaheckler1@gmail.com",
       icone: MdEmail,
       link: "mailto:bernaheckler1@gmail.com",
     },
     {
       id: 2,
-      tipo: "Phone",
+      tipo: "Telefone",
       valor: "(54) 9 9641-8356",
       icone: MdPhone,
       link: "tel:+54996418356",
     },
     {
       id: 3,
-      tipo: "Programming Since",
+      tipo: "Programando Desde",
       valor: "1/11/2022",
       icone: BiCalendar,
     },
     {
       id: 4,
-      tipo: "Local",
+      tipo: "Localização",
       valor: "Brazil, Rio Grande do Sul",
       icone: MdLocationOn,
     },
