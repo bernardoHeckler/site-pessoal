@@ -9,9 +9,7 @@ const SobreMimData = {
   descricaoLonga: [
     "Minha motivação é simples: gosto de codar, buscar resultados e ver como os números validam o que funciona ou não em um negócio.",
     "O que entrego: Engenharia e Análise — domínio de Python, SQL e ETL, com experiência na criação de dashboards que transformam dados brutos em decisões.",
-    "Cultura de Manutenção: desenvolvo código pensando no próximo desenvolvedor. Meus projetos acompanham vídeos de handover técnico e documentação de processos.",
-    "Liderança e Agilidade: atuei como líder de squad em ambiente de sprints, facilitando dailies e a comunicação entre o time técnico e a gestão. Tenho um repositório público com todas as minhas entregas documentadas.",
-    "Atualmente, busco novos desafios onde eu possa aplicar meu conhecimento em Docker, AWS e infraestrutura de dados para construir soluções robustas e escaláveis."
+    "Atualmente, busco novos desafios onde eu possa aplicar meu conhecimento em Docker, AWS e infraestrutura de dados para construir soluções robustas e escaláveis.",
   ],
 
   atividades: [
