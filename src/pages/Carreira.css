@@ -127,39 +127,8 @@
   font-size: 0.95rem;
   line-height: 1.5;
 }
-.career-container > .linha-carreira {
-  display: flex;
-  flex-wrap: nowrap;
-  flex-direction: column;
-  align-items: stretch;
-  gap: 16px;
-}
-.linha-skills {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  align-items: flex-start;
-}
-.skill {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-  width: 100%;
-  padding: 0 16px;
-}
-.barra-interativa {
-  background-color: var(--highlightopacity);
-  border-radius: 5px;
-}
-.barra-interativa div {
-  height: 10px;
-  background-color: var(--highlight);
-  border-radius: 5px;
-  transition: width 0.5s ease-in-out;
-}
-.skill > h3 {
-  padding-top: 16px;
-}
+/* Regras relacionadas à seção "Minhas Habilidades" removidas — não estão sendo usadas no componente.
+   Caso mais tarde queira reativar a seção, essas regras podem ser recuperadas no histórico do git. */
 
 .icon-wrapper:hover img {
   transform: scale(1.1);
