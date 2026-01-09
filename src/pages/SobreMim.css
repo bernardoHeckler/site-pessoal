@@ -47,6 +47,48 @@ section.sobreMim-section {
   hyphens: auto;
   word-spacing: -0.02em;
 }
+.descricao:hover {
+  color: var(--color-white);
+}
+/* Estilos específicos para a descrição longa (melhor leitura) */
+.descricao-longa {
+  margin-top: 12px;
+  width: 100%;
+  max-width: 72ch; /* comprimento de linha ideal para leitura */
+  margin-left: auto;
+  margin-right: auto;
+  transition: max-height 0.35s cubic-bezier(.2,.9,.2,1), opacity 0.35s ease, padding 0.25s ease;
+  overflow: hidden;
+  opacity: 0;
+  max-height: 0;
+  padding-top: 0;
+}
+
+.descricao-longa.open {
+  opacity: 1;
+  max-height: 1000px;
+  padding-top: 12px;
+}
+
+.descricao-longa p {
+  margin: 0 0 14px 0;
+  font-size: 1rem;
+  color: var(--text);
+  text-align: justify;
+  padding: 10px 14px;
+  border-left: 3px solid var(--highlight);
+}
+
+.btn-ler-mais {
+  margin-top: 8px;
+  background: transparent;
+  border: 1px solid var(--highlight);
+  color: var(--highlight);
+  padding: 8px 14px;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: all 0.22s ease;
+}
 .coluna-ideias {
   display: flex;
   flex-direction: column;

@@ -8,6 +8,7 @@ import Footer from "../components/Footer";
 
 const SobreMim = () => {
   const [baixarCurriculo, setBaixarCurriculo] = useState(false);
+  const [mostrarCompleto, setMostrarCompleto] = useState(false);
 
   const handleBaixarCurriculo = () => {
     const link = document.createElement("a");
@@ -34,7 +35,29 @@ const SobreMim = () => {
           <div className="linha">
             <h1>{SobreMimData.titulo}</h1>
             <div className="barra"></div>
-            <p className="descricao">{SobreMimData.descricao}</p>
+            <div className="descricao">
+              <p>{SobreMimData.descricao}</p>
+              {SobreMimData.descricaoLonga && (
+                <>
+                  <div
+                    className={`descricao-longa ${mostrarCompleto ? "open" : ""}`}
+                    aria-expanded={mostrarCompleto}
+                  >
+                    {mostrarCompleto
+                      ? SobreMimData.descricaoLonga.map((paragrafo, idx) => (
+                          <p key={idx}>{paragrafo}</p>
+                        ))
+                      : null}
+                  </div>
+                  <button
+                    className="btn-ler-mais"
+                    onClick={() => setMostrarCompleto((s) => !s)}
+                  >
+                    {mostrarCompleto ? "Ler menos" : "Ler mais"}
+                  </button>
+                </>
+              )}
+            </div>
           </div>
           <div className="linha" id="linha-caixa">
             <div className="caixa">

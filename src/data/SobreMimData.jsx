@@ -5,7 +5,14 @@ import { FaAws, FaJava } from "react-icons/fa";
 
 const SobreMimData = {
   titulo: "Sobre Mim",
-  descricao: "Sou Bernardo Heckler, um Engenheiro de Dados em construção e um verdadeiro arquiteto do mundo digital. Na Compass UOL, atuo na linha de frente, onde os dados ganham vida. É como se eu fosse um maestro regendo uma orquestra de informações, transformando bytes brutos em notas musicais claras e estratégicas para o negócio. Minha rotina é movida pelo desafio de construir e otimizar pipelines de dados, garantindo que cada informação chegue ao seu destino com perfeição. Utilizo o poder do Python e SQL para moldar, organizar e purificar esses dados, e aprendo diariamente as melhores práticas de ETL e engenharia de dados. No dia a dia, colaboro ativamente em Sprints, acompanhando o fluxo no Kanban e garantindo que cada entrega seja uma vitória meu desenvolvimento profissional e pessoal. Para mim, os dados são a matéria-prima do futuro, e meu objetivo é continuar transformando-os em insights valiosos e soluções que realmente fazem a diferença.",
+  descricao: "Meu nome é Bernardo Heckler e minha base foi construída na prática. Recentemente, fechei um ciclo intenso de estágio na Compass UOL como AWS Cloud Data Engineering, mas minha entrega foi além do pipeline: eu entendi que dados só têm valor quando as pessoas conseguem usá-los.",
+  descricaoLonga: [
+    "Minha motivação é simples: gosto de codar, buscar resultados e ver como os números validam o que funciona ou não em um negócio.",
+    "O que entrego: Engenharia e Análise — domínio de Python, SQL e ETL, com experiência na criação de dashboards que transformam dados brutos em decisões.",
+    "Cultura de Manutenção: desenvolvo código pensando no próximo desenvolvedor. Meus projetos acompanham vídeos de handover técnico e documentação de processos.",
+    "Liderança e Agilidade: atuei como líder de squad em ambiente de sprints, facilitando dailies e a comunicação entre o time técnico e a gestão. Tenho um repositório público com todas as minhas entregas documentadas.",
+    "Atualmente, busco novos desafios onde eu possa aplicar meu conhecimento em Docker, AWS e infraestrutura de dados para construir soluções robustas e escaláveis."
+  ],
 
   atividades: [
     {
