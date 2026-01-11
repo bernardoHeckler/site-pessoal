@@ -20,15 +20,15 @@ const CaixaDownloadCV = () => {
       const blob = await res.blob();
       const url = window.URL.createObjectURL(blob);
 
-      const isIOS =
-        /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
+      const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
 
       if (isIOS) {
-        const opened = window.open(url, "_blank");
+        const opened = window.open(curriculoPDF, "_blank", "noopener,noreferrer");
         if (!opened) {
           const a = document.createElement("a");
-          a.href = url;
+          a.href = curriculoPDF;
           a.target = "_blank";
+          a.rel = "noopener noreferrer";
           document.body.appendChild(a);
           a.click();
           a.remove();
