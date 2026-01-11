@@ -24,11 +24,13 @@ const CaixaDownloadCV = () => {
       const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
 
       if (isIOS) {
-        const opened = window.open(url, "_blank");
+        // Em iOS, abrir o asset original em nova aba é mais confiável que object URL
+        const opened = window.open(curriculoPDF, "_blank", "noopener");
         if (!opened) {
           const a = document.createElement("a");
-          a.href = url;
+          a.href = curriculoPDF;
           a.target = "_blank";
+          a.rel = "noopener noreferrer";
           document.body.appendChild(a);
           a.click();
           a.remove();
