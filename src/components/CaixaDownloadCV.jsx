@@ -4,7 +4,6 @@ import { useState } from "react";
 import curriculoPDF from "../curriculo2025.pdf";
 import "./CaixaDownloadCV.css";
 const CaixaDownloadCV = () => {
-  
   // status: 'idle' | 'loading' | 'done'
   const [status, setStatus] = useState("idle");
 
@@ -21,16 +20,15 @@ const CaixaDownloadCV = () => {
       const blob = await res.blob();
       const url = window.URL.createObjectURL(blob);
 
-      const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
+      const isIOS =
+        /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
 
       if (isIOS) {
-        // Em iOS, abrir o asset original em nova aba é mais confiável que object URL
-        const opened = window.open(curriculoPDF, "_blank", "noopener");
+        const opened = window.open(url, "_blank");
         if (!opened) {
           const a = document.createElement("a");
-          a.href = curriculoPDF;
+          a.href = url;
           a.target = "_blank";
-          a.rel = "noopener noreferrer";
           document.body.appendChild(a);
           a.click();
           a.remove();
@@ -64,33 +62,35 @@ const CaixaDownloadCV = () => {
   };
   return (
     <div className="linha" id="linha-caixa">
-        <button
-          className={`btn-baixar ${status === "done" ? "btn-baixado" : ""} ${status === "loading" ? "loading" : ""}`}
-          onClick={handleBaixarCurriculo}
-          disabled={status === "loading"}
-          aria-live="polite"
-          aria-pressed={status === "loading"}
-        >
-          <span className="btn-content">
-            <span className="btn-text">
-              {status === "done"
-                ? "Download concluído"
-                : status === "loading"
-                ? "Baixando…"
-                : "Baixar CV"}
-            </span>
-
-            <span className="btn-icon" aria-hidden>
-              {status === "loading" ? (
-                <span className="spinner" />
-              ) : status === "done" ? (
-                <MdCheckCircle size={20} />
-              ) : (
-                <MdDownload size={20} />
-              )}
-            </span>
+      <button
+        className={`btn-baixar ${status === "done" ? "btn-baixado" : ""} ${
+          status === "loading" ? "loading" : ""
+        }`}
+        onClick={handleBaixarCurriculo}
+        disabled={status === "loading"}
+        aria-live="polite"
+        aria-pressed={status === "loading"}
+      >
+        <span className="btn-content">
+          <span className="btn-text">
+            {status === "done"
+              ? "Download concluído"
+              : status === "loading"
+              ? "Baixando…"
+              : "Baixar CV"}
           </span>
-        </button>
+
+          <span className="btn-icon" aria-hidden>
+            {status === "loading" ? (
+              <span className="spinner" />
+            ) : status === "done" ? (
+              <MdCheckCircle size={20} />
+            ) : (
+              <MdDownload size={20} />
+            )}
+          </span>
+        </span>
+      </button>
     </div>
   );
 };
