@@ -8,26 +8,57 @@ const CaixaDownloadCV = () => {
   // status: 'idle' | 'loading' | 'done'
   const [status, setStatus] = useState("idle");
 
-  const handleBaixarCurriculo = () => {
-    if (status === "loading") return; // avoid double clicks
+  const handleBaixarCurriculo = async () => {
+    if (status === "loading") return;
 
     setStatus("loading");
 
-    const link = document.createElement("a");
-    link.href = curriculoPDF;
-    link.download = "bernardoHeckler_CV_2026.pdf";
+    const filename = "bernardoHeckler_CV_2026.pdf";
 
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
+    try {
+      const res = await fetch(curriculoPDF, { cache: "no-store" });
+      if (!res.ok) throw new Error("Falha ao baixar arquivo");
+      const blob = await res.blob();
+      const url = window.URL.createObjectURL(blob);
 
-    // give a small feedback time for 'loading', then show success
-    setTimeout(() => {
+      const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
+
+      if (isIOS) {
+        const opened = window.open(url, "_blank");
+        if (!opened) {
+          const a = document.createElement("a");
+          a.href = url;
+          a.target = "_blank";
+          document.body.appendChild(a);
+          a.click();
+          a.remove();
+        }
+      } else {
+        const a = document.createElement("a");
+        a.href = url;
+        a.download = filename;
+        document.body.appendChild(a);
+        a.click();
+        a.remove();
+      }
+
+      setTimeout(() => {
+        setStatus("done");
+        setTimeout(() => setStatus("idle"), 3000);
+        window.URL.revokeObjectURL(url);
+      }, 700);
+    } catch (err) {
+      console.error("Erro no download do CV:", err);
+      const a = document.createElement("a");
+      a.href = curriculoPDF;
+      a.download = filename;
+      document.body.appendChild(a);
+      a.click();
+      a.remove();
+
       setStatus("done");
-
-      // reset to idle after a short period so user can download again
       setTimeout(() => setStatus("idle"), 3000);
-    }, 700);
+    }
   };
   return (
     <div className="linha" id="linha-caixa">
