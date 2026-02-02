@@ -1,7 +1,7 @@
 import React from "react";
 import { MdDownload, MdCheckCircle } from "react-icons/md";
 import { useState } from "react";
-import curriculoPDF from "../curriculo2025.pdf";
+import curriculoPDF from "../curriculo2026.pdf";
 import "./CaixaDownloadCV.css";
 const CaixaDownloadCV = () => {
   // status: 'idle' | 'loading' | 'done'
