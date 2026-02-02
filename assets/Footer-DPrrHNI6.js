@@ -1,1 +1,0 @@
-import{j as e}from"./index-CLX0LOBD.js";import"./router-QAMGBvrs.js";function s(){return e.jsx("footer",{className:"footer",children:e.jsxs("p",{children:["Desenvolvido por Bernardo Heckler © ",new Date().getFullYear()," - Todos os Direitos Reservados"]})})}export{s as F};
