@@ -7,7 +7,7 @@ import { IoChevronDown } from "react-icons/io5";
 const CardData = {
   perfil: {
     nome: "Bernardo Heckler",
-    profissao: "Engenheiro de Dados",
+    profissao: "Dev FullStack",
     foto: getSeasonalProfile(),
     desde: "1/11/2022",
     localizacao: "Brazil, Rio Grande do Sul",

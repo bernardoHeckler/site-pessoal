@@ -15,9 +15,35 @@ import apimicroservices from "../svg/apimicroservice.svg";
 import briqueshop from "../svg/briqueshop.svg";
 import compassUOL from "../svg/compass uol.svg";
 import TreEBook from "../svg/TreE-Book.svg";
+import websckt from "../svg/websocket-chat.svg"
+import enhancedCV from "../svg/enhancedCV.svg"
 
 const ProjetosData = {
   projetos: [
+    {
+      id: 97,
+      target: "_blank",
+      titulo: "Chat de Mensagens",
+      imagem: websckt,
+      categoria: "web",
+      descricao:
+        "Uma Aplicação de chat em tempo real com WebSockets (Tornado + JavaScript), suportando múltiplas salas isoladas e comunicação assíncrona, desenvolvida para demonstrar conceitos de sistemas distribuídos.",
+      tecnologias: ["Tornado", "Python", "JavaScript", "WebSocket"],
+      repositorio: "https://github.com/bernardoHeckler/websocket-chat-simples",
+      demo: null,
+    },
+    {
+      id: 97,
+      target: "_blank",
+      titulo: "Gerador de CV",
+      imagem: enhancedCV,
+      categoria: "web",
+      descricao:
+        "Uma plataforma responsável por toda a lógica de negócio: geração de CVs com IA, análise de compatibilidade, CRUD de perfil e kanban de candidaturas.",
+      tecnologias: ["FastAPI", "Python", "Next.js", "CRUD", "Autenticação", "Supabase", "Google Gemini"],
+      repositorio: null,
+      demo: "https://enhanced-cv-iota.vercel.app/auth",
+    },
     {
       id: 98,
       target: "_blank",
