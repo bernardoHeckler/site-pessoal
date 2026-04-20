@@ -42,27 +42,34 @@ const CarreiraData = {
     itens: [
       {
         id: 0,
-        posicao: "Aprimorando Habilidades para o Mercado de Trabalho",
-        periodo: "2026",
+        posicao: "Desenvolvedor Full Stack Júnior - Rota System",
+        periodo: "04/2026 - Emprego Atual",
         descricao:
-          "Atualmente, estou focado em aprimorar minhas habilidades técnicas e práticas para me preparar para futuras oportunidades no mercado de trabalho. Estou explorando projetos pessoais, contribuindo para comunidades de código aberto e participando de cursos avançados para fortalecer meu conhecimento em engenharia de dados e desenvolvimento de software.",
+          "Uma nova etapa profissional como Desenvolvedor na Rota System. Sigo contribuindo com projetos da empresa. Experiência com React, Node, Python, SQL, Redis, Kafka e BI.",
       },
       {
         id: 1,
+        posicao: "Projeto Pessoal - EnhancedCV",
+        periodo: "02/2026 - 03/2026",
+        descricao:
+          "Foi um período onde desenvolvi uma Plataforma de geração de cúrriculos com auxílio de IA chamado EnhancedCV, automatizando a criação de CVs, com aumento significativo em cúrriculos montados para plataformas Gupy, Indeed, LinkedIn e demais. Atingindo resultados de aprovação por passar de filtros ATS e comprovando maiores chances de ser chamado para entrevistas e propostas de contratação.",
+      },
+      {
+        id: 2,
         posicao: "Engenheiro de Dados(Estágio) - Compass UOL",
         periodo: "08/2025 — 12/2025",
         descricao:
           "Atuei na Compass UOL, onde aprendi e apliquei práticas de ETL, modelagem de dados e otimização de pipelines. Tive experiência com Python e suas Bibliotecas, Jupyter Notebooks e Ambientes de nuvem da AWS (S3, Lambda, Glue, Athena), também com Docker para criar ambientes eficientes de análise. E com Apache Spark e SQL para estudo e transformar dados brutos em insights valiosos. Lá dentro Busquei resultados em decisões estratégicas, e fiz a organização e Documentação de processos do projeto.",
       },
       {
-        id: 2,
+        id: 3,
         posicao: "Projetos de Desenvolvimento Front-end (Estudo Dirigido)",
         periodo: "03/2022 — 05/2025",
         descricao:
           "Fase dedicada ao domínio de tecnologias web e mobile. Em vez de atuar no mercado, foquei na construção de aplicações complexas para portfólio, utilizando React, HTML/CSS e JavaScript. Foi o período onde consolidei minha lógica de programação antes de migrar para o mundo dos dados.",
       },
       {
-        id: 3,
+        id: 4,
         posicao:
           "Estágio de TI - Secretaria de Educação Municipal de Passo Fundo",
         periodo: "08/2024 — 05/2025",
@@ -70,7 +77,7 @@ const CarreiraData = {
           "Manutenção de computadores, configuração de redes, suporte técnico, instalação de softwares e hardware.",
       },
       {
-        id: 4,
+        id: 5,
         posicao: "Operador de Caixa",
         periodo: "04/2023 — 09/2023",
         descricao:

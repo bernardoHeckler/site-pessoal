@@ -1,26 +1,26 @@
 import blogSiteImg from "../svg/imgsitenovo.svg";
-import blogNoticia from "../svg/imgblognoticia.svg";
 import blogCertificado from "../svg/CertificadoCompassUOL.svg";
+import blogRotaSystem from "../svg/rotaSystem.svg"
 const BlogData = {
   titulo: "Blog",
   posts: [
     {
       id: 0,
+      imagem: blogRotaSystem,
+      categoria: "Desenvolvedor",
+      data: "06/04/2026",
+      titulo: "Desenvolvedor Full Stack Júnior - Rota System",
+      descricao:
+        "Nova Etapa Profissional, iniciando minha jornada como Desenvolvedor Full Stack na Rota System!",
+    },
+    {
+      id: 1,
       imagem: blogCertificado,
       categoria: "Conclusão do Estágio",
       data: "30/12/2025",
       titulo: "Estágio AWS Clod Data Engineer",
       descricao:
         "Agradeço a todas as pessoas que cruzaram meu caminho ao longo dessa jornada, finalmente agora, no final de 2025, sou grato a essa experiência. Estou muito feliz de receber esse reconhecimento.",
-    },
-    {
-      id: 1,
-      imagem: blogNoticia,
-      categoria: "Minha nova Jornada",
-      data: "04/08/2025",
-      titulo: "Estágio - Compass UOL",
-      descricao:
-        "Estou iniciando uma nova jornada na Compass UOL como Engenheiro de Dados. Estou animado para aprender e crescer nesta nova posição.",
     },
     {
       id: 2,
