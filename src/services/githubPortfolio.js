@@ -56,8 +56,11 @@ const scoreRepo = (repo) => {
   return hasDescription + hasHomepage + hasTopics + repo.stargazers_count + activity;
 };
 
-const getFeaturedRepos = (repos, limit) =>
+const normalizeProfileRepoName = (name = "") => name.trim().toLowerCase();
+
+const getFeaturedRepos = (repos, limit, username = DEFAULT_USERNAME) =>
   repos
+    .filter((repo) => normalizeProfileRepoName(repo.name) !== normalizeProfileRepoName(username))
     .filter((repo) => !repo.fork && !repo.archived && repo.description)
     .sort((a, b) => scoreRepo(b) - scoreRepo(a))
     .slice(0, limit)
@@ -80,7 +83,7 @@ const fetchPublicGitHubData = async ({ signal, limit = 8 } = {}) => {
     fetchJson(`${GITHUB_API}/users/${DEFAULT_USERNAME}/repos?per_page=100&sort=updated&type=owner`, { signal }),
   ]);
 
-  const featuredRepos = getFeaturedRepos(repos, limit);
+  const featuredRepos = getFeaturedRepos(repos, limit, DEFAULT_USERNAME);
   const originalRepos = repos.filter((repo) => !repo.fork && !repo.archived);
 
   return {

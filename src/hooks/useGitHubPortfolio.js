@@ -4,9 +4,11 @@ import { fetchGitHubPortfolio } from "../services/githubPortfolio";
 const CACHE_KEY = "githubPortfolioData:v1";
 const CACHE_TTL = 15 * 60 * 1000;
 
-const readCache = () => {
+const getCacheKey = (limit) => `${CACHE_KEY}:${limit}`;
+
+const readCache = (limit) => {
   try {
-    const cached = JSON.parse(localStorage.getItem(CACHE_KEY));
+    const cached = JSON.parse(localStorage.getItem(getCacheKey(limit)));
     if (!cached?.savedAt || Date.now() - cached.savedAt > CACHE_TTL) return null;
     return cached.data;
   } catch {
@@ -14,16 +16,16 @@ const readCache = () => {
   }
 };
 
-const writeCache = (data) => {
+const writeCache = (limit, data) => {
   try {
-    localStorage.setItem(CACHE_KEY, JSON.stringify({ savedAt: Date.now(), data }));
+    localStorage.setItem(getCacheKey(limit), JSON.stringify({ savedAt: Date.now(), data }));
   } catch {
     // Cache is optional; private browsing or quota limits should not break the page.
   }
 };
 
 export const useGitHubPortfolio = (limit = 8) => {
-  const [data, setData] = useState(() => readCache());
+  const [data, setData] = useState(() => readCache(limit));
   const [loading, setLoading] = useState(!data);
   const [error, setError] = useState(null);
 
@@ -41,7 +43,7 @@ export const useGitHubPortfolio = (limit = 8) => {
         });
 
         setData(payload);
-        writeCache(payload);
+        writeCache(limit, payload);
       } catch (err) {
         if (err.name !== "AbortError") {
           setError(err);

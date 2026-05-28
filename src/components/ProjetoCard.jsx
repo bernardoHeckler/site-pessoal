@@ -43,7 +43,14 @@ const ProjetoCard = ({ projeto, onCardClick }) => {
           <LazyImage src={projeto.imagem} alt={projeto.titulo} />
           <div className="text">
             <h3 className="nome-projeto">{projeto.titulo}</h3>
-            <p className="tipo-projeto">{getTipoProjeto(projeto.categoria)}</p>
+            <div className="projeto-card-meta">
+              <p className="tipo-projeto">{getTipoProjeto(projeto.categoria)}</p>
+              {projeto.sincronizadoGithub && (
+                <span className="github-card-badge">
+                  {projeto.origemGithub ? "Novo GitHub" : "GitHub"}
+                </span>
+              )}
+            </div>
           </div>
         </div>
       </figure>

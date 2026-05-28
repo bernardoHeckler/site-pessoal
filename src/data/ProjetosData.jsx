@@ -33,7 +33,7 @@ const ProjetosData = {
       demo: null,
     },
     {
-      id: 97,
+      id: 96,
       target: "_blank",
       titulo: "Gerador de CV",
       imagem: enhancedCV,
