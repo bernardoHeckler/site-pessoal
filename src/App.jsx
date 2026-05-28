@@ -92,14 +92,14 @@ export default function App() {
         );
       case "card":
       default:
-        return <Card />;
+        return <Card setSessaoAtiva={setSessaoAtiva} />;
     }
   };
 
   return (
     <div className="app">
       {sessaoRenderizada()}
-      <NavBar setSessaoAtiva={setSessaoAtiva} />
+      <NavBar setSessaoAtiva={setSessaoAtiva} sessaoAtiva={sessaoAtiva} />
     </div>
     
   );

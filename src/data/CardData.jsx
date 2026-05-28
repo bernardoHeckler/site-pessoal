@@ -7,11 +7,32 @@ import { IoChevronDown } from "react-icons/io5";
 const CardData = {
   perfil: {
     nome: "Bernardo Heckler",
-    profissao: "Dev FullStack",
+    profissao: "Desenvolvedor Full Stack Junior",
     foto: getSeasonalProfile(),
     desde: "1/11/2022",
     localizacao: "Brazil, Rio Grande do Sul",
+    headline:
+      "Construo interfaces, APIs e soluções orientadas a dados com foco em clareza, evolução técnica e entrega real.",
+    stack: ["React", "Python", "SQL", "AWS", "JavaScript"],
   },
+
+  destaques: [
+    {
+      id: 1,
+      valor: "2026/2027",
+      rotulo: "Portfólio em evolução",
+    },
+    {
+      id: 2,
+      valor: "Full Stack",
+      rotulo: "Web, APIs e dados",
+    },
+    {
+      id: 3,
+      valor: "RS - Brasil",
+      rotulo: "Disponível para conexões",
+    },
+  ],
 
   contatos: [
     {

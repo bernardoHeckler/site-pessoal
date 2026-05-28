@@ -18,6 +18,16 @@ aside {
   box-shadow: 0px 0px 20px 0px var(--black);
   align-items: flex-end;
 }
+
+.home-profile-card {
+  width: min(100%, 860px);
+}
+
+aside.home-card {
+  width: min(860px, calc(100vw - 32px));
+  align-items: stretch;
+  overflow: hidden;
+}
 .canto {
   display: flex;
   justify-content: end;
@@ -84,6 +94,103 @@ aside {
   font-size: 24px;
   font-weight: 700;
   color: var(--white);
+}
+
+.home-card .texto > h1 {
+  font-size: clamp(28px, 4vw, 44px);
+  line-height: 1.05;
+  text-align: left;
+}
+
+.home-eyebrow {
+  color: var(--highlight);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0;
+  text-transform: uppercase;
+}
+
+.home-headline {
+  max-width: 54ch;
+  color: var(--text-secondary);
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.home-stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: center;
+}
+
+.home-stack span {
+  padding: 7px 10px;
+  border: 1px solid var(--borders);
+  border-radius: 999px;
+  color: var(--white);
+  background: rgba(0, 0, 0, 0.18);
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.home-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+}
+
+.home-actions button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: 42px;
+  padding: 10px 14px;
+  border: 1px solid var(--highlight);
+  border-radius: 12px;
+  color: var(--white);
+  background: rgba(21, 153, 228, 0.16);
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.home-actions button:hover {
+  transform: translateY(-2px);
+  background: var(--highlight);
+  color: var(--black1d);
+}
+
+.home-destaques {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+  width: 100%;
+  padding: 0 24px 18px;
+}
+
+.home-destaque {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 14px;
+  border: 1px solid var(--bordersopacity);
+  border-radius: 14px;
+  background: rgba(0, 0, 0, 0.16);
+}
+
+.home-destaque strong {
+  color: var(--white);
+  font-size: 18px;
+  line-height: 1;
+}
+
+.home-destaque span {
+  color: var(--text-secondary);
+  font-size: 12px;
+  line-height: 1.35;
+  text-transform: uppercase;
 }
 
 .textoLinks {
@@ -209,6 +316,10 @@ aside {
   gap: 16px;
 }
 
+.home-card .content-acima {
+  padding: 34px 28px 22px;
+}
+
 .content-acima.compacto {
   display: flex;
   flex-direction: row;
@@ -273,5 +384,80 @@ aside {
   }
   to {
     transform: scale(0.9);
+  }
+}
+
+@media (min-width: 768px) {
+  .home-card .content-acima {
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 30px;
+    padding: 42px 42px 26px;
+  }
+
+  .home-card .texto {
+    align-items: flex-start;
+    text-align: left;
+  }
+
+  .home-card .home-stack,
+  .home-card .home-actions {
+    justify-content: flex-start;
+  }
+
+  .home-card .caixaPerfil.expandido {
+    flex: 0 0 176px;
+    width: 176px;
+    height: 176px;
+    border-radius: 28px;
+  }
+
+  .home-card .tamanhoFoto.expandido {
+    border-radius: 28px;
+  }
+
+  .home-destaques {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    padding: 0 42px 24px;
+  }
+
+  .home-card .home-content-abaixo {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 180px;
+    align-items: stretch;
+    gap: 18px;
+    padding: 0 42px 34px;
+  }
+
+  .home-card .home-content-abaixo .barraLinha {
+    display: none;
+  }
+
+  .home-card .home-content-abaixo .links {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+    padding: 0;
+  }
+
+  .home-card .home-content-abaixo .informacoes {
+    min-height: 72px;
+    padding: 10px;
+    border: 1px solid var(--bordersopacity);
+    border-radius: 14px;
+    background: rgba(0, 0, 0, 0.14);
+  }
+
+  .home-card .home-content-abaixo .iconesSociais {
+    align-content: center;
+    align-items: center;
+    border: 1px solid var(--bordersopacity);
+    border-radius: 14px;
+    background: rgba(0, 0, 0, 0.14);
+    flex-wrap: wrap;
+    gap: 12px;
+    justify-content: center;
+    padding: 12px;
   }
 }
