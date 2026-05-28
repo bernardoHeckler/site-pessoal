@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 
-const siteUrl = import.meta.env.VITE_SITE_URL || 'https://site-pessoal.vercel.app';
+const siteUrl = import.meta.env.VITE_SITE_URL || 'https://bernardo-heckler.vercel.app';
 const defaultImage = `${siteUrl}/favicon.svg`;
 
 const useMetaTags = ({ 

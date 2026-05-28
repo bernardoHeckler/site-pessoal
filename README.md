@@ -49,7 +49,7 @@ npm run audit
 Use `.env.example` como referencia e mantenha o arquivo `.env` fora do Git.
 
 ```bash
-VITE_SITE_URL=https://site-pessoal.vercel.app
+VITE_SITE_URL=https://bernardo-heckler.vercel.app
 GITHUB_TOKEN=
 GITHUB_USERNAME=bernardoHeckler
 ```
@@ -79,7 +79,7 @@ Configuracao sugerida:
 - Output Directory: `dist`
 - Node.js: 20+
 
-Ao definir um dominio final diferente de `site-pessoal.vercel.app`, atualize `VITE_SITE_URL`, `sitemap.xml`, `robots.txt` e as metas estaticas do `index.html`.
+Ao definir um dominio final diferente de `bernardo-heckler.vercel.app`, atualize `VITE_SITE_URL`, `sitemap.xml`, `robots.txt` e as metas estaticas do `index.html`.
 
 ## Estrutura Principal
 
@@ -99,7 +99,7 @@ src/
 
 ## Contato
 
-- Portfolio: https://site-pessoal.vercel.app
+- Portfolio: https://bernardo-heckler.vercel.app
 - GitHub: https://github.com/bernardoHeckler
 - LinkedIn: https://www.linkedin.com/in/bernardo-heckler-645153305/
 - X/Twitter: https://x.com/bhcklr

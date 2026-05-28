@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://site-pessoal.vercel.app/sitemap.xml
+Sitemap: https://bernardo-heckler.vercel.app/sitemap.xml
