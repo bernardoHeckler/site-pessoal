@@ -56,6 +56,19 @@ GITHUB_USERNAME=bernardoHeckler
 
 `VITE_SITE_URL` e publico porque e usado pelo Vite no navegador. `GITHUB_TOKEN` deve ficar apenas no servidor ou nas variaveis protegidas da Vercel.
 
+## API do GitHub
+
+O endpoint `api/github.js` consulta a API publica do GitHub pelo backend da Vercel. O token e opcional e serve para aumentar limite de requisicoes; ele nao e enviado ao navegador.
+
+Dados retornados:
+
+- perfil publico
+- repositorios publicos
+- linguagens mais recorrentes
+- lista inicial de repositorios candidatos ao portfolio
+
+Durante desenvolvimento local, `npm run dev` usa fallback direto para a API publica do GitHub se `/api/github` nao estiver disponivel. Para testar a funcao serverless localmente, use `vercel dev`.
+
 ## Deploy na Vercel
 
 Configuracao sugerida:
@@ -72,16 +85,16 @@ Ao definir um dominio final diferente de `site-pessoal.vercel.app`, atualize `VI
 
 ```text
 src/
-├── components/
-├── data/
-├── hooks/
-├── pages/
-├── png/
-├── svg/
-├── utils/
-├── App.jsx
-├── main.jsx
-└── index.css
++-- components/
++-- data/
++-- hooks/
++-- pages/
++-- png/
++-- svg/
++-- utils/
++-- App.jsx
++-- main.jsx
+`-- index.css
 ```
 
 ## Contato
