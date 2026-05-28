@@ -1,16 +1,19 @@
 import { useEffect } from 'react';
 
+const siteUrl = import.meta.env.VITE_SITE_URL || 'https://site-pessoal.vercel.app';
+const defaultImage = `${siteUrl}/favicon.svg`;
+
 const useMetaTags = ({ 
-  title = 'Bernardo Heckler - Engenheiro de Dados', 
-  description = 'Portfólio de Bernardo Heckler, Engenheiro de Dados especializado em Python, React e AWS. Transformando dados em insights valiosos.',
-  image = '/site-pessoal/src/svg/fotoperfil.svg',
-  url = 'https://bernardoheckler.github.io/site-pessoal'
+  title = 'Bernardo Heckler - Desenvolvedor Full Stack',
+  description = 'Portfolio de Bernardo Heckler, Desenvolvedor Full Stack Junior com experiencia em React, Python, SQL, AWS e Engenharia de Dados.',
+  image = defaultImage,
+  url = siteUrl
 }) => {
   useEffect(() => {
     document.title = title;
     
     updateMetaTag('description', description);
-    updateMetaTag('keywords', 'Bernardo Heckler, Engenheiro de Dados, Python, React, JavaScript, AWS, Portfólio, Desenvolvedor');
+    updateMetaTag('keywords', 'Bernardo Heckler, Desenvolvedor Full Stack, Engenharia de Dados, Python, React, JavaScript, AWS, SQL, Portfolio');
     updateMetaTag('author', 'Bernardo Heckler');
     
     updateMetaProperty('og:title', title);

@@ -24,29 +24,30 @@ export default defineConfig({
         ]
       },
       manifest: {
-        name: 'Bernardo Heckler - Projetos',
-        short_name: 'BH Projetos',
-        description: 'Portfólio de Bernardo Heckler, Engenheiro de Dados',
+        name: 'Bernardo Heckler - Portfolio',
+        short_name: 'BH Portfolio',
+        description: 'Portfolio profissional de Bernardo Heckler, Desenvolvedor Full Stack e Engenheiro de Dados',
         theme_color: '#fcce68',
         background_color: '#111',
         display: 'standalone',
+        lang: 'pt-BR',
         icons: [
           {
-            src: 'src/svg/fotoperfil.svg',
-            sizes: '192x192',
-            type: 'image/svg+xml'
+            src: '/favicon.svg',
+            sizes: 'any',
+            type: 'image/svg+xml',
+            purpose: 'any maskable'
           }
         ]
       }
     })
   ],
-  base: '/site-pessoal/',
+  base: '/',
   build: {
     rollupOptions: {
       output: {
         manualChunks: {
-          vendor: ['react', 'react-dom'],
-          router: ['react-router-dom']
+          vendor: ['react', 'react-dom']
         }
       }
     }
