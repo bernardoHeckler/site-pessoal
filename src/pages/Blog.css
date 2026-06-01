@@ -194,9 +194,3 @@
     height: auto;
   }
 }
-
-@media (min-width: 1100px) {
-  .linha-posts {
-    grid-template-columns: repeat(4, minmax(0, 1fr));
-  }
-}
