@@ -2,6 +2,27 @@ import { MdSchool, MdWork } from "react-icons/md";
 
 const CarreiraData = {
   titulo: "Carreira",
+  resumo: {
+    descricao:
+      "Minha trajetória combina desenvolvimento full stack, engenharia de dados, suporte técnico e formação em Ciência da Computação. Busco crescer em times que valorizam entrega, aprendizado contínuo e construção de soluções bem mantidas.",
+    destaques: [
+      {
+        valor: "Full Stack",
+        rotulo: "Atuação atual",
+        descricao: "Desenvolvimento e manutenção de aplicações web na Rota System.",
+      },
+      {
+        valor: "Dados",
+        rotulo: "Experiência aplicada",
+        descricao: "Vivência com pipelines, AWS, SQL, Python e visualização de dados.",
+      },
+      {
+        valor: "2028",
+        rotulo: "Formação em andamento",
+        descricao: "Ciência da Computação com foco em software, cloud e segurança.",
+      },
+    ],
+  },
   educacao: {
     titulo: "Educação",
     icone: MdSchool,
@@ -11,7 +32,8 @@ const CarreiraData = {
         instituicao: "Atitus Educação",
         periodo: "03/2024 — 12/2028",
         descricao:
-          "Atualmente no 5º semestre. Foco em Engenharia de Software e Segurança da Informação. Tecnologias: Python, JAVA, Git/GitHub, Docker, Cyber Security, Curso AWS, Cisco Packet Tracer, Kali Linux, Ethical Hacking, PostgreSQL e React Native. Projetos Reais: Desenvolvimento dos apps BusTrack e TreE-Book (React Native/Supabase). Stack Técnica: Criação de APIs RESTful com Java, manipulação de dados com PLpgSQL e testes de endpoints via Postman. Estudo de Hacking Ético e Cloud Computing.",
+          "Atualmente no 5º semestre, com foco em Engenharia de Software, Segurança da Informação, cloud computing e fundamentos de sistemas. Desenvolvimento de projetos acadêmicos e próprios com React Native, Supabase, Java, PostgreSQL, Docker, Git/GitHub e testes de APIs via Postman.",
+        competencias: ["Engenharia de Software", "Cyber Security", "PostgreSQL", "React Native"],
       },
       {
         id: 2,
@@ -19,6 +41,7 @@ const CarreiraData = {
         periodo: "08/2025 — 12/2025",
         descricao:
           "Aprofundamento técnico em Python Avançado, ecossistema Docker e arquitetura de dados na AWS para Engenharia de Dados. Certificados disponíveis via LinkedIn.",
+        competencias: ["Python", "Docker", "AWS", "Engenharia de Dados"],
       },
       {
         id: 3,
@@ -26,6 +49,7 @@ const CarreiraData = {
         periodo: "11/2022 — 03/2023",
         descricao:
           "Fundamentos de JavaScript, Java e bancos de dados relacionais (MySQL).",
+        competencias: ["JavaScript", "Java", "MySQL"],
       },
       {
         id: 4,
@@ -33,6 +57,7 @@ const CarreiraData = {
         periodo: "03/2019 — 05/2022",
         descricao:
           "Fluência em inglês conquistada em 2 anos - Intermediário alto (B1)",
+        competencias: ["Inglês B1", "Comunicação"],
       },
     ],
   },
@@ -45,21 +70,24 @@ const CarreiraData = {
         posicao: "Desenvolvedor Full Stack Júnior - Rota System",
         periodo: "04/2026 - Emprego Atual",
         descricao:
-          "Uma nova etapa profissional como Desenvolvedor na Rota System. Sigo contribuindo com projetos da empresa. Experiência com React, Node, Python, SQL, Redis, Kafka e BI.",
+          "Atuação no desenvolvimento e manutenção de aplicações web, contribuindo com projetos internos e evolução de sistemas. Experiência prática com React, Node, Python, SQL, Redis, Kafka e BI.",
+        competencias: ["React", "Node", "Python", "SQL", "Redis", "Kafka", "BI"],
       },
       {
         id: 1,
         posicao: "Projeto Pessoal - EnhancedCV",
         periodo: "02/2026 - 03/2026",
         descricao:
-          "Foi um período onde desenvolvi uma Plataforma de geração de cúrriculos com auxílio de IA chamado EnhancedCV, automatizando a criação de CVs, com aumento significativo em cúrriculos montados para plataformas Gupy, Indeed, LinkedIn e demais. Atingindo resultados de aprovação por passar de filtros ATS e comprovando maiores chances de ser chamado para entrevistas e propostas de contratação.",
+          "Desenvolvimento de uma plataforma de geração de currículos com auxílio de IA, automatizando a criação de CVs adaptados para plataformas como Gupy, Indeed e LinkedIn, com foco em legibilidade, estrutura e compatibilidade com filtros ATS.",
+        competencias: ["IA", "Automação", "Produto", "ATS", "UX"],
       },
       {
         id: 2,
-        posicao: "Engenheiro de Dados(Estágio) - Compass UOL",
+        posicao: "Engenheiro de Dados (Estágio) - Compass UOL",
         periodo: "08/2025 — 12/2025",
         descricao:
-          "Atuei na Compass UOL, onde aprendi e apliquei práticas de ETL, modelagem de dados e otimização de pipelines. Tive experiência com Python e suas Bibliotecas, Jupyter Notebooks e Ambientes de nuvem da AWS (S3, Lambda, Glue, Athena), também com Docker para criar ambientes eficientes de análise. E com Apache Spark e SQL para estudo e transformar dados brutos em insights valiosos. Lá dentro Busquei resultados em decisões estratégicas, e fiz a organização e Documentação de processos do projeto.",
+          "Aplicação de práticas de ETL, modelagem de dados e otimização de pipelines. Experiência com Python, Jupyter Notebooks, AWS (S3, Lambda, Glue, Athena), Docker, Apache Spark e SQL, além de organização e documentação de processos do projeto.",
+        competencias: ["ETL", "AWS", "Python", "Spark", "SQL", "Docker"],
       },
       {
         id: 3,
@@ -67,6 +95,7 @@ const CarreiraData = {
         periodo: "03/2022 — 05/2025",
         descricao:
           "Fase dedicada ao domínio de tecnologias web e mobile. Em vez de atuar no mercado, foquei na construção de aplicações complexas para portfólio, utilizando React, HTML/CSS e JavaScript. Foi o período onde consolidei minha lógica de programação antes de migrar para o mundo dos dados.",
+        competencias: ["React", "HTML", "CSS", "JavaScript", "Portfólio"],
       },
       {
         id: 4,
@@ -75,6 +104,7 @@ const CarreiraData = {
         periodo: "08/2024 — 05/2025",
         descricao:
           "Manutenção de computadores, configuração de redes, suporte técnico, instalação de softwares e hardware.",
+        competencias: ["Suporte Técnico", "Redes", "Hardware", "Software"],
       },
       {
         id: 5,
@@ -82,6 +112,7 @@ const CarreiraData = {
         periodo: "04/2023 — 09/2023",
         descricao:
           "Primeira experiência com atendimento ao cliente e controle de estoque. Desenvolvi agilidade na resolução de problemas e organização de processos sob pressão.",
+        competencias: ["Atendimento", "Organização", "Resolução de Problemas"],
       },
     ],
   },

@@ -15,6 +15,19 @@ const Carreira = () => {
             <div className="barra"></div>
           </div>
 
+          <section className="career-summary" aria-label="Resumo de carreira">
+            <p>{CarreiraData.resumo.descricao}</p>
+            <div className="career-summary-grid">
+              {CarreiraData.resumo.destaques.map((destaque) => (
+                <article key={destaque.rotulo} className="career-summary-card">
+                  <span>{destaque.rotulo}</span>
+                  <strong>{destaque.valor}</strong>
+                  <p>{destaque.descricao}</p>
+                </article>
+              ))}
+            </div>
+          </section>
+
           {/* Seção Experiência */}
           <div className="section-header">
             <div className="icon-wrapper">
@@ -32,6 +45,13 @@ const Carreira = () => {
                 <h4 className="item-title">{item.posicao}</h4>
                 <span className="item-period">{item.periodo}</span>
                 <p className="item-description">{item.descricao}</p>
+                {item.competencias && (
+                  <div className="item-tags" aria-label={`Competências de ${item.posicao}`}>
+                    {item.competencias.map((competencia) => (
+                      <span key={competencia}>{competencia}</span>
+                    ))}
+                  </div>
+                )}
               </li>
             ))}
           </ol>
@@ -50,6 +70,13 @@ const Carreira = () => {
                 <h4 className="item-title">{item.instituicao}</h4>
                 <span className="item-period">{item.periodo}</span>
                 <p className="item-description">{item.descricao}</p>
+                {item.competencias && (
+                  <div className="item-tags" aria-label={`Competências de ${item.instituicao}`}>
+                    {item.competencias.map((competencia) => (
+                      <span key={competencia}>{competencia}</span>
+                    ))}
+                  </div>
+                )}
               </li>
             ))}
           </ol>
