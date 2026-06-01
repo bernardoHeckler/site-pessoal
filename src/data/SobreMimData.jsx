@@ -1,4 +1,4 @@
-import { MdSchool, MdWork, MdAdd } from "react-icons/md";
+import { MdSchool, MdWork } from "react-icons/md";
 import { SiPython, SiMysql, SiReact, SiFigma, SiJavascript, SiHtml5, SiCss3, SiGit, SiPostman, SiDocker, SiJupyter, SiAnaconda, SiPandas, SiNumpy } from "react-icons/si";
 import { IoAnalytics } from "react-icons/io5";
 import { FaAws, FaJava } from "react-icons/fa";
@@ -6,10 +6,16 @@ import { FaAws, FaJava } from "react-icons/fa";
 const SobreMimData = {
   titulo: "Sobre Mim",
   descricao: "Meu nome é Bernardo Heckler e sou Desenvolvedor Full Stack Júnior na Rota System, com grande interesse em oportunidades que me permitam crescer profissionalmente e contribuir de forma significativa com a equipe.",
+  pontosChave: [
+    "Full Stack Júnior",
+    "React, Python e SQL",
+    "APIs, dados e cloud",
+    "Foco em evolução técnica",
+  ],
   descricaoLonga: [
-    "Tenho conhecimentos em desenvolvimento tanto no front-end quanto no back-end, utilizando tecnologias como JavaScript, Python, SQL e frameworks modernos como React/Next, além de experiência com desenvolvimento em servidores e bancos de dados. Busco sempre a melhor solução para cada problema.",
-    "Sou dedicado e tenho facilidade de aprendizado, com forte interesse em resolver problemas de forma eficiente. Invisto continuamente no meu aprimoramento técnico, estudando novas ferramentas e tendências do mercado, além de desenvolver projetos próprios para consolidar meus conhecimentos.",
-    "Acredito que, ao longo da minha carreira, posso agregar valor por meio do meu comprometimento, curiosidade e vontade de evoluir constantemente. Estou disposto a enfrentar desafios e pronto para colaborar com a equipe, aprender com profissionais mais experientes e crescer junto com a empresa.",
+    "Tenho conhecimentos em desenvolvimento tanto no front-end quanto no back-end, utilizando tecnologias como JavaScript, Python, SQL e frameworks modernos como React, além de experiência com servidores, bancos de dados e integração de sistemas. Busco sempre entender o problema antes de propor a solução.",
+    "Sou dedicado, tenho facilidade de aprendizado e me interesso por resolver problemas de forma eficiente. Invisto continuamente no meu aprimoramento técnico, estudando ferramentas atuais do mercado e desenvolvendo projetos próprios para consolidar meus conhecimentos.",
+    "Quero evoluir em ambientes onde possa entregar valor, aprender com profissionais mais experientes e assumir responsabilidades de forma gradual. Meu foco é crescer com consistência, mantendo organização, comunicação clara e qualidade técnica.",
   ],
 
   atividades: [
@@ -122,11 +128,24 @@ const SobreMimData = {
   futurasIdeias: [
     {
       id: 1,
-      icone: MdAdd,
+      titulo: "Full Stack com produto real",
+      icone: MdWork,
+      descricao:
+        "Aprofundar minha atuação em aplicações web completas, conectando interface, regras de negócio, banco de dados e deploy com foco em usabilidade e manutenção.",
     },
     {
       id: 2,
-      icone: MdAdd,
+      titulo: "Dados aplicados ao negócio",
+      icone: IoAnalytics,
+      descricao:
+        "Usar análise, automações e pipelines para transformar dados em visões úteis, confiáveis e fáceis de consumir por equipes técnicas e de negócio.",
+    },
+    {
+      id: 3,
+      titulo: "Base técnica sólida",
+      icone: MdSchool,
+      descricao:
+        "Continuar fortalecendo fundamentos de engenharia de software, cloud, segurança e boas práticas para construir soluções cada vez mais robustas.",
     },
   ],
 };

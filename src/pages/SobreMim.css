@@ -88,6 +88,26 @@ section.sobreMim-section {
   cursor: pointer;
   transition: all 0.22s ease;
 }
+
+.perfil-pontos {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 14px;
+  text-align: left;
+}
+
+.perfil-pontos span {
+  padding: 7px 10px;
+  border: 1px solid var(--borders);
+  border-radius: 999px;
+  background: rgba(0, 0, 0, 0.18);
+  color: var(--white);
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 1.2;
+}
+
 .coluna-ideias {
   display: flex;
   flex-direction: column;
@@ -95,6 +115,56 @@ section.sobreMim-section {
   height: auto;
   gap: 16px;
 }
+
+.objetivos-grid {
+  align-items: stretch;
+}
+
+.objetivo-card {
+  justify-content: flex-start;
+  padding: 18px;
+}
+
+.objetivo-conteudo {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  height: 100%;
+}
+
+.objetivo-icon {
+  width: 56px;
+  min-width: 56px;
+  height: 56px;
+  padding: 0;
+  background: var(--bcicon);
+  border: 1px solid var(--borders);
+}
+
+.objetivo-icon svg {
+  color: var(--icon-primary);
+}
+
+.objetivo-texto {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.objetivo-texto h3 {
+  margin: 0;
+  color: var(--white);
+  font-size: 18px;
+  line-height: 1.2;
+}
+
+.objetivo-texto p {
+  margin: 0;
+  color: var(--textfade);
+  font-size: 14px;
+  line-height: 1.55;
+}
+
 #coluna-atividades {
   display: flex;
   gap: 32px;
@@ -303,6 +373,10 @@ h2 {
   .coluna-ideias > .informacao {
     width: 420px;
     height: auto;
+  }
+  .objetivos-grid > .objetivo-card {
+    width: min(260px, 100%);
+    min-height: 260px;
   }
   .sobreMim-section > .linha > .coluna{
     gap: 12px;
