@@ -1,6 +1,7 @@
 import "./NavBar.css";
 
 const navItems = [
+  { id: "card", label: "Início" },
   { id: "sobreMim", label: "Sobre" },
   { id: "carreira", label: "Carreira" },
   { id: "portfolio", label: "Projetos" },

@@ -28,6 +28,10 @@ export default function App() {
   // Meta tags dinâmicas baseadas na seção ativa
   const getMetaData = () => {
     const metaMap = {
+      card: {
+        title: 'Bernardo Heckler - Desenvolvedor Full Stack',
+        description: 'Portfólio 2026/2027 de Bernardo Heckler, Desenvolvedor Full Stack Junior com foco em interfaces, APIs e dados.'
+      },
       sobreMim: {
         title: 'Sobre Mim - Bernardo Heckler',
         description: 'Conheca Bernardo Heckler, Desenvolvedor Full Stack Junior com experiencia em React, Python, SQL, AWS e Engenharia de Dados.'
