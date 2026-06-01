@@ -30,27 +30,27 @@ export default function App() {
     const metaMap = {
       card: {
         title: 'Bernardo Heckler - Desenvolvedor Full Stack',
-        description: 'Portfólio 2026/2027 de Bernardo Heckler, Desenvolvedor Full Stack Junior com foco em interfaces, APIs e dados.'
+        description: 'Portfólio 2026/2027 de Bernardo Heckler, Desenvolvedor Full Stack Júnior com foco em interfaces, APIs, dados e entrega de valor real.'
       },
       sobreMim: {
         title: 'Sobre Mim - Bernardo Heckler',
-        description: 'Conheca Bernardo Heckler, Desenvolvedor Full Stack Junior com experiencia em React, Python, SQL, AWS e Engenharia de Dados.'
+        description: 'Conheça Bernardo Heckler, Desenvolvedor Full Stack Júnior com experiência em React, Python, SQL, AWS e Engenharia de Dados.'
       },
       carreira: {
         title: 'Carreira - Bernardo Heckler',
-        description: 'Experiencia profissional e formacao academica de Bernardo Heckler em desenvolvimento full stack, dados, cloud e tecnologia.'
+        description: 'Experiência profissional e formação acadêmica de Bernardo Heckler em desenvolvimento full stack, dados, cloud e tecnologia.'
       },
       portfolio: {
         title: 'Projetos - Bernardo Heckler',
-        description: 'Projetos e trabalhos desenvolvidos por Bernardo Heckler: APIs, aplicacoes web, apps mobile, dados e designs em Figma.'
+        description: 'Projetos desenvolvidos por Bernardo Heckler: APIs, aplicações web, apps mobile, dados, integrações com GitHub e designs em Figma.'
       },
       blog: {
-        title: 'Blog - Bernardo Heckler',
-        description: 'Atualizacoes sobre desenvolvimento, engenharia de dados, carreira e tecnologia por Bernardo Heckler.'
+        title: 'Atualizações - Bernardo Heckler',
+        description: 'Atualizações sobre desenvolvimento, engenharia de dados, carreira, projetos e tecnologia por Bernardo Heckler.'
       },
       contato: {
         title: 'Contato - Bernardo Heckler',
-        description: 'Entre em contato com Bernardo Heckler para oportunidades, projetos e conexoes profissionais.'
+        description: 'Entre em contato com Bernardo Heckler para oportunidades, projetos, conexões profissionais e conversas sobre tecnologia.'
       }
     };
     return metaMap[sessaoAtiva] || {};

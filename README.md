@@ -1,6 +1,6 @@
-# Portfolio 2026/2027 - Bernardo Heckler
+# Portfólio 2026/2027 - Bernardo Heckler
 
-Portfolio pessoal em React + Vite para apresentar perfil profissional, carreira, projetos, blog e contatos de Bernardo Heckler.
+Portfólio pessoal em React + Vite para apresentar perfil profissional, carreira, projetos, blog e contatos de Bernardo Heckler.
 
 ## Status do Projeto
 
@@ -65,7 +65,7 @@ Dados retornados:
 - perfil publico
 - repositorios publicos
 - linguagens mais recorrentes
-- lista inicial de repositorios candidatos ao portfolio
+- lista inicial de repositorios em destaque para o portfolio
 
 Durante desenvolvimento local, `npm run dev` usa fallback direto para a API publica do GitHub se `/api/github` nao estiver disponivel. Para testar a funcao serverless localmente, use `vercel dev`.
 
@@ -99,7 +99,7 @@ src/
 
 ## Contato
 
-- Portfolio: https://bernardo-heckler.vercel.app
+- Portfólio: https://bernardo-heckler.vercel.app
 - GitHub: https://github.com/bernardoHeckler
 - LinkedIn: https://www.linkedin.com/in/bernardo-heckler-645153305/
 - X/Twitter: https://x.com/bhcklr

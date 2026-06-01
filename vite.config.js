@@ -24,13 +24,16 @@ export default defineConfig({
         ]
       },
       manifest: {
-        name: 'Bernardo Heckler - Portfolio',
-        short_name: 'BH Portfolio',
-        description: 'Portfolio profissional de Bernardo Heckler, Desenvolvedor Full Stack e Engenheiro de Dados',
+        name: 'Bernardo Heckler - Portfólio',
+        short_name: 'BH Portfólio',
+        description: 'Portfólio profissional de Bernardo Heckler, Desenvolvedor Full Stack Júnior com foco em React, Python, SQL, AWS e Engenharia de Dados',
         theme_color: '#fcce68',
         background_color: '#111',
         display: 'standalone',
         lang: 'pt-BR',
+        start_url: '/',
+        scope: '/',
+        categories: ['portfolio', 'developer', 'technology'],
         icons: [
           {
             src: '/favicon.svg',
