@@ -43,6 +43,10 @@ const Projetos = () => {
           <div className="linha">
             <h2>Projetos</h2>
             <div className="barra"></div>
+            <p className="projetos-intro">
+              Seleção de aplicações, APIs, projetos mobile e estudos orientados a
+              dados, com foco em clareza técnica, manutenção e evolução contínua.
+            </p>
             <div className="projetos-github-status">
               <span>{githubStats.synced} projetos sincronizados com GitHub</span>
               <span>{githubStats.generated} novos destaques</span>

@@ -25,50 +25,96 @@
   animation: fadeInProjetos 0.5s ease-out forwards;
 }
 
+.projetos-intro {
+  max-width: 70ch;
+  margin: 0;
+  color: var(--textfade);
+  font-size: 15px;
+  line-height: 1.6;
+}
+
 .card-projeto {
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
   align-items: flex-start;
-  justify-content: center;
-  gap: 6px;
+  justify-content: space-between;
+  gap: 14px;
+  width: 100%;
+  min-height: 520px;
+  padding: 14px;
+  border: 1px solid var(--borders);
+  border-radius: 18px;
+  background: var(--bcradial);
   transition: all 0.3s ease;
 }
 
-.card-projeto > .link-projeto > img {
-  min-width: 100%;
-  height: 187px;
-  border-radius: 24px;
-  border: 4px solid var(--borders);
-  transition: all 0.3s ease;
-}
-
-.card-projeto > .link-projeto > .text {
-  padding-left: 8px;
+.projeto-card-main {
   display: flex;
   flex-direction: column;
-  gap: 6px;
+  gap: 14px;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: inherit;
+  cursor: pointer;
+  text-align: left;
+}
+
+.card-projeto .lazy-image-container {
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  border-radius: 14px;
+  border: 1px solid var(--borders);
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.card-projeto .lazy-image-container img,
+.card-projeto .lazy-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card-projeto .text {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 100%;
   text-align: left;
   align-items: flex-start;
 }
 
 .lista-projetos {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: 1fr;
   justify-content: center;
   align-items: center;
-  gap: 32px;
+  gap: 18px;
+  width: 100%;
 }
 
 .nome-projeto {
+  margin: 0;
   font-size: 18px;
   font-weight: 700;
+  line-height: 1.25;
 }
 
 .tipo-projeto {
   font-size: 15px;
-  font-weight: 100;
+  font-weight: 600;
+  color: var(--text-secondary);
+}
+
+.projeto-card-heading {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 100%;
 }
 
 .projeto-card-meta {
@@ -86,6 +132,71 @@
   font-size: 11px;
   font-weight: 700;
   line-height: 1;
+}
+
+.projeto-card-descricao {
+  display: -webkit-box;
+  margin: 0;
+  color: var(--textfade);
+  font-size: 13px;
+  line-height: 1.5;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 4;
+}
+
+.projeto-card-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.projeto-card-tags span {
+  padding: 6px 9px;
+  border: 1px solid var(--borders);
+  border-radius: 999px;
+  background: rgba(0, 0, 0, 0.18);
+  color: var(--white);
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+.projeto-card-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  width: 100%;
+}
+
+.projeto-card-actions button,
+.projeto-card-actions a {
+  display: inline-flex;
+  flex: 1 1 112px;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: 42px;
+  padding: 9px 10px;
+  border: 1px solid var(--borders);
+  border-radius: 10px;
+  background: rgba(0, 0, 0, 0.18);
+  color: var(--white);
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.projeto-card-actions button:hover,
+.projeto-card-actions a:hover {
+  border-color: var(--highlight);
+  color: var(--highlight);
+  transform: translateY(-2px);
+}
+
+.projeto-card-actions svg {
+  color: currentColor;
 }
 
 .projetos-github-status {
@@ -116,9 +227,10 @@
 
 .card-projeto:hover {
   transform: translateY(-2px);
+  border-color: var(--highlight);
 }
 
-.card-projeto:hover img {
+.card-projeto:hover .lazy-image {
   transform: scale(1.01);
 }
 @media (min-width: 768px) {
@@ -132,21 +244,12 @@
     justify-content: flex-start;
   }
   .lista-projetos {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: auto;
-    align-items: center;
-    align-content: center;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    align-items: stretch;
+    gap: 18px;
   }
   .card-projeto {
-    width: auto;
     margin-bottom: 15px;
-  }
-  .card-projeto > .link-projeto > img {
-    width: 100%;
-    height: 160px;
   }
 }
 .carrosel {
