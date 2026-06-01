@@ -34,7 +34,6 @@ const SobreMim = () => {
                     className={`descricao-longa ${
                       mostrarCompleto ? "open" : ""
                     }`}
-                    aria-expanded={mostrarCompleto}
                   >
                     {mostrarCompleto
                       ? SobreMimData.descricaoLonga.map((paragrafo, idx) => (
@@ -44,6 +43,8 @@ const SobreMim = () => {
                   </div>
                   <button
                     className="btn-ler-mais"
+                    type="button"
+                    aria-expanded={mostrarCompleto}
                     onClick={() => setMostrarCompleto((s) => !s)}
                   >
                     {mostrarCompleto ? "Ler menos" : "Ler mais"}

@@ -3,10 +3,15 @@
   top: 0;
   left: 0;
   width: 100%;
-  backdrop-filter: blur(2px);
   height: 100%;
   z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   padding: 60px;
+  background: rgba(0, 0, 0, 0.42);
+  backdrop-filter: blur(2px);
+  animation: fadeIn 0.2s ease-out;
 }
 .modal-content {
   background: var(--section);
@@ -18,9 +23,10 @@
   position: relative;
   animation: slideUp 0.3s ease-out;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-  backdrop-filter: blur(3px); /* Mantendo este do seu código anterior */
+  backdrop-filter: blur(3px);
   overflow-y: auto;
-  max-height: 76vh; /* Limita a altura máxima para ativar a rolagem */
+  max-height: 76vh;
+  outline: none;
 }
 .modal-header {
   display: flex;
@@ -138,6 +144,12 @@
   border: 2px solid var(--white);
 }
 
+.btn-link:focus-visible,
+.modal-close:focus-visible {
+  outline: 2px solid var(--white);
+  outline-offset: 3px;
+}
+
 .modal-close {
   position: absolute;
   top: 5px;
@@ -179,10 +191,9 @@
   }
 }
 
-/* Responsividade */
 @media (max-width: 768px) {
   .modal-content {
-    width: 95%; /* Aumenta um pouco para telas menores */
+    width: 95%;
     margin: 0;
     min-width: 250px;
   }
@@ -217,7 +228,7 @@
     min-width: 200px;
     margin: 0;
     border-radius: 12px;
-    max-height: 85vh; /* Limita a altura máxima para evitar overflow */
+    max-height: 85vh;
   }
 
   .modal-header h2 {
@@ -234,7 +245,6 @@
   }
 }
 
-/* Para telas muito grandes */
 @media (min-width: 1200px) {
   .modal-content {
     min-width: 400px;
@@ -242,25 +252,21 @@
   }
 }
 
-/* Define a largura da barra de rolagem */
 .modal-content::-webkit-scrollbar {
   width: 6px;
 }
 
-/* Define a cor de fundo da pista/trilha da barra de rolagem */
 .modal-content::-webkit-scrollbar-track {
-  background-color: var(--borders); /* Cor de fundo da trilha */
+  background-color: var(--borders);
   border-radius: 6px;
   border: 2px solid var(--section);
 }
 
-/* Define o estilo e a cor do "polegar" (a parte que você move) */
 .modal-content::-webkit-scrollbar-thumb {
-  background-color: var(--textfade); /* Cor mais neutra para o polegar */
-  border-radius: 6px; /* Bordas arredondadas */
+  background-color: var(--textfade);
+  border-radius: 6px;
 }
 
-/* Efeito ao passar o mouse sobre o "polegar" */
 .modal-content::-webkit-scrollbar-thumb:hover {
-  background-color: var(--d1d1d1); /* Cor ao passar o mouse */
+  background-color: var(--d1d1d1);
 }

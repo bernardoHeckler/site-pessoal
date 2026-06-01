@@ -26,6 +26,11 @@
   transform: translateY(-2px);
 }
 
+.projetos-nav > button:focus-visible {
+  outline: 2px solid var(--white);
+  outline-offset: 3px;
+}
+
 .projetos-nav > button.ativo {
   background: var(--highlight);
   color: var(--white);

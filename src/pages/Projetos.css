@@ -195,6 +195,13 @@
   transform: translateY(-2px);
 }
 
+.projeto-card-main:focus-visible,
+.projeto-card-actions button:focus-visible,
+.projeto-card-actions a:focus-visible {
+  outline: 2px solid var(--white);
+  outline-offset: 3px;
+}
+
 .projeto-card-actions svg {
   color: currentColor;
 }
