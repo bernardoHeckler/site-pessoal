@@ -48,6 +48,9 @@ const Card = ({ setSessaoAtiva }) => {
               className={`tamanhoFoto ${mostrar ? "expandido" : ""}`}
               src={CardData.perfil.foto}
               alt="Foto perfil"
+              loading="eager"
+              fetchPriority="high"
+              rootMargin="0px"
             />
           </div>
           <div className="texto">

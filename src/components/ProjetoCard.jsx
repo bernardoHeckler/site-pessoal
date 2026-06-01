@@ -47,7 +47,12 @@ const ProjetoCard = ({ projeto, onCardClick }) => {
         className="projeto-card-main"
         onClick={handleOpenDetails}
       >
-        <LazyImage src={projeto.imagem} alt={projeto.titulo} />
+        <LazyImage
+          src={projeto.imagem}
+          alt={projeto.titulo}
+          rootMargin="420px"
+          sizes="(min-width: 768px) 380px, calc(100vw - 64px)"
+        />
         <div className="text">
           <div className="projeto-card-heading">
             <h3 className="nome-projeto">{projeto.titulo}</h3>
