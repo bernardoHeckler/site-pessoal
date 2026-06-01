@@ -96,7 +96,12 @@ export default function App() {
         );
       case "card":
       default:
-        return <Card setSessaoAtiva={setSessaoAtiva} />;
+        return (
+          <>
+            <div id="animated-background"></div>
+            <Card setSessaoAtiva={setSessaoAtiva} />
+          </>
+        );
     }
   };
 
