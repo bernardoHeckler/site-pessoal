@@ -40,6 +40,24 @@
   color: var(--text-secondary);
 }
 
+.github-sync-meta {
+  margin-top: 4px;
+  color: var(--text-tertiary);
+  font-size: 12px;
+  line-height: 1.35;
+}
+
+.github-sync-warning {
+  margin: 0;
+  padding: 10px 12px;
+  border: 1px solid var(--highlightopacity);
+  border-radius: 10px;
+  background: rgba(21, 153, 228, 0.1);
+  color: var(--text-secondary);
+  font-size: 13px;
+  line-height: 1.45;
+}
+
 .github-stats-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -116,6 +134,13 @@
 .github-repo:hover {
   border-color: var(--highlight);
   transform: translateY(-2px);
+}
+
+.github-repo:focus-visible,
+.github-insights-header a:focus-visible,
+.github-insights-error a:focus-visible {
+  outline: 2px solid var(--white);
+  outline-offset: 3px;
 }
 
 .github-repo strong {

@@ -1,5 +1,6 @@
 import { FaGithub } from "react-icons/fa6";
 import { useGitHubPortfolio } from "../hooks/useGitHubPortfolio";
+import { formatGitHubSyncDate, getGitHubSourceLabel } from "../utils/githubStatus";
 import "./GitHubInsights.css";
 
 const numberFormatter = new Intl.NumberFormat("pt-BR");
@@ -41,7 +42,8 @@ const GitHubSkeleton = () => (
 );
 
 const GitHubInsights = () => {
-  const { data, loading, error } = useGitHubPortfolio(6);
+  const { data, loading, error, isStale, refreshing, source, updatedAt } =
+    useGitHubPortfolio(6);
 
   if (!data && loading) {
     return <GitHubSkeleton />;
@@ -68,9 +70,10 @@ const GitHubInsights = () => {
   const stats = data.stats;
   const repos = data.featuredRepos?.slice(0, 4) || [];
   const topLanguages = stats.topLanguages || [];
+  const formattedSyncDate = formatGitHubSyncDate(updatedAt);
 
   return (
-    <section className="github-insights">
+    <section className="github-insights" aria-busy={refreshing ? "true" : undefined}>
       <div className="github-insights-header">
         <FaGithub size={26} />
         <div>
@@ -78,8 +81,23 @@ const GitHubInsights = () => {
           <a href={profile.htmlUrl} target="_blank" rel="noopener noreferrer">
             @{profile.login}
           </a>
+          <p className="github-sync-meta" aria-live="polite">
+            {refreshing
+              ? "Atualizando dados"
+              : isStale
+                ? "Dados em cache"
+                : "Dados atualizados"}
+            {formattedSyncDate ? ` - ${formattedSyncDate}` : ""}
+            {source ? ` - ${getGitHubSourceLabel(source)}` : ""}
+          </p>
         </div>
       </div>
+
+      {isStale && error && (
+        <p className="github-sync-warning">
+          Usando a última leitura salva porque a atualização do GitHub falhou.
+        </p>
+      )}
 
       <div className="github-stats-grid">
         <StatItem label="Repositórios públicos" value={stats.publicRepos} />
