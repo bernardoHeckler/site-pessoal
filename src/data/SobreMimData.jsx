@@ -31,7 +31,7 @@ const SobreMimData = {
       titulo: "Engenheiro de Dados",
       icone: IoAnalytics,
       descricao:
-        "Tenho experiência na construção de pipelines de dados e análise, utilizando ferramentas como AWS (Lambda, S3 e QuickSight). Minha visão analítica contribui para garantir qualidade e confiabilidade desde a origem até a visualização dos dados.",
+        "Tenho experiência na construção de pipelines de dados e análise, utilizando ferramentas como AWS Lambda, Amazon S3 e AWS QuickSight. Minha visão analítica contribui para garantir qualidade e confiabilidade desde a origem até a visualização dos dados.",
     },
     {
       id: 3,
@@ -128,10 +128,10 @@ const SobreMimData = {
   futurasIdeias: [
     {
       id: 1,
-      titulo: "Full Stack com produto real",
+      titulo: "Aplicações de Alto Impacto",
       icone: MdWork,
       descricao:
-        "Aprofundar minha atuação em aplicações web completas, conectando interface, regras de negócio, banco de dados e deploy com foco em usabilidade e manutenção.",
+        "Aprofundar minha atuação em aplicações web robustas, conectando interface, regras de negócio, banco de dados e deploy com foco em manutenibilidade, performance e experiência do usuário.",
     },
     {
       id: 2,

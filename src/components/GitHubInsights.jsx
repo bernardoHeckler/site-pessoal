@@ -8,6 +8,12 @@ const dateFormatter = new Intl.DateTimeFormat("pt-BR", {
   year: "numeric",
 });
 
+const languageLabelMap = {
+  PLpgSQL: "PL/pgSQL",
+};
+
+const formatLanguageName = (name) => languageLabelMap[name] || name;
+
 const formatDate = (date) => {
   if (!date) return "sem data";
   return dateFormatter.format(new Date(date));
@@ -48,7 +54,7 @@ const GitHubInsights = () => {
           <FaGithub size={26} />
           <div>
             <h3>GitHub</h3>
-            <p>Perfil indisponivel no momento.</p>
+            <p>Perfil indisponível no momento.</p>
           </div>
         </div>
         <a href="https://github.com/bernardoHeckler" target="_blank" rel="noopener noreferrer">
@@ -68,7 +74,7 @@ const GitHubInsights = () => {
       <div className="github-insights-header">
         <FaGithub size={26} />
         <div>
-          <h3>GitHub em Numeros</h3>
+          <h3>GitHub em Números</h3>
           <a href={profile.htmlUrl} target="_blank" rel="noopener noreferrer">
             @{profile.login}
           </a>
@@ -76,17 +82,17 @@ const GitHubInsights = () => {
       </div>
 
       <div className="github-stats-grid">
-        <StatItem label="repositorios publicos" value={stats.publicRepos} />
-        <StatItem label="repositorios autorais" value={stats.originalRepos} />
-        <StatItem label="seguidores" value={stats.followers} />
-        <StatItem label="candidatos ao portfolio" value={stats.portfolioReadyRepos} />
+        <StatItem label="Repositórios públicos" value={stats.publicRepos} />
+        <StatItem label="Repositórios autorais" value={stats.originalRepos} />
+        <StatItem label="Seguidores" value={stats.followers} />
+        <StatItem label="Projetos em destaque" value={stats.portfolioReadyRepos} />
       </div>
 
       {topLanguages.length > 0 && (
         <div className="github-languages" aria-label="Linguagens mais usadas">
           {topLanguages.map((language) => (
             <span key={language.name}>
-              {language.name} <small>{language.total}</small>
+              {formatLanguageName(language.name)} <small>{language.total}</small>
             </span>
           ))}
         </div>

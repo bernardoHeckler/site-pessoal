@@ -45,7 +45,7 @@ const Projetos = () => {
             <div className="barra"></div>
             <div className="projetos-github-status">
               <span>{githubStats.synced} projetos sincronizados com GitHub</span>
-              <span>{githubStats.generated} novos candidatos</span>
+              <span>{githubStats.generated} novos destaques</span>
               {carregandoGithub && <span>Atualizando dados...</span>}
             </div>
           </div>
