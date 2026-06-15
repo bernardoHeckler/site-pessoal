@@ -4,6 +4,7 @@ import Card from "../components/Card";
 import { useState } from "react";
 import Footer from "../components/Footer";
 import CaixaDownloadCV from "../components/CaixaDownloadCV";
+import GitHubInsights from "../components/GitHubInsights";
 
 const SobreMim = () => {
   const [mostrarCompleto, setMostrarCompleto] = useState(false);
@@ -102,6 +103,11 @@ const SobreMim = () => {
                 );
               })}
             </div>
+          </div>
+
+          <div className="linha">
+            <h2>GitHub</h2>
+            <GitHubInsights />
           </div>
 
           <div className="linha">
