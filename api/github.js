@@ -1,6 +1,7 @@
 const GITHUB_API = "https://api.github.com";
 const DEFAULT_USERNAME = "bernardoHeckler";
 const DEFAULT_LIMIT = 8;
+const REQUEST_TIMEOUT = 8000;
 
 const json = (res, statusCode, payload) => {
   res.statusCode = statusCode;
@@ -22,9 +23,10 @@ const getRequestHeaders = () => {
   return headers;
 };
 
-const fetchGitHub = async (path) => {
+const fetchGitHub = async (path, signal) => {
   const response = await fetch(`${GITHUB_API}${path}`, {
     headers: getRequestHeaders(),
+    signal,
   });
 
   if (!response.ok) {
@@ -118,11 +120,13 @@ export default async function handler(req, res) {
   const username = process.env.GITHUB_USERNAME || DEFAULT_USERNAME;
   const limit = Number.parseInt(req.query?.limit, 10) || DEFAULT_LIMIT;
   const safeLimit = Math.min(Math.max(limit, 1), 24);
+  const controller = new AbortController();
+  const timeoutId = setTimeout(() => controller.abort(), REQUEST_TIMEOUT);
 
   try {
     const [profile, repos] = await Promise.all([
-      fetchGitHub(`/users/${username}`),
-      fetchGitHub(`/users/${username}/repos?per_page=100&sort=updated&type=owner`),
+      fetchGitHub(`/users/${username}`, controller.signal),
+      fetchGitHub(`/users/${username}/repos?per_page=100&sort=updated&type=owner`, controller.signal),
     ]);
 
     const publicRepos = repos.map(normalizeRepo);
@@ -130,7 +134,7 @@ export default async function handler(req, res) {
     const featuredRepos = getFeaturedRepos(repos, safeLimit, username);
 
     json(res, 200, {
-      source: "github-api",
+      source: process.env.GITHUB_TOKEN ? "github-api-token" : "github-api-public",
       username,
       fetchedAt: new Date().toISOString(),
       profile: normalizeProfile(profile),
@@ -147,9 +151,15 @@ export default async function handler(req, res) {
       featuredRepos,
     });
   } catch (error) {
-    json(res, 502, {
-      error: "Nao foi possivel consultar a API do GitHub.",
+    const isTimeout = error.name === "AbortError";
+
+    json(res, isTimeout ? 504 : 502, {
+      error: isTimeout
+        ? "Tempo limite excedido ao consultar a API do GitHub."
+        : "Nao foi possivel consultar a API do GitHub.",
       ...(process.env.NODE_ENV !== "production" ? { detail: error.message } : {}),
     });
+  } finally {
+    clearTimeout(timeoutId);
   }
 }

@@ -8,11 +8,19 @@ import ProjetosNav from "../components/ProjetosNav";
 import Footer from "../components/Footer";
 import { useGitHubPortfolio } from "../hooks/useGitHubPortfolio";
 import { buildGithubProjects, getGithubProjectStats } from "../utils/githubProjects";
+import { getGitHubSourceLabel } from "../utils/githubStatus";
 
 const Projetos = () => {
   const [filtroAtual, setFiltroAtual] = useState("todos");
   const [projetoSelecionado, setProjetoSelecionado] = useState(null);
-  const { data: githubData, loading: carregandoGithub } = useGitHubPortfolio(24);
+  const {
+    data: githubData,
+    loading: carregandoGithub,
+    error: githubError,
+    isStale: githubStale,
+    refreshing: atualizandoGithub,
+    source: githubSource,
+  } = useGitHubPortfolio(24);
   const projetos = useMemo(
     () => buildGithubProjects(ProjetosData.projetos, githubData),
     [githubData]
@@ -34,6 +42,17 @@ const Projetos = () => {
     setProjetoSelecionado(null);
   };
 
+  const githubStatus = (() => {
+    if (atualizandoGithub) return "Atualizando dados do GitHub";
+    if (githubStale) return "Dados do GitHub em cache local";
+    if (githubData?.source || githubSource) {
+      return `Fonte: ${getGitHubSourceLabel(githubSource || githubData.source)}`;
+    }
+    if (githubError) return "Projetos locais ativos";
+    if (carregandoGithub) return "Conectando ao GitHub";
+    return null;
+  })();
+
   return (
     <>
       <div id="animated-background"></div>
@@ -47,10 +66,10 @@ const Projetos = () => {
               Seleção de aplicações, APIs, projetos mobile e estudos orientados a
               dados, com foco em clareza técnica, manutenção e evolução contínua.
             </p>
-            <div className="projetos-github-status">
+            <div className="projetos-github-status" aria-live="polite">
               <span>{githubStats.synced} projetos sincronizados com GitHub</span>
               <span>{githubStats.generated} novos destaques</span>
-              {carregandoGithub && <span>Atualizando dados...</span>}
+              {githubStatus && <span>{githubStatus}</span>}
             </div>
           </div>
 

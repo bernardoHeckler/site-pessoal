@@ -1,5 +1,6 @@
 const DEFAULT_USERNAME = "bernardoHeckler";
 const GITHUB_API = "https://api.github.com";
+const REQUEST_TIMEOUT = 8000;
 
 const normalizeProfile = (profile) => ({
   login: profile.login,
@@ -67,14 +68,47 @@ const getFeaturedRepos = (repos, limit, username = DEFAULT_USERNAME) =>
     .map(normalizeRepo);
 
 const fetchJson = async (url, options = {}) => {
-  const response = await fetch(url, options);
-  const contentType = response.headers.get("content-type") || "";
+  const { signal, timeout = REQUEST_TIMEOUT, ...fetchOptions } = options;
+  const controller = new AbortController();
+  let didTimeout = false;
 
-  if (!response.ok || !contentType.includes("application/json")) {
-    throw new Error(`Falha ao carregar ${url}`);
+  const timeoutId = setTimeout(() => {
+    didTimeout = true;
+    controller.abort();
+  }, timeout);
+
+  const handleAbort = () => controller.abort(signal.reason);
+
+  if (signal) {
+    if (signal.aborted) {
+      handleAbort();
+    } else {
+      signal.addEventListener("abort", handleAbort, { once: true });
+    }
   }
 
-  return response.json();
+  try {
+    const response = await fetch(url, {
+      ...fetchOptions,
+      signal: controller.signal,
+    });
+    const contentType = response.headers.get("content-type") || "";
+
+    if (!response.ok || !contentType.includes("application/json")) {
+      throw new Error(`Falha ao carregar ${url}`);
+    }
+
+    return response.json();
+  } catch (error) {
+    if (didTimeout) {
+      throw new Error("Tempo limite excedido ao consultar o GitHub.");
+    }
+
+    throw error;
+  } finally {
+    clearTimeout(timeoutId);
+    signal?.removeEventListener("abort", handleAbort);
+  }
 };
 
 const fetchPublicGitHubData = async ({ signal, limit = 8 } = {}) => {

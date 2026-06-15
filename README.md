@@ -4,7 +4,7 @@ Portfólio pessoal em React + Vite para apresentar perfil profissional, carreira
 
 ## Status do Projeto
 
-Esta base esta sendo preparada para deploy na Vercel, com suporte a variaveis de ambiente e futuras integracoes com a API do GitHub via funcoes server-side. Tokens e chaves privadas nao devem ser expostos no frontend.
+Esta base esta sendo preparada para deploy na Vercel, com suporte a variaveis de ambiente e integracao com a API do GitHub via funcao server-side. Tokens e chaves privadas nao devem ser expostos no frontend.
 
 ## Tecnologias
 
@@ -68,6 +68,13 @@ Dados retornados:
 - lista inicial de repositorios em destaque para o portfolio
 
 Durante desenvolvimento local, `npm run dev` usa fallback direto para a API publica do GitHub se `/api/github` nao estiver disponivel. Para testar a funcao serverless localmente, use `vercel dev`.
+
+Resiliencia em producao:
+
+- timeout controlado para evitar telas presas em carregamento
+- cache local temporario no navegador
+- fallback para dados publicos do GitHub quando a funcao serverless nao responder
+- indicacao visual quando o portfolio estiver usando cache local
 
 ## Deploy na Vercel
 
