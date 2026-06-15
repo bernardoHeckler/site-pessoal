@@ -30,23 +30,23 @@ export default function App() {
     const metaMap = {
       sobreMim: {
         title: 'Sobre Mim - Bernardo Heckler',
-        description: 'Conheça Bernardo Heckler, Engenheiro de Dados especializado em Python, AWS e análise de dados. Atualmente na Compass UOL.'
+        description: 'Conheca Bernardo Heckler, Desenvolvedor Full Stack Junior com experiencia em React, Python, SQL, AWS e Engenharia de Dados.'
       },
       carreira: {
         title: 'Carreira - Bernardo Heckler',
-        description: 'Experiência profissional e formação acadêmica de Bernardo Heckler. Engenheiro de Dados com expertise em Python, React e AWS.'
+        description: 'Experiencia profissional e formacao academica de Bernardo Heckler em desenvolvimento full stack, dados, cloud e tecnologia.'
       },
       portfolio: {
         title: 'Projetos - Bernardo Heckler',
-        description: 'Projetos e trabalhos desenvolvidos por Bernardo Heckler. APIs, aplicações web, mobile e designs em Figma.'
+        description: 'Projetos e trabalhos desenvolvidos por Bernardo Heckler: APIs, aplicacoes web, apps mobile, dados e designs em Figma.'
       },
       blog: {
         title: 'Blog - Bernardo Heckler',
-        description: 'Artigos e posts sobre desenvolvimento, engenharia de dados e tecnologia por Bernardo Heckler.'
+        description: 'Atualizacoes sobre desenvolvimento, engenharia de dados, carreira e tecnologia por Bernardo Heckler.'
       },
       contato: {
         title: 'Contato - Bernardo Heckler',
-        description: 'Entre em contato com Bernardo Heckler. Engenheiro de Dados disponível para oportunidades e projetos.'
+        description: 'Entre em contato com Bernardo Heckler para oportunidades, projetos e conexoes profissionais.'
       }
     };
     return metaMap[sessaoAtiva] || {};

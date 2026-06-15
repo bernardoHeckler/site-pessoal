@@ -59,7 +59,7 @@ const CardData = {
       id: 3,
       nome: "GitHub",
       icone: FaGithub,
-      link: "https://github.com/bernardoHeckler/site-pessoal.git",
+      link: "https://github.com/bernardoHeckler",
     },
     {
       id: 4,
