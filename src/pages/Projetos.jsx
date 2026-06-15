@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useMemo, useState } from "react";
 import "./Projetos.css";
 import Card from "../components/Card";
 import ProjetoCard from "../components/ProjetoCard";
@@ -6,25 +6,30 @@ import ProjetosData from "../data/ProjetosData";
 import ProjetoModal from "../components/ProjetoModal";
 import ProjetosNav from "../components/ProjetosNav";
 import Footer from "../components/Footer";
+import { useGitHubPortfolio } from "../hooks/useGitHubPortfolio";
+import { buildGithubProjects, getGithubProjectStats } from "../utils/githubProjects";
 
 const Projetos = () => {
   const [filtroAtual, setFiltroAtual] = useState("todos");
-  // 2. Novo estado para controlar o projeto selecionado (abre/fecha o modal)
-  const [projetoSelecionado, setProjetoSelecionado] = useState(null); 
+  const [projetoSelecionado, setProjetoSelecionado] = useState(null);
+  const { data: githubData, loading: carregandoGithub } = useGitHubPortfolio(24);
+  const projetos = useMemo(
+    () => buildGithubProjects(ProjetosData.projetos, githubData),
+    [githubData]
+  );
+  const githubStats = useMemo(() => getGithubProjectStats(projetos), [projetos]);
 
   const projetosFiltrados =
     filtroAtual === "todos"
-      ? ProjetosData.projetos
-      : ProjetosData.projetos.filter(
+      ? projetos
+      : projetos.filter(
           (projeto) => projeto.categoria === filtroAtual
         );
-        
-  // 3. Função para abrir o modal (recebe o objeto projeto)
+
   const handleOpenModal = (projeto) => {
     setProjetoSelecionado(projeto);
   };
-  
-  // 4. Função para fechar o modal
+
   const handleCloseModal = () => {
     setProjetoSelecionado(null);
   };
@@ -38,6 +43,11 @@ const Projetos = () => {
           <div className="linha">
             <h2>Projetos</h2>
             <div className="barra"></div>
+            <div className="projetos-github-status">
+              <span>{githubStats.synced} projetos sincronizados com GitHub</span>
+              <span>{githubStats.generated} novos candidatos</span>
+              {carregandoGithub && <span>Atualizando dados...</span>}
+            </div>
           </div>
 
           <div className="carrosel">
@@ -51,7 +61,7 @@ const Projetos = () => {
           <div className="lista-projetos">
             {projetosFiltrados.map((projeto) => (
               <ProjetoCard 
-                key={projeto.id} 
+                key={projeto.uid || projeto.id}
                 projeto={projeto} 
                 onCardClick={handleOpenModal}
               />

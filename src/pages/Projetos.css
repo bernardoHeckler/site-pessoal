@@ -71,6 +71,38 @@
   font-weight: 100;
 }
 
+.projeto-card-meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+}
+
+.github-card-badge {
+  padding: 4px 8px;
+  border: 1px solid var(--highlight);
+  border-radius: 999px;
+  color: var(--highlight);
+  font-size: 11px;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.projetos-github-status {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.projetos-github-status span {
+  padding: 6px 10px;
+  border: 1px solid var(--borders);
+  border-radius: 999px;
+  color: var(--text-secondary);
+  background: rgba(0, 0, 0, 0.18);
+  font-size: 12px;
+}
+
 @keyframes fadeInProjetos {
   from {
     opacity: 0;

@@ -59,6 +59,22 @@
   margin-bottom: 24px;
 }
 
+.github-modal-panel {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 8px;
+  margin-bottom: 24px;
+}
+
+.github-modal-panel span {
+  padding: 10px;
+  border: 1px solid var(--bordersopacity);
+  border-radius: 10px;
+  color: var(--text-secondary);
+  background: rgba(0, 0, 0, 0.18);
+  font-size: 13px;
+}
+
 .projeto-tecnologias {
   margin: 24px 0;
 }
@@ -188,6 +204,10 @@
   .projeto-links {
     flex-direction: column;
     gap: 12px;
+  }
+
+  .github-modal-panel {
+    grid-template-columns: 1fr;
   }
 }
 

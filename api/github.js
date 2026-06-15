@@ -90,12 +90,15 @@ const scoreRepo = (repo) => {
   return hasDescription + hasHomepage + hasTopics + repo.stargazers_count + activity;
 };
 
-const getFeaturedRepos = (repos, limit) =>
+const getFeaturedRepos = (repos, limit, username = DEFAULT_USERNAME) =>
   repos
+    .filter((repo) => normalizeProfileRepoName(repo.name) !== normalizeProfileRepoName(username))
     .filter((repo) => !repo.fork && !repo.archived && repo.description)
     .sort((a, b) => scoreRepo(b) - scoreRepo(a))
     .slice(0, limit)
     .map(normalizeRepo);
+
+const normalizeProfileRepoName = (name = "") => name.trim().toLowerCase();
 
 export default async function handler(req, res) {
   res.setHeader("Access-Control-Allow-Methods", "GET, OPTIONS");
@@ -124,7 +127,7 @@ export default async function handler(req, res) {
 
     const publicRepos = repos.map(normalizeRepo);
     const originalRepos = repos.filter((repo) => !repo.fork && !repo.archived);
-    const featuredRepos = getFeaturedRepos(repos, safeLimit);
+    const featuredRepos = getFeaturedRepos(repos, safeLimit, username);
 
     json(res, 200, {
       source: "github-api",
