@@ -23,6 +23,11 @@ const SobreMim = () => {
             <div className="barra"></div>
             <div className="descricao">
               <p>{SobreMimData.descricao}</p>
+              <div className="perfil-pontos" aria-label="Resumo profissional">
+                {SobreMimData.pontosChave.map((ponto) => (
+                  <span key={ponto}>{ponto}</span>
+                ))}
+              </div>
               {SobreMimData.descricaoLonga && (
                 <>
                   <div
@@ -83,20 +88,19 @@ const SobreMim = () => {
             </div>
           </div> */}
           <div className="linha">
-            <h2>Futuras Ideias</h2>
-            <div className="coluna-ideias">
+            <h2>Direção 2026/2027</h2>
+            <div className="coluna-ideias objetivos-grid">
               {SobreMimData.futurasIdeias.map((ideia) => {
                 const IconeIdeia = ideia.icone;
                 return (
-                  <section key={ideia.id} className="informacao">
-                    <div className="blocos">
-                      <div className="blocoMaior">
+                  <section key={ideia.id} className="informacao objetivo-card">
+                    <div className="objetivo-conteudo">
+                      <div className="blocoMaior objetivo-icon">
                         <IconeIdeia size={48} />
                       </div>
-                      <div className="retangulos">
-                        <div className="forma1"></div>
-                        <div className="forma2"></div>
-                        <div className="forma2"></div>
+                      <div className="objetivo-texto">
+                        <h3>{ideia.titulo}</h3>
+                        <p>{ideia.descricao}</p>
                       </div>
                     </div>
                   </section>
