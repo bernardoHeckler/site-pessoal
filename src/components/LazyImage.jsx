@@ -1,55 +1,84 @@
-import { useState, useRef, useEffect } from 'react';
-import './LazyImage.css';
+import { useEffect, useRef, useState } from "react";
+import "./LazyImage.css";
 
-const LazyImage = ({ src, alt, className = '', placeholder = null }) => {
+const LazyImage = ({
+  src,
+  alt,
+  className = "",
+  placeholder = null,
+  loading = "lazy",
+  fetchPriority = "auto",
+  decoding = "async",
+  rootMargin = "280px",
+  sizes,
+}) => {
+  const shouldLoadImmediately = loading === "eager" || fetchPriority === "high";
   const [isLoaded, setIsLoaded] = useState(false);
-  const [isInView, setIsInView] = useState(false);
+  const [shouldLoad, setShouldLoad] = useState(shouldLoadImmediately);
   const [hasError, setHasError] = useState(false);
-  const imgRef = useRef();
+  const containerRef = useRef(null);
 
   useEffect(() => {
+    setIsLoaded(false);
+    setHasError(false);
+    setShouldLoad(shouldLoadImmediately);
+  }, [src, shouldLoadImmediately]);
+
+  useEffect(() => {
+    if (shouldLoad || shouldLoadImmediately) return undefined;
+
+    if (typeof IntersectionObserver === "undefined") {
+      setShouldLoad(true);
+      return undefined;
+    }
+
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
-          setIsInView(true);
+          setShouldLoad(true);
           observer.disconnect();
         }
       },
-      { threshold: 0.1 }
+      { rootMargin, threshold: 0.01 }
     );
+    const currentContainer = containerRef.current;
 
-    if (imgRef.current) {
-      observer.observe(imgRef.current);
+    if (currentContainer) {
+      observer.observe(currentContainer);
     }
 
     return () => observer.disconnect();
-  }, []);
+  }, [rootMargin, shouldLoad, shouldLoadImmediately]);
 
   const handleLoad = () => setIsLoaded(true);
   const handleError = () => setHasError(true);
+  const showPlaceholder = !shouldLoad || (!isLoaded && !hasError);
 
   return (
-    <div ref={imgRef} className={`lazy-image-container ${className}`}>
-      {!isInView && (
-        <div className="lazy-placeholder">
+    <div ref={containerRef} className={`lazy-image-container ${className}`}>
+      {showPlaceholder && (
+        <div className="lazy-placeholder" aria-hidden="true">
           {placeholder || <div className="lazy-skeleton" />}
         </div>
       )}
-      
-      {isInView && !hasError && (
+
+      {shouldLoad && !hasError && (
         <img
           src={src}
           alt={alt}
-          className={`lazy-image ${isLoaded ? 'loaded' : 'loading'}`}
+          className={`lazy-image ${isLoaded ? "loaded" : "loading"}`}
           onLoad={handleLoad}
           onError={handleError}
-          loading="lazy"
+          loading={loading}
+          fetchPriority={fetchPriority}
+          decoding={decoding}
+          sizes={sizes}
         />
       )}
-      
+
       {hasError && (
-        <div className="lazy-error">
-          <span>⚠️ Imagem não disponível</span>
+        <div className="lazy-error" role="img" aria-label={alt}>
+          <span>Imagem indisponível</span>
         </div>
       )}
     </div>

@@ -11,9 +11,10 @@ import blueprintPattern from './png/blueprint-pattern.png';
 const hoje = new Date();
 const mesAtual = hoje.getMonth();
 const diaAtual = hoje.getDate();
+const profileImage = mesAtual === 11 ? fotoNatal : fotoperfil;
 const favicon = document.querySelector('link[rel="icon"]');
 if (favicon) {
-  favicon.href = mesAtual === 11 ? fotoNatal : fotoperfil;
+  favicon.href = profileImage;
 }
 
 // Alert de Feliz Natal no dia 25/12
@@ -23,8 +24,8 @@ if (mesAtual === 11 && diaAtual === 25) {
 
 // Preload imagens críticas
 const criticalImages = [
-  fotoperfil,
-  blueprintPattern
+  { src: profileImage, fetchPriority: "high" },
+  blueprintPattern,
 ];
 preloadImages(criticalImages);
 
