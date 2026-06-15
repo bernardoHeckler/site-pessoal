@@ -26,7 +26,13 @@ const Card = ({ setSessaoAtiva }) => {
       <aside className={isHome ? "home-card" : ""}>
         {isMobile && !mostrar && (
           <div className="canto">
-            <button className="btn-canto" onClick={alterar}>
+            <button
+              className="btn-canto"
+              type="button"
+              aria-label="Expandir informações do perfil"
+              aria-expanded={mostrar}
+              onClick={alterar}
+            >
               <CardData.icones.seta size={12} />
             </button>
           </div>
@@ -118,7 +124,13 @@ const Card = ({ setSessaoAtiva }) => {
             </div>
             {isMobile && (
               <div className="canto-baixo">
-                <button className="btn-canto-invertido" onClick={alterar}>
+                <button
+                  className="btn-canto-invertido"
+                  type="button"
+                  aria-label="Recolher informações do perfil"
+                  aria-expanded={mostrar}
+                  onClick={alterar}
+                >
                   <CardData.icones.seta size={12} style={{ transform: 'rotate(180deg)' }} />
                 </button>
               </div>

@@ -47,6 +47,14 @@ aside.home-card {
   color: var(--icon-primary);
 }
 
+.btn-canto:focus-visible,
+.btn-canto-invertido:focus-visible,
+.home-actions button:focus-visible,
+.iconesSociais a:focus-visible {
+  outline: 2px solid var(--white);
+  outline-offset: 3px;
+}
+
 .content-abaixo {
   display: flex;
   flex-direction: column;
