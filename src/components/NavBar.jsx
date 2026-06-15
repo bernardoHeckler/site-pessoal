@@ -1,27 +1,29 @@
 import "./NavBar.css";
 
-const NavBar = ({ setSessaoAtiva }) => {
+const navItems = [
+  { id: "card", label: "Início" },
+  { id: "sobreMim", label: "Sobre" },
+  { id: "carreira", label: "Carreira" },
+  { id: "portfolio", label: "Projetos" },
+  { id: "blog", label: "Blog" },
+  { id: "contato", label: "Contato" },
+];
+
+const NavBar = ({ setSessaoAtiva, sessaoAtiva }) => {
   return (
     <div className="navbar-container">
-      <nav className="navbar">
-        <button onClick={() => setSessaoAtiva("sobreMim")} className="nav-link">
-          <p className="textoNav">Sobre</p>
-        </button>
-        <button onClick={() => setSessaoAtiva("carreira")} className="nav-link">
-          <p className="textoNav">Carreira</p>
-        </button>
-        <button
-          onClick={() => setSessaoAtiva("portfolio")}
-          className="nav-link"
-        >
-          <p className="textoNav">Projetos</p>
-        </button>
-        <button onClick={() => setSessaoAtiva("blog")} className="nav-link">
-          <p className="textoNav">Blog</p>
-        </button>
-        <button onClick={() => setSessaoAtiva("contato")} className="nav-link">
-          <p className="textoNav">Contato</p>
-        </button>
+      <nav className="navbar" aria-label="Navegação principal">
+        {navItems.map((item) => (
+          <button
+            key={item.id}
+            type="button"
+            onClick={() => setSessaoAtiva(item.id)}
+            className={`nav-link ${sessaoAtiva === item.id ? "ativo" : ""}`}
+            aria-current={sessaoAtiva === item.id ? "page" : undefined}
+          >
+            <span className="textoNav">{item.label}</span>
+          </button>
+        ))}
       </nav>
     </div>
   );

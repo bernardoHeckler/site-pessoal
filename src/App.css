@@ -2,7 +2,7 @@
 body {
   background-color: var(--bcsite);
   color: var(--white);
-  padding: 46px 16px 16px 16px;
+  padding: 46px 16px 120px 16px;
   transition: 0.3s;
 
   display: flex;

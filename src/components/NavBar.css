@@ -3,11 +3,12 @@
   bottom: 0;
   left: 50%;
   transform: translateX(-50%);
-  z-index: 1000;
+  z-index: 9999;
   width: auto;
   animation: fadeInNav 0.5s ease-out forwards;
   backdrop-filter: blur(10px);
   border-radius: 20px 20px 0 0;
+  pointer-events: none;
 }
 
 .navbar {
@@ -21,20 +22,29 @@
   margin: 0 0 16px 0;
   height: 65px;
   box-shadow: 0px 0px 20px 0px var(--black);
-  gap: 16px;
-  width: 358px;
-  padding: 0 20px;
+  gap: 4px;
+  width: min(600px, calc(100vw - 24px));
+  padding: 0 10px;
   transition: all 0.3s ease;
+  pointer-events: auto;
 }
 
 .nav-link {
   background-color: transparent;
   color: var(--white);
   border: none;
+  cursor: pointer;
+  flex: 1 1 0;
+  min-height: 44px;
+  min-width: 0;
+  padding: 8px 4px;
+  position: relative;
+  z-index: 2;
   transition: color 0.3s ease, transform 0.1s ease, box-shadow 0.2s ease;
 }
 
-.nav-link:hover {
+.nav-link:hover,
+.nav-link.ativo {
   color: var(--highlight);
   transform: translateY(-3px) scale(1.05);
   animation: animacaoConteudoNav 0.4s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
@@ -48,8 +58,11 @@
 }
 
 .textoNav {
-  font-size: 16px;
+  display: block;
+  font-size: 13px;
   margin: 0;
+  pointer-events: none;
+  white-space: nowrap;
 }
 
 @keyframes fadeInNav {
@@ -83,5 +96,11 @@
     margin: 0;
     height: 80px;
     box-shadow: 0px 0px 20px 0px var(--black);
+    gap: 8px;
+    padding: 0 18px;
+  }
+
+  .textoNav {
+    font-size: 16px;
   }
 }
