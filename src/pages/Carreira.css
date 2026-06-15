@@ -73,6 +73,62 @@
   margin-top: 8px;
 }
 
+.career-summary {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 100%;
+  padding: 16px;
+  border: 1px solid var(--bordersopacity);
+  border-radius: 16px;
+  background: rgba(0, 0, 0, 0.16);
+}
+
+.career-summary > p {
+  margin: 0;
+  color: var(--textfade);
+  font-size: 0.98rem;
+  line-height: 1.6;
+}
+
+.career-summary-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+}
+
+.career-summary-card {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  min-height: 120px;
+  padding: 14px;
+  border: 1px solid var(--borders);
+  border-radius: 14px;
+  background: var(--bcradial);
+}
+
+.career-summary-card span {
+  color: var(--textfade);
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1.2;
+  text-transform: uppercase;
+}
+
+.career-summary-card strong {
+  color: var(--white);
+  font-size: 20px;
+  line-height: 1.1;
+}
+
+.career-summary-card p {
+  margin: 0;
+  color: var(--textfade);
+  font-size: 13px;
+  line-height: 1.45;
+}
+
 .timeline-list {
   display: flex;
   flex-direction: column;
@@ -127,6 +183,25 @@
   font-size: 0.95rem;
   line-height: 1.5;
 }
+
+.item-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.item-tags span {
+  padding: 6px 9px;
+  border: 1px solid var(--borders);
+  border-radius: 999px;
+  background: rgba(0, 0, 0, 0.18);
+  color: var(--white);
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1.2;
+}
+
 /* Regras relacionadas à seção "Minhas Habilidades" removidas — não estão sendo usadas no componente.
    Caso mais tarde queira reativar a seção, essas regras podem ser recuperadas no histórico do git. */
 
@@ -174,6 +249,9 @@
 @media (min-width: 768px) {
   .career-section {
     width: 100%;
+  }
+  .career-summary-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
   .career-section > .linha-skills > .informacao-skills {
     width: 100%;
