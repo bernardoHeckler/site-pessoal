@@ -19,6 +19,10 @@ const languageCategoryMap = {
   PLpgSQL: "dados",
 };
 
+const technologyLabelMap = {
+  PLpgSQL: "PL/pgSQL",
+};
+
 const categoryImageMap = {
   api: apitrabalho,
   java: apimicroservices,
@@ -77,11 +81,13 @@ const toTitle = (name = "") =>
 const uniqueValues = (values) =>
   [...new Set(values.filter(Boolean).map((value) => String(value).trim()).filter(Boolean))];
 
+const formatTechnologyName = (value = "") => technologyLabelMap[value] || value;
+
 const getRepoTechnologies = (repo) =>
   uniqueValues([
     repo.language,
     ...(repo.topics || []).map((topic) => topic.replace(/-/g, " ")),
-  ]).slice(0, 8);
+  ]).map(formatTechnologyName).slice(0, 8);
 
 const getCategoryFromRepo = (repo, fallback = "web") => {
   const search = `${repo.name || ""} ${(repo.description || "")} ${(repo.topics || []).join(" ")}`.toLowerCase();
@@ -119,7 +125,7 @@ const toGitHubMeta = (repo) => ({
   homepage: repo.homepage,
   stars: repo.stars,
   forks: repo.forks,
-  language: repo.language,
+  language: formatTechnologyName(repo.language),
   topics: repo.topics || [],
   updatedAt: repo.pushedAt || repo.updatedAt,
   isFork: repo.isFork,

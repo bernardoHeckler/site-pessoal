@@ -12,7 +12,7 @@ const CardData = {
     desde: "1/11/2022",
     localizacao: "Brazil, Rio Grande do Sul",
     headline:
-      "Construo interfaces, APIs e soluções orientadas a dados com foco em clareza, evolução técnica e entrega real.",
+      "Construo interfaces, APIs e soluções orientadas a dados com foco em clareza, performance e entrega de valor real.",
     stack: ["React", "Python", "SQL", "AWS", "JavaScript"],
   },
 

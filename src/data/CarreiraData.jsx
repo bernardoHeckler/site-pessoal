@@ -32,8 +32,8 @@ const CarreiraData = {
         instituicao: "Atitus Educação",
         periodo: "03/2024 — 12/2028",
         descricao:
-          "Atualmente no 5º semestre, com foco em Engenharia de Software, Segurança da Informação, cloud computing e fundamentos de sistemas. Desenvolvimento de projetos acadêmicos e próprios com React Native, Supabase, Java, PostgreSQL, Docker, Git/GitHub e testes de APIs via Postman.",
-        competencias: ["Engenharia de Software", "Cyber Security", "PostgreSQL", "React Native"],
+          "Atualmente no 5º semestre, com foco em Engenharia de Software, Segurança da Informação, cloud computing e fundamentos de sistemas. Desenvolvimento de projetos acadêmicos e próprios com React Native, Supabase, Java, PostgreSQL, PL/pgSQL, Docker, Git/GitHub e testes de APIs via Postman.",
+        competencias: ["Engenharia de Software", "Cyber Security", "PostgreSQL", "PL/pgSQL", "React Native"],
       },
       {
         id: 2,
@@ -70,8 +70,8 @@ const CarreiraData = {
         posicao: "Desenvolvedor Full Stack Júnior - Rota System",
         periodo: "04/2026 - Emprego Atual",
         descricao:
-          "Atuação no desenvolvimento e manutenção de aplicações web, contribuindo com projetos internos e evolução de sistemas. Experiência prática com React, Node, Python, SQL, Redis, Kafka e BI.",
-        competencias: ["React", "Node", "Python", "SQL", "Redis", "Kafka", "BI"],
+          "Atuação no desenvolvimento e manutenção de aplicações web, contribuindo para otimização de sistemas internos, arquitetura e evolução de aplicações. Experiência prática com React, Node.js, Python, SQL, Redis, Kafka e AWS QuickSight.",
+        competencias: ["React", "Node.js", "Python", "SQL", "Redis", "Kafka", "AWS QuickSight"],
       },
       {
         id: 1,
@@ -86,8 +86,8 @@ const CarreiraData = {
         posicao: "Engenheiro de Dados (Estágio) - Compass UOL",
         periodo: "08/2025 — 12/2025",
         descricao:
-          "Aplicação de práticas de ETL, modelagem de dados e otimização de pipelines. Experiência com Python, Jupyter Notebooks, AWS (S3, Lambda, Glue, Athena), Docker, Apache Spark e SQL, além de organização e documentação de processos do projeto.",
-        competencias: ["ETL", "AWS", "Python", "Spark", "SQL", "Docker"],
+          "Aplicação de práticas de ETL, modelagem de dados e otimização de pipelines. Experiência com Python, Jupyter Notebooks, Amazon S3, AWS Lambda, AWS Glue, Amazon Athena, Docker, Apache Spark e SQL, além de organização e documentação de processos do projeto.",
+        competencias: ["ETL", "AWS", "Python", "Apache Spark", "SQL", "Docker"],
       },
       {
         id: 3,
